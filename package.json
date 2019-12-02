@@ -9,6 +9,7 @@
   "module": "src/index.mjs",
   "scripts": {
     "start": "npm test",
+    "build:db": "bin/bin.js build && npm run format",
     "test": "t --exclude docs example config.js",
     "format": "f -w --exclude docs",
     "format:check": "f",
