@@ -1,5 +1,5 @@
 export const state = {
-  title: '@magic/fs',
+  title: '@magic/mime-types',
   description: [
     'mime-db mimetypes that have file extensions.',
     'exports a key => value store, where key = extension and value = mime/type',
