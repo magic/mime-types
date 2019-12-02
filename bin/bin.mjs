@@ -4,6 +4,8 @@ import { cli } from '@magic/cli/src/index.mjs'
 
 import fs from '@magic/fs'
 
+import overwrites from './overwrites.mjs'
+
 const filePath = path.join(process.cwd(), 'src', 'index.mjs')
 
 const args = {
@@ -23,6 +25,8 @@ src/bin/bin.js build
   },
 }
 
+const overwriteKeys = Object.keys(overwrites)
+
 const run = async () => {
   const res = cli(args)
 
@@ -35,7 +39,11 @@ const run = async () => {
       .filter(([key, val]) => val.extensions && val.extensions.length)
       .forEach(([key, val]) => {
         val.extensions.forEach(ext => {
-          keyValues += `  '${ext}': '${key}',\n`
+          if (overwriteKeys.includes(ext)) {
+            keyValues += `  '${ext}': '${overwrites[ext]}',\n`
+          } else {
+            keyValues += `  '${ext}': '${key}',\n`
+          }
         })
       })
 
