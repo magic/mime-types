@@ -1,0 +1,52 @@
+{
+  "name": "@magic/mime-types",
+  "version": "0.0.1",
+  "author": "Wizards & Witches",
+  "description": "mime-db, in a key => value store where keys are extensions and values are mime/types",
+  "license": "AGPL-3.0",
+  "homepage": "https://magic.github.io/mime-types",
+  "main": "src/index.mjs",
+  "module": "src/index.mjs",
+  "scripts": {
+    "start": "npm test",
+    "test": "t --exclude docs example config.js",
+    "format": "f -w --exclude docs",
+    "format:check": "f",
+    "calls": "calls",
+    "build": "NODE_ENV=production magic build",
+    "prod": "NODE_ENV=production magic build serve",
+    "clean": "magic clean",
+    "serve": "magic serve",
+    "dev": "magic dev"
+  },
+  "engine": {
+    "node": ">=12.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magic/mime-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magic/mime-types/issues"
+  },
+  "devDependencies": {
+    "@magic-modules/git-badges": "github:magic-modules/git-badges",
+    "@magic-modules/light-switch": "github:magic-modules/light-switch",
+    "@magic-modules/pre": "github:magic-modules/pre",
+    "@magic-themes/docs": "github:magic-themes/docs",
+    "@magic/cli": "0.0.8",
+    "@magic/core": "github:magic/core",
+    "@magic/fs": "0.0.1",
+    "@magic/test": "0.1.21",
+    "mime-db": "1.42.0"
+  },
+  "files": [
+    "src"
+  ],
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "github": "jaeh"
+    }
+  ]
+}
