@@ -20,6 +20,14 @@ import mimes from '@magic/mime-types'
 console.log(mimes.css)
 ```
 
+### recreate src/index.mjs
+src/index.mjs should never be changed manually.
+run
+```bash
+./bin/bin.mjs build
+```
+to rebuild the file.
+
 ### changelog
 
 #### 0.0.1
