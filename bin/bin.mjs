@@ -19,7 +19,7 @@ const args = {
       build: 'build from mime-db to src/index.mjs',
     },
     example: `
-production:
+# build src/index.mjs from mime-db:
 src/bin/bin.js build
 `,
   },
