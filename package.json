@@ -15,7 +15,7 @@
     "format": "f -w --exclude docs",
     "format:check": "f",
     "calls": "calls",
-    "build": "NODE_ENV=production magic build",
+    "build": "npm run build:db && npm run build:docs && NODE_ENV=production magic build",
     "prod": "NODE_ENV=production magic build serve",
     "clean": "magic clean",
     "serve": "magic serve",
