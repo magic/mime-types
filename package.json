@@ -10,6 +10,7 @@
   "scripts": {
     "start": "npm test",
     "build:db": "bin/bin.js build && npm run format",
+    "build:docs": "./bin/bin.js docs",
     "test": "t --exclude docs example config.js",
     "format": "f -w --exclude docs",
     "format:check": "f",
