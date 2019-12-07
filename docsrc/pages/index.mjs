@@ -6,12 +6,12 @@ export const View = state => [
 
   h3({ id: 'install' }, 'installation'),
   p('be in a nodejs project'),
-Pre(`
+  Pre(`
 npm install @magic/mime-types
 `),
 
-h3({ id: 'usage' }, 'import / usage'),
-Pre(`
+  h3({ id: 'usage' }, 'import / usage'),
+  Pre(`
 import mimes from '@magic/mime-types'
 
 console.log(mimes.css)
