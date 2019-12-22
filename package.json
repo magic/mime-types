@@ -38,9 +38,9 @@
     "@magic-modules/pre": "0.0.2",
     "@magic-themes/docs": "0.0.2",
     "@magic/cli": "0.0.10",
-    "@magic/core": "0.0.4",
+    "@magic/core": "0.0.6",
     "@magic/fs": "0.0.1",
-    "@magic/test": "0.1.23",
+    "@magic/test": "0.1.24",
     "mime-db": "1.42.0"
   },
   "files": [
