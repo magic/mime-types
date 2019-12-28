@@ -4,4 +4,5 @@ export default {
   WEB_ROOT: '/mime-types/',
   URL: 'magic.github.io/mime-types',
   THEME: 'docs',
+  HOIST: 'Gdpr',
 }
