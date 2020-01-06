@@ -39,7 +39,7 @@
     "@magic-themes/docs": "0.0.3",
     "@magic/cli": "0.0.13",
     "@magic/core": "0.0.18",
-    "@magic/format": "0.0.3",
+    "@magic/format": "0.0.4",
     "@magic/fs": "0.0.2",
     "@magic/test": "0.1.28",
     "mime-db": "1.43.0"
