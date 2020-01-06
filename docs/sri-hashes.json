@@ -1,9 +1,9 @@
 {
   "css": "sha384-Zq69ZfLn2zMms7j2K6iZ4EutxfQtqvQdMArbrmWD1ZCTC4BnxZbOaCKwKYosMrdy",
-  "js": "sha384-kLpqhem0otGuh0HUjy+mcd37JxLFQe6nEmuglNnpM2wD+G4db8/AXX+ktvyffdmb",
+  "js": "sha384-yySwfWGrnwlUGOAXLUUUfpUvy662b1gA/dEF6Qib5Tq9y4LUwMSFJQJj3XOYMzGw",
   "pages": {
-    "/mime-types/": "sha384-NIfM13Jr+/GX6KTUCcSAbumyip2Iuk6W7JtFl12q8BuqSJG3PxZaC3FtKLS6acFb",
-    "/mime-types/404/": "sha384-MJ+kbsZX0bn5g2U3k8cbrmh3VS4Vq2vsQyOzQZUcWVNMOcaUFFiAYyqgtlx16DeD"
+    "/mime-types/": "sha384-i+5SgHnY43scS2oTUEGUpfUPrgdm8qBuRYAbSqFLRe2VzQZjtsmHkmo9cbT9R8Ao",
+    "/mime-types/404/": "sha384-PRPQolQiOYLHPCO+SEJ1MNSbMhf596sayKinDPTMJ5oW/SR3HGE6wUo5nbE8f9x6"
   },
   "static": {
     "/favicon.ico": "sha384-pf51ay6pZCj3+XlVCPmCKLDFpLj7QP+2heR+/n08WgS7Bve7JMkgubHOkwLzaTr+",
