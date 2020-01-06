@@ -1,8 +1,16 @@
+---
+
+This file gets generated via 'bin/README-template.md'
+do not change README.md, change the template instead!
+
+---
+
 # @magic/mime-types
 
 exports all mime-db mimetypes that have file extensions.
 
 exports a key => value store,
+
 where key = extension and value = mime/type
 
 [html-docs](https://magic.github.io/mime-types)
@@ -10,10 +18,8 @@ where key = extension and value = mime/type
 ### installation
 be in a nodejs project
 ```bash
-npm install @magic/mime-types
+npm install --save-exact @magic/mime-types
 ```
-
-## do not change this README file!
 
 ### recreate README.md
 **README.md should never be changed manually.**

@@ -1,8 +1,16 @@
+---
+
+This file gets generated via 'bin/README-template.md'
+do not change README.md, change the template instead!
+
+---
+
 # @magic/mime-types
 
 exports all mime-db mimetypes that have file extensions.
 
 exports a key => value store,
+
 where key = extension and value = mime/type
 
 [html-docs](https://magic.github.io/mime-types)
@@ -10,10 +18,8 @@ where key = extension and value = mime/type
 ### installation
 be in a nodejs project
 ```bash
-npm install @magic/mime-types
+npm install --save-exact @magic/mime-types
 ```
-
-## do not change this README file!
 
 ### recreate README.md
 **README.md should never be changed manually.**
@@ -50,14 +56,32 @@ console.log(mimes.atom)
 console.log(mimes.atomcat)
 // logs application/atomcat+xml
 
+console.log(mimes.atomdeleted)
+// logs application/atomdeleted+xml
+
 console.log(mimes.atomsvc)
 // logs application/atomsvc+xml
+
+console.log(mimes.dwd)
+// logs application/atsc-dwd+xml
+
+console.log(mimes.held)
+// logs application/atsc-held+xml
+
+console.log(mimes.rsat)
+// logs application/atsc-rsat+xml
 
 console.log(mimes.bdoc)
 // logs application/bdoc
 
+console.log(mimes.xcs)
+// logs application/calendar+xml
+
 console.log(mimes.ccxml)
 // logs application/ccxml+xml
+
+console.log(mimes.cdfx)
+// logs application/cdfx+xml
 
 console.log(mimes.cdmia)
 // logs application/cdmi-capability
@@ -101,11 +125,17 @@ console.log(mimes.es)
 console.log(mimes.emma)
 // logs application/emma+xml
 
+console.log(mimes.emotionml)
+// logs application/emotionml+xml
+
 console.log(mimes.epub)
 // logs application/epub+zip
 
 console.log(mimes.exi)
 // logs application/exi
+
+console.log(mimes.fdt)
+// logs application/fdt+xml
 
 console.log(mimes.pfr)
 // logs application/font-tdpfr
@@ -139,6 +169,9 @@ console.log(mimes.inkml)
 
 console.log(mimes.ipfix)
 // logs application/ipfix
+
+console.log(mimes.its)
+// logs application/its+xml
 
 console.log(mimes.jar)
 // logs application/java-archive
@@ -175,6 +208,9 @@ console.log(mimes.jsonml)
 
 console.log(mimes.jsonld)
 // logs application/ld+json
+
+console.log(mimes.lgr)
+// logs application/lgr+xml
 
 console.log(mimes.lostxml)
 // logs application/lost+xml
@@ -224,6 +260,12 @@ console.log(mimes.meta4)
 console.log(mimes.mets)
 // logs application/mets+xml
 
+console.log(mimes.maei)
+// logs application/mmt-aei+xml
+
+console.log(mimes.musd)
+// logs application/mmt-usd+xml
+
 console.log(mimes.mods)
 // logs application/mods+xml
 
@@ -238,6 +280,12 @@ console.log(mimes.mp4s)
 
 console.log(mimes.m4p)
 // logs application/mp4
+
+console.log(mimes.xdf)
+// logs application/mrb-consumer+xml
+
+console.log(mimes.xdf)
+// logs application/mrb-publish+xml
 
 console.log(mimes.doc)
 // logs application/msword
@@ -347,6 +395,9 @@ console.log(mimes.onepkg)
 console.log(mimes.oxps)
 // logs application/oxps
 
+console.log(mimes.relo)
+// logs application/p2p-overlay+xml
+
 console.log(mimes.xer)
 // logs application/patch-ops-error+xml
 
@@ -407,6 +458,9 @@ console.log(mimes.eps)
 console.log(mimes.ps)
 // logs application/postscript
 
+console.log(mimes.provx)
+// logs application/provenance+xml
+
 console.log(mimes.cww)
 // logs application/prs.cww
 
@@ -436,6 +490,15 @@ console.log(mimes.rld)
 
 console.log(mimes.rs)
 // logs application/rls-services+xml
+
+console.log(mimes.rapd)
+// logs application/route-apd+xml
+
+console.log(mimes.sls)
+// logs application/route-s-tsid+xml
+
+console.log(mimes.rusd)
+// logs application/route-usd+xml
 
 console.log(mimes.gbr)
 // logs application/rpki-ghostbusters
@@ -472,6 +535,12 @@ console.log(mimes.spp)
 
 console.log(mimes.sdp)
 // logs application/sdp
+
+console.log(mimes.senmlx)
+// logs application/senml+xml
+
+console.log(mimes.sensmlx)
+// logs application/sensml+xml
 
 console.log(mimes.setpay)
 // logs application/set-payment-initiation
@@ -515,6 +584,9 @@ console.log(mimes.ssdl)
 console.log(mimes.ssml)
 // logs application/ssml+xml
 
+console.log(mimes.swidtag)
+// logs application/swid+xml
+
 console.log(mimes.tei)
 // logs application/tei+xml
 
@@ -529,6 +601,15 @@ console.log(mimes.tsd)
 
 console.log(mimes.toml)
 // logs application/toml
+
+console.log(mimes.ttml)
+// logs application/ttml+xml
+
+console.log(mimes.rsheet)
+// logs application/urc-ressheet+xml
+
+console.log(mimes.1km)
+// logs application/vnd.1000minds.decision-model+xml
 
 console.log(mimes.plb)
 // logs application/vnd.3gpp.pic-bw-large
@@ -634,6 +715,9 @@ console.log(mimes.iota)
 
 console.log(mimes.aep)
 // logs application/vnd.audiograph
+
+console.log(mimes.bmml)
+// logs application/vnd.balsamiq.bmml+xml
 
 console.log(mimes.mpm)
 // logs application/vnd.blueice.multipass
@@ -1355,6 +1439,9 @@ console.log(mimes.nns)
 console.log(mimes.nnw)
 // logs application/vnd.noblenet-web
 
+console.log(mimes.ac)
+// logs application/vnd.nokia.n-gage.ac+xml
+
 console.log(mimes.ngdat)
 // logs application/vnd.nokia.n-gage.data
 
@@ -1433,8 +1520,14 @@ console.log(mimes.xo)
 console.log(mimes.dd2)
 // logs application/vnd.oma.dd2+xml
 
+console.log(mimes.obgx)
+// logs application/vnd.openblox.game+xml
+
 console.log(mimes.oxt)
 // logs application/vnd.openofficeorg.extension
+
+console.log(mimes.osm)
+// logs application/vnd.openstreetmap.data+xml
 
 console.log(mimes.pptx)
 // logs application/vnd.openxmlformats-officedocument.presentationml.presentation
@@ -1592,6 +1685,9 @@ console.log(mimes.mmf)
 console.log(mimes.teacher)
 // logs application/vnd.smart.teacher
 
+console.log(mimes.fo)
+// logs application/vnd.software602.filler.form+xml
+
 console.log(mimes.sdkm)
 // logs application/vnd.solent.sdkm+xml
 
@@ -1687,6 +1783,9 @@ console.log(mimes.bdm)
 
 console.log(mimes.xdm)
 // logs application/vnd.syncml.dm+xml
+
+console.log(mimes.ddf)
+// logs application/vnd.syncml.dmddf+xml
 
 console.log(mimes.tao)
 // logs application/vnd.tao.intent-module-archive
@@ -2054,6 +2153,9 @@ console.log(mimes.jardiff)
 console.log(mimes.jnlp)
 // logs application/x-java-jnlp-file
 
+console.log(mimes.kdbx)
+// logs application/x-keepass2
+
 console.log(mimes.latex)
 // logs application/x-latex
 
@@ -2351,8 +2453,23 @@ console.log(mimes.z8)
 console.log(mimes.xaml)
 // logs application/xaml+xml
 
+console.log(mimes.xav)
+// logs application/xcap-att+xml
+
+console.log(mimes.xca)
+// logs application/xcap-caps+xml
+
 console.log(mimes.xdf)
 // logs application/xcap-diff+xml
+
+console.log(mimes.xel)
+// logs application/xcap-el+xml
+
+console.log(mimes.xer)
+// logs application/xcap-error+xml
+
+console.log(mimes.xns)
+// logs application/xcap-ns+xml
 
 console.log(mimes.xenc)
 // logs application/xenc+xml
@@ -2362,6 +2479,9 @@ console.log(mimes.xhtml)
 
 console.log(mimes.xht)
 // logs application/xhtml+xml
+
+console.log(mimes.xlf)
+// logs application/xliff+xml
 
 console.log(mimes.xml)
 // logs text/xml
@@ -2434,6 +2554,9 @@ console.log(mimes.kar)
 
 console.log(mimes.rmi)
 // logs audio/midi
+
+console.log(mimes.mxmf)
+// logs audio/mobile-xmf
 
 console.log(mimes.mp3)
 // logs audio/mp3
