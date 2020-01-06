@@ -42,7 +42,7 @@
     "@magic/format": "0.0.3",
     "@magic/fs": "0.0.2",
     "@magic/test": "0.1.28",
-    "mime-db": "1.42.0"
+    "mime-db": "1.43.0"
   },
   "files": [
     "src"
