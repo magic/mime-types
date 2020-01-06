@@ -1,7 +1,8 @@
+#!/usr/bin/env node
+
 import path from 'path'
 
-import { cli } from '@magic/cli/src/index.mjs'
-
+import cli from '@magic/cli'
 import fs from '@magic/fs'
 
 import overwrites from './overwrites.mjs'
@@ -34,9 +35,9 @@ import { default as mimes } from 'mime-db'
 const overwriteKeys = Object.keys(overwrites)
 
 const run = async () => {
-  const res = cli(args)
+  const { commands } = cli(args)
 
-  if (res.cmds.build) {
+  if (commands.build) {
     let keyValues = `export default {\n`
 
     Object.entries(mimes)
@@ -54,7 +55,9 @@ const run = async () => {
     keyValues += '}\n'
 
     await fs.writeFile(filePath, keyValues)
-  } else if (res.cmds.docs) {
+  }
+
+  if (commands.docs) {
     let keyValues = ''
 
     Object.entries(mimes)
