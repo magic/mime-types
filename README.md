@@ -1,9 +1,9 @@
----
+<!--
 
 This file gets generated via 'bin/README-template.md'
 do not change README.md, change the template instead!
 
----
+-->
 
 # @magic/mime-types
 
