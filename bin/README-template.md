@@ -51,6 +51,13 @@ import mimes from '@magic/mime-types'
 #### 0.0.1
 first publish
 
+#### 0.0.2
+* required node version is >= 13.5.0
+* update mime-db
+
+#### 0.0.3 - unreleased
+...
+
 [![NPM version][npm-image]][npm-url]
 [![Linux Build Status][travis-image]][travis-url]
 [![Windows Build Status][appveyor-image]][appveyor-url]
