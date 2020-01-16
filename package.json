@@ -40,7 +40,7 @@
     "@magic/cli": "0.0.17",
     "@magic/core": "0.0.19",
     "@magic/format": "0.0.7",
-    "@magic/fs": "0.0.2",
+    "@magic/fs": "0.0.3",
     "@magic/test": "0.1.32",
     "mime-db": "1.43.0"
   },
