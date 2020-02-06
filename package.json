@@ -38,7 +38,7 @@
     "@magic-modules/pre": "0.0.2",
     "@magic-themes/docs": "0.0.3",
     "@magic/cli": "0.0.23",
-    "@magic/core": "0.0.21",
+    "@magic/core": "0.0.22",
     "@magic/format": "0.0.7",
     "@magic/fs": "0.0.4",
     "@magic/test": "0.1.33",
