@@ -41,7 +41,7 @@
     "@magic/core": "0.0.67",
     "@magic/format": "0.0.8",
     "@magic/fs": "0.0.5",
-    "@magic/test": "0.1.41",
+    "@magic/test": "0.1.42",
     "mime-db": "1.43.0"
   },
   "files": [
