@@ -38,10 +38,10 @@
     "@magic-modules/pre": "0.0.7",
     "@magic-themes/docs": "0.0.6",
     "@magic/cli": "0.0.27",
-    "@magic/core": "0.0.70",
+    "@magic/core": "0.0.71",
     "@magic/format": "0.0.10",
     "@magic/fs": "0.0.5",
-    "@magic/test": "0.1.45",
+    "@magic/test": "0.1.46",
     "mime-db": "1.44.0"
   },
   "files": [
