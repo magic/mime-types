@@ -3631,7 +3631,10 @@ first publish
 * required node version is >= 13.5.0
 * update mime-db
 
-#### 0.0.3 - unreleased
+#### 0.0.3
+bump required node version to 14.2.0
+
+#### 0.0.4 - unreleased
 ...
 
 [![NPM version][npm-image]][npm-url]
