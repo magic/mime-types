@@ -302,6 +302,9 @@ console.log(mimes.nq)
 console.log(mimes.nt)
 // logs application/n-triples
 
+console.log(mimes.cjs)
+// logs application/node
+
 console.log(mimes.bin)
 // logs application/octet-stream
 
@@ -3067,6 +3070,12 @@ console.log(mimes.mesh)
 
 console.log(mimes.silo)
 // logs model/mesh
+
+console.log(mimes.mtl)
+// logs model/mtl
+
+console.log(mimes.obj)
+// logs model/obj
 
 console.log(mimes.stl)
 // logs model/stl
