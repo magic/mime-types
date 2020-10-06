@@ -581,8 +581,14 @@ console.log(mimes.toml)
 console.log(mimes.ttml)
 // logs application/ttml+xml
 
+console.log(mimes.ubj)
+// logs application/ubjson
+
 console.log(mimes.rsheet)
 // logs application/urc-ressheet+xml
+
+console.log(mimes.td)
+// logs application/urc-targetdesc+xml
 
 console.log(mimes.1km)
 // logs application/vnd.1000minds.decision-model+xml
@@ -668,7 +674,7 @@ console.log(mimes.atx)
 console.log(mimes.mpkg)
 // logs application/vnd.apple.installer+xml
 
-console.log(mimes.keynote)
+console.log(mimes.key)
 // logs application/vnd.apple.keynote
 
 console.log(mimes.m3u8)
@@ -787,6 +793,9 @@ console.log(mimes.dart)
 
 console.log(mimes.rdz)
 // logs application/vnd.data-vision.rdz
+
+console.log(mimes.dbf)
+// logs application/vnd.dbf
 
 console.log(mimes.uvf)
 // logs application/vnd.dece.data
@@ -1597,6 +1606,9 @@ console.log(mimes.qxl)
 
 console.log(mimes.qxb)
 // logs application/vnd.quark.quarkxpress
+
+console.log(mimes.rar)
+// logs application/vnd.rar
 
 console.log(mimes.bed)
 // logs application/vnd.realvnc.bed
@@ -2480,6 +2492,9 @@ console.log(mimes.xop)
 console.log(mimes.xpl)
 // logs application/xproc+xml
 
+console.log(mimes.xsl)
+// logs application/xslt+xml
+
 console.log(mimes.xslt)
 // logs application/xslt+xml
 
@@ -2711,6 +2726,9 @@ console.log(mimes.exr)
 console.log(mimes.apng)
 // logs image/apng
 
+console.log(mimes.avif)
+// logs image/avif
+
 console.log(mimes.bmp)
 // logs image/bmp
 
@@ -2810,6 +2828,9 @@ console.log(mimes.jxss)
 console.log(mimes.ktx)
 // logs image/ktx
 
+console.log(mimes.ktx2)
+// logs image/ktx2
+
 console.log(mimes.png)
 // logs image/png
 
@@ -2902,6 +2923,9 @@ console.log(mimes.wdp)
 
 console.log(mimes.npx)
 // logs image/vnd.net-fpx
+
+console.log(mimes.b16)
+// logs image/vnd.pco.b16
 
 console.log(mimes.tap)
 // logs image/vnd.tencent.tap
@@ -3220,6 +3244,9 @@ console.log(mimes.slim)
 
 console.log(mimes.slm)
 // logs text/slim
+
+console.log(mimes.spdx)
+// logs text/spdx
 
 console.log(mimes.stylus)
 // logs text/stylus
