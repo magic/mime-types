@@ -2,28 +2,15 @@
 
 import path from 'path'
 
-import cli from '@magic/cli'
 import fs from '@magic/fs'
 import log from '@magic/log'
 
 import overwrites from './overwrites.mjs'
 
+import { default as mimes } from 'mime-db'
+
 const mimeTypeFilePath = path.join(process.cwd(), 'src', 'mimes.mjs')
 const compressFilePath = path.join(process.cwd(), 'src', 'compressibles.mjs')
-
-const args = {
-  options: [['--help', '-help', 'help', '--h', '-h']],
-  help: {
-    name: 'magic-mime-types',
-    header: 'mime-db, sorted by file extension.',
-    example: `
-# build files in src, build documentation
-./bin/bin.mjs 
-`,
-  },
-}
-
-import { default as mimes } from 'mime-db'
 
 const overwriteKeys = Object.keys(overwrites)
 
@@ -33,7 +20,7 @@ const run = async () => {
   const compressibles = {}
 
   Object.entries(mimes)
-    .filter(([key, val]) => val.extensions?.length)
+    .filter(([_, { extensions = [] }]) => extensions.length)
     .forEach(([key, val]) => {
       val.extensions.forEach(ext => {
         if (overwriteKeys.includes(ext)) {
@@ -59,17 +46,12 @@ const run = async () => {
     .map(([key, ext]) => `mimes.${key} === '${ext}'`)
     .join('\n\n')
 
-  let docContent = await fs.readFile(
-    path.join(process.cwd(), 'bin', './README-template.md'),
-    'utf8',
-  )
+  let [docContent, jsDocContent] = await Promise.all([
+    fs.readFile(path.join(process.cwd(), 'bin', './README-template.md'), 'utf8'),
+    fs.readFile(path.join(process.cwd(), 'bin', './MAGIC-doc-template.mjs'), 'utf8'),
+  ])
 
   docContent = docContent.replace('||::mime-db-content::||', docMimeTypeString)
-
-  let jsDocContent = await fs.readFile(
-    path.join(process.cwd(), 'bin', './MAGIC-doc-template.mjs'),
-    'utf8',
-  )
 
   jsDocContent = jsDocContent.replace('||::mime-db-content::||', docMimeTypeString)
 
