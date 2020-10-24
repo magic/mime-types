@@ -1,3 +1,8 @@
+/*
+ * Some extensions have multiple mime-type representations in the mime-db.
+ * make sure some mimes http and browsers would expect are included.
+ */
+
 export default {
   bdoc: 'application/bdoc',
   exe: 'application/octet-stream',
