@@ -61,11 +61,14 @@ first publish
 bump required node version to 14.2.0
 
 #### 0.0.4
+small change
+
+#### 0.0.5
 * bin now only builds, no commands needed.
 * build only loops once.
 * update documentation.
 
-#### 0.0.5 - unreleased
+#### 0.0.6 - unreleased
 ...
 
 
