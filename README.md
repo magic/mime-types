@@ -29,6 +29,16 @@ run
 ```
 to rebuild the file.
 
+### usage:
+in yourproject.js
+
+```javascript
+import defaultMimes, { mimes, compressibles } from '@magic/mime-types'
+```
+
+very detailed usage below
+
+## Dev
 
 ### recreate src/index.mjs
 **src/index.mjs should never be changed manually.**
@@ -37,3617 +47,6 @@ run
 ./bin/bin.mjs build
 ```
 to rebuild the file.
-
-
-### import / usage
-```javascript
-import mimes from '@magic/mime-types'
-
-
-console.log(mimes.ez)
-// logs application/andrew-inset
-
-console.log(mimes.aw)
-// logs application/applixware
-
-console.log(mimes.atom)
-// logs application/atom+xml
-
-console.log(mimes.atomcat)
-// logs application/atomcat+xml
-
-console.log(mimes.atomdeleted)
-// logs application/atomdeleted+xml
-
-console.log(mimes.atomsvc)
-// logs application/atomsvc+xml
-
-console.log(mimes.dwd)
-// logs application/atsc-dwd+xml
-
-console.log(mimes.held)
-// logs application/atsc-held+xml
-
-console.log(mimes.rsat)
-// logs application/atsc-rsat+xml
-
-console.log(mimes.bdoc)
-// logs application/bdoc
-
-console.log(mimes.xcs)
-// logs application/calendar+xml
-
-console.log(mimes.ccxml)
-// logs application/ccxml+xml
-
-console.log(mimes.cdfx)
-// logs application/cdfx+xml
-
-console.log(mimes.cdmia)
-// logs application/cdmi-capability
-
-console.log(mimes.cdmic)
-// logs application/cdmi-container
-
-console.log(mimes.cdmid)
-// logs application/cdmi-domain
-
-console.log(mimes.cdmio)
-// logs application/cdmi-object
-
-console.log(mimes.cdmiq)
-// logs application/cdmi-queue
-
-console.log(mimes.cu)
-// logs application/cu-seeme
-
-console.log(mimes.mpd)
-// logs application/dash+xml
-
-console.log(mimes.davmount)
-// logs application/davmount+xml
-
-console.log(mimes.dbk)
-// logs application/docbook+xml
-
-console.log(mimes.dssc)
-// logs application/dssc+der
-
-console.log(mimes.xdssc)
-// logs application/dssc+xml
-
-console.log(mimes.ecma)
-// logs application/ecmascript
-
-console.log(mimes.es)
-// logs application/ecmascript
-
-console.log(mimes.emma)
-// logs application/emma+xml
-
-console.log(mimes.emotionml)
-// logs application/emotionml+xml
-
-console.log(mimes.epub)
-// logs application/epub+zip
-
-console.log(mimes.exi)
-// logs application/exi
-
-console.log(mimes.fdt)
-// logs application/fdt+xml
-
-console.log(mimes.pfr)
-// logs application/font-tdpfr
-
-console.log(mimes.geojson)
-// logs application/geo+json
-
-console.log(mimes.gml)
-// logs application/gml+xml
-
-console.log(mimes.gpx)
-// logs application/gpx+xml
-
-console.log(mimes.gxf)
-// logs application/gxf
-
-console.log(mimes.gz)
-// logs application/gzip
-
-console.log(mimes.hjson)
-// logs application/hjson
-
-console.log(mimes.stk)
-// logs application/hyperstudio
-
-console.log(mimes.ink)
-// logs application/inkml+xml
-
-console.log(mimes.inkml)
-// logs application/inkml+xml
-
-console.log(mimes.ipfix)
-// logs application/ipfix
-
-console.log(mimes.its)
-// logs application/its+xml
-
-console.log(mimes.jar)
-// logs application/java-archive
-
-console.log(mimes.war)
-// logs application/java-archive
-
-console.log(mimes.ear)
-// logs application/java-archive
-
-console.log(mimes.ser)
-// logs application/java-serialized-object
-
-console.log(mimes.class)
-// logs application/java-vm
-
-console.log(mimes.js)
-// logs application/javascript
-
-console.log(mimes.mjs)
-// logs application/javascript
-
-console.log(mimes.json)
-// logs application/json
-
-console.log(mimes.map)
-// logs application/json
-
-console.log(mimes.json5)
-// logs application/json5
-
-console.log(mimes.jsonml)
-// logs application/jsonml+json
-
-console.log(mimes.jsonld)
-// logs application/ld+json
-
-console.log(mimes.lgr)
-// logs application/lgr+xml
-
-console.log(mimes.lostxml)
-// logs application/lost+xml
-
-console.log(mimes.hqx)
-// logs application/mac-binhex40
-
-console.log(mimes.cpt)
-// logs application/mac-compactpro
-
-console.log(mimes.mads)
-// logs application/mads+xml
-
-console.log(mimes.webmanifest)
-// logs application/manifest+json
-
-console.log(mimes.mrc)
-// logs application/marc
-
-console.log(mimes.mrcx)
-// logs application/marcxml+xml
-
-console.log(mimes.ma)
-// logs application/mathematica
-
-console.log(mimes.nb)
-// logs application/mathematica
-
-console.log(mimes.mb)
-// logs application/mathematica
-
-console.log(mimes.mathml)
-// logs application/mathml+xml
-
-console.log(mimes.mbox)
-// logs application/mbox
-
-console.log(mimes.mscml)
-// logs application/mediaservercontrol+xml
-
-console.log(mimes.metalink)
-// logs application/metalink+xml
-
-console.log(mimes.meta4)
-// logs application/metalink4+xml
-
-console.log(mimes.mets)
-// logs application/mets+xml
-
-console.log(mimes.maei)
-// logs application/mmt-aei+xml
-
-console.log(mimes.musd)
-// logs application/mmt-usd+xml
-
-console.log(mimes.mods)
-// logs application/mods+xml
-
-console.log(mimes.m21)
-// logs application/mp21
-
-console.log(mimes.mp21)
-// logs application/mp21
-
-console.log(mimes.mp4s)
-// logs application/mp4
-
-console.log(mimes.m4p)
-// logs application/mp4
-
-console.log(mimes.xdf)
-// logs application/mrb-consumer+xml
-
-console.log(mimes.xdf)
-// logs application/mrb-publish+xml
-
-console.log(mimes.doc)
-// logs application/msword
-
-console.log(mimes.dot)
-// logs application/msword
-
-console.log(mimes.mxf)
-// logs application/mxf
-
-console.log(mimes.nq)
-// logs application/n-quads
-
-console.log(mimes.nt)
-// logs application/n-triples
-
-console.log(mimes.cjs)
-// logs application/node
-
-console.log(mimes.bin)
-// logs application/octet-stream
-
-console.log(mimes.dms)
-// logs application/octet-stream
-
-console.log(mimes.lrf)
-// logs application/octet-stream
-
-console.log(mimes.mar)
-// logs application/octet-stream
-
-console.log(mimes.so)
-// logs application/octet-stream
-
-console.log(mimes.dist)
-// logs application/octet-stream
-
-console.log(mimes.distz)
-// logs application/octet-stream
-
-console.log(mimes.pkg)
-// logs application/octet-stream
-
-console.log(mimes.bpk)
-// logs application/octet-stream
-
-console.log(mimes.dump)
-// logs application/octet-stream
-
-console.log(mimes.elc)
-// logs application/octet-stream
-
-console.log(mimes.deploy)
-// logs application/octet-stream
-
-console.log(mimes.exe)
-// logs application/x-msdos-program
-
-console.log(mimes.dll)
-// logs application/octet-stream
-
-console.log(mimes.deb)
-// logs application/x-debian-package
-
-console.log(mimes.dmg)
-// logs application/octet-stream
-
-console.log(mimes.iso)
-// logs application/octet-stream
-
-console.log(mimes.img)
-// logs application/octet-stream
-
-console.log(mimes.msi)
-// logs application/octet-stream
-
-console.log(mimes.msp)
-// logs application/octet-stream
-
-console.log(mimes.msm)
-// logs application/octet-stream
-
-console.log(mimes.buffer)
-// logs application/octet-stream
-
-console.log(mimes.oda)
-// logs application/oda
-
-console.log(mimes.opf)
-// logs application/oebps-package+xml
-
-console.log(mimes.ogx)
-// logs application/ogg
-
-console.log(mimes.omdoc)
-// logs application/omdoc+xml
-
-console.log(mimes.onetoc)
-// logs application/onenote
-
-console.log(mimes.onetoc2)
-// logs application/onenote
-
-console.log(mimes.onetmp)
-// logs application/onenote
-
-console.log(mimes.onepkg)
-// logs application/onenote
-
-console.log(mimes.oxps)
-// logs application/oxps
-
-console.log(mimes.relo)
-// logs application/p2p-overlay+xml
-
-console.log(mimes.xer)
-// logs application/patch-ops-error+xml
-
-console.log(mimes.pdf)
-// logs application/pdf
-
-console.log(mimes.pgp)
-// logs application/pgp-encrypted
-
-console.log(mimes.asc)
-// logs application/pgp-signature
-
-console.log(mimes.sig)
-// logs application/pgp-signature
-
-console.log(mimes.prf)
-// logs application/pics-rules
-
-console.log(mimes.p10)
-// logs application/pkcs10
-
-console.log(mimes.p7m)
-// logs application/pkcs7-mime
-
-console.log(mimes.p7c)
-// logs application/pkcs7-mime
-
-console.log(mimes.p7s)
-// logs application/pkcs7-signature
-
-console.log(mimes.p8)
-// logs application/pkcs8
-
-console.log(mimes.ac)
-// logs application/pkix-attr-cert
-
-console.log(mimes.cer)
-// logs application/pkix-cert
-
-console.log(mimes.crl)
-// logs application/pkix-crl
-
-console.log(mimes.pkipath)
-// logs application/pkix-pkipath
-
-console.log(mimes.pki)
-// logs application/pkixcmp
-
-console.log(mimes.pls)
-// logs application/pls+xml
-
-console.log(mimes.ai)
-// logs application/postscript
-
-console.log(mimes.eps)
-// logs application/postscript
-
-console.log(mimes.ps)
-// logs application/postscript
-
-console.log(mimes.provx)
-// logs application/provenance+xml
-
-console.log(mimes.cww)
-// logs application/prs.cww
-
-console.log(mimes.pskcxml)
-// logs application/pskc+xml
-
-console.log(mimes.raml)
-// logs application/raml+yaml
-
-console.log(mimes.rdf)
-// logs application/rdf+xml
-
-console.log(mimes.owl)
-// logs application/rdf+xml
-
-console.log(mimes.rif)
-// logs application/reginfo+xml
-
-console.log(mimes.rnc)
-// logs application/relax-ng-compact-syntax
-
-console.log(mimes.rl)
-// logs application/resource-lists+xml
-
-console.log(mimes.rld)
-// logs application/resource-lists-diff+xml
-
-console.log(mimes.rs)
-// logs application/rls-services+xml
-
-console.log(mimes.rapd)
-// logs application/route-apd+xml
-
-console.log(mimes.sls)
-// logs application/route-s-tsid+xml
-
-console.log(mimes.rusd)
-// logs application/route-usd+xml
-
-console.log(mimes.gbr)
-// logs application/rpki-ghostbusters
-
-console.log(mimes.mft)
-// logs application/rpki-manifest
-
-console.log(mimes.roa)
-// logs application/rpki-roa
-
-console.log(mimes.rsd)
-// logs application/rsd+xml
-
-console.log(mimes.rss)
-// logs application/rss+xml
-
-console.log(mimes.rtf)
-// logs text/rtf
-
-console.log(mimes.sbml)
-// logs application/sbml+xml
-
-console.log(mimes.scq)
-// logs application/scvp-cv-request
-
-console.log(mimes.scs)
-// logs application/scvp-cv-response
-
-console.log(mimes.spq)
-// logs application/scvp-vp-request
-
-console.log(mimes.spp)
-// logs application/scvp-vp-response
-
-console.log(mimes.sdp)
-// logs application/sdp
-
-console.log(mimes.senmlx)
-// logs application/senml+xml
-
-console.log(mimes.sensmlx)
-// logs application/sensml+xml
-
-console.log(mimes.setpay)
-// logs application/set-payment-initiation
-
-console.log(mimes.setreg)
-// logs application/set-registration-initiation
-
-console.log(mimes.shf)
-// logs application/shf+xml
-
-console.log(mimes.siv)
-// logs application/sieve
-
-console.log(mimes.sieve)
-// logs application/sieve
-
-console.log(mimes.smi)
-// logs application/smil+xml
-
-console.log(mimes.smil)
-// logs application/smil+xml
-
-console.log(mimes.rq)
-// logs application/sparql-query
-
-console.log(mimes.srx)
-// logs application/sparql-results+xml
-
-console.log(mimes.gram)
-// logs application/srgs
-
-console.log(mimes.grxml)
-// logs application/srgs+xml
-
-console.log(mimes.sru)
-// logs application/sru+xml
-
-console.log(mimes.ssdl)
-// logs application/ssdl+xml
-
-console.log(mimes.ssml)
-// logs application/ssml+xml
-
-console.log(mimes.swidtag)
-// logs application/swid+xml
-
-console.log(mimes.tei)
-// logs application/tei+xml
-
-console.log(mimes.teicorpus)
-// logs application/tei+xml
-
-console.log(mimes.tfi)
-// logs application/thraud+xml
-
-console.log(mimes.tsd)
-// logs application/timestamped-data
-
-console.log(mimes.toml)
-// logs application/toml
-
-console.log(mimes.ttml)
-// logs application/ttml+xml
-
-console.log(mimes.ubj)
-// logs application/ubjson
-
-console.log(mimes.rsheet)
-// logs application/urc-ressheet+xml
-
-console.log(mimes.td)
-// logs application/urc-targetdesc+xml
-
-console.log(mimes.1km)
-// logs application/vnd.1000minds.decision-model+xml
-
-console.log(mimes.plb)
-// logs application/vnd.3gpp.pic-bw-large
-
-console.log(mimes.psb)
-// logs application/vnd.3gpp.pic-bw-small
-
-console.log(mimes.pvb)
-// logs application/vnd.3gpp.pic-bw-var
-
-console.log(mimes.tcap)
-// logs application/vnd.3gpp2.tcap
-
-console.log(mimes.pwn)
-// logs application/vnd.3m.post-it-notes
-
-console.log(mimes.aso)
-// logs application/vnd.accpac.simply.aso
-
-console.log(mimes.imp)
-// logs application/vnd.accpac.simply.imp
-
-console.log(mimes.acu)
-// logs application/vnd.acucobol
-
-console.log(mimes.atc)
-// logs application/vnd.acucorp
-
-console.log(mimes.acutc)
-// logs application/vnd.acucorp
-
-console.log(mimes.air)
-// logs application/vnd.adobe.air-application-installer-package+zip
-
-console.log(mimes.fcdt)
-// logs application/vnd.adobe.formscentral.fcdt
-
-console.log(mimes.fxp)
-// logs application/vnd.adobe.fxp
-
-console.log(mimes.fxpl)
-// logs application/vnd.adobe.fxp
-
-console.log(mimes.xdp)
-// logs application/vnd.adobe.xdp+xml
-
-console.log(mimes.xfdf)
-// logs application/vnd.adobe.xfdf
-
-console.log(mimes.ahead)
-// logs application/vnd.ahead.space
-
-console.log(mimes.azf)
-// logs application/vnd.airzip.filesecure.azf
-
-console.log(mimes.azs)
-// logs application/vnd.airzip.filesecure.azs
-
-console.log(mimes.azw)
-// logs application/vnd.amazon.ebook
-
-console.log(mimes.acc)
-// logs application/vnd.americandynamics.acc
-
-console.log(mimes.ami)
-// logs application/vnd.amiga.ami
-
-console.log(mimes.apk)
-// logs application/vnd.android.package-archive
-
-console.log(mimes.cii)
-// logs application/vnd.anser-web-certificate-issue-initiation
-
-console.log(mimes.fti)
-// logs application/vnd.anser-web-funds-transfer-initiation
-
-console.log(mimes.atx)
-// logs application/vnd.antix.game-component
-
-console.log(mimes.mpkg)
-// logs application/vnd.apple.installer+xml
-
-console.log(mimes.key)
-// logs application/vnd.apple.keynote
-
-console.log(mimes.m3u8)
-// logs application/vnd.apple.mpegurl
-
-console.log(mimes.numbers)
-// logs application/vnd.apple.numbers
-
-console.log(mimes.pages)
-// logs application/vnd.apple.pages
-
-console.log(mimes.pkpass)
-// logs application/vnd.apple.pkpass
-
-console.log(mimes.swi)
-// logs application/vnd.aristanetworks.swi
-
-console.log(mimes.iota)
-// logs application/vnd.astraea-software.iota
-
-console.log(mimes.aep)
-// logs application/vnd.audiograph
-
-console.log(mimes.bmml)
-// logs application/vnd.balsamiq.bmml+xml
-
-console.log(mimes.mpm)
-// logs application/vnd.blueice.multipass
-
-console.log(mimes.bmi)
-// logs application/vnd.bmi
-
-console.log(mimes.rep)
-// logs application/vnd.businessobjects
-
-console.log(mimes.cdxml)
-// logs application/vnd.chemdraw+xml
-
-console.log(mimes.mmd)
-// logs application/vnd.chipnuts.karaoke-mmd
-
-console.log(mimes.cdy)
-// logs application/vnd.cinderella
-
-console.log(mimes.csl)
-// logs application/vnd.citationstyles.style+xml
-
-console.log(mimes.cla)
-// logs application/vnd.claymore
-
-console.log(mimes.rp9)
-// logs application/vnd.cloanto.rp9
-
-console.log(mimes.c4g)
-// logs application/vnd.clonk.c4group
-
-console.log(mimes.c4d)
-// logs application/vnd.clonk.c4group
-
-console.log(mimes.c4f)
-// logs application/vnd.clonk.c4group
-
-console.log(mimes.c4p)
-// logs application/vnd.clonk.c4group
-
-console.log(mimes.c4u)
-// logs application/vnd.clonk.c4group
-
-console.log(mimes.c11amc)
-// logs application/vnd.cluetrust.cartomobile-config
-
-console.log(mimes.c11amz)
-// logs application/vnd.cluetrust.cartomobile-config-pkg
-
-console.log(mimes.csp)
-// logs application/vnd.commonspace
-
-console.log(mimes.cdbcmsg)
-// logs application/vnd.contact.cmsg
-
-console.log(mimes.cmc)
-// logs application/vnd.cosmocaller
-
-console.log(mimes.clkx)
-// logs application/vnd.crick.clicker
-
-console.log(mimes.clkk)
-// logs application/vnd.crick.clicker.keyboard
-
-console.log(mimes.clkp)
-// logs application/vnd.crick.clicker.palette
-
-console.log(mimes.clkt)
-// logs application/vnd.crick.clicker.template
-
-console.log(mimes.clkw)
-// logs application/vnd.crick.clicker.wordbank
-
-console.log(mimes.wbs)
-// logs application/vnd.criticaltools.wbs+xml
-
-console.log(mimes.pml)
-// logs application/vnd.ctc-posml
-
-console.log(mimes.ppd)
-// logs application/vnd.cups-ppd
-
-console.log(mimes.car)
-// logs application/vnd.curl.car
-
-console.log(mimes.pcurl)
-// logs application/vnd.curl.pcurl
-
-console.log(mimes.dart)
-// logs application/vnd.dart
-
-console.log(mimes.rdz)
-// logs application/vnd.data-vision.rdz
-
-console.log(mimes.dbf)
-// logs application/vnd.dbf
-
-console.log(mimes.uvf)
-// logs application/vnd.dece.data
-
-console.log(mimes.uvvf)
-// logs application/vnd.dece.data
-
-console.log(mimes.uvd)
-// logs application/vnd.dece.data
-
-console.log(mimes.uvvd)
-// logs application/vnd.dece.data
-
-console.log(mimes.uvt)
-// logs application/vnd.dece.ttml+xml
-
-console.log(mimes.uvvt)
-// logs application/vnd.dece.ttml+xml
-
-console.log(mimes.uvx)
-// logs application/vnd.dece.unspecified
-
-console.log(mimes.uvvx)
-// logs application/vnd.dece.unspecified
-
-console.log(mimes.uvz)
-// logs application/vnd.dece.zip
-
-console.log(mimes.uvvz)
-// logs application/vnd.dece.zip
-
-console.log(mimes.fe_launch)
-// logs application/vnd.denovo.fcselayout-link
-
-console.log(mimes.dna)
-// logs application/vnd.dna
-
-console.log(mimes.mlp)
-// logs application/vnd.dolby.mlp
-
-console.log(mimes.dpg)
-// logs application/vnd.dpgraph
-
-console.log(mimes.dfac)
-// logs application/vnd.dreamfactory
-
-console.log(mimes.kpxx)
-// logs application/vnd.ds-keypoint
-
-console.log(mimes.ait)
-// logs application/vnd.dvb.ait
-
-console.log(mimes.svc)
-// logs application/vnd.dvb.service
-
-console.log(mimes.geo)
-// logs application/vnd.dynageo
-
-console.log(mimes.mag)
-// logs application/vnd.ecowin.chart
-
-console.log(mimes.nml)
-// logs application/vnd.enliven
-
-console.log(mimes.esf)
-// logs application/vnd.epson.esf
-
-console.log(mimes.msf)
-// logs application/vnd.epson.msf
-
-console.log(mimes.qam)
-// logs application/vnd.epson.quickanime
-
-console.log(mimes.slt)
-// logs application/vnd.epson.salt
-
-console.log(mimes.ssf)
-// logs application/vnd.epson.ssf
-
-console.log(mimes.es3)
-// logs application/vnd.eszigno3+xml
-
-console.log(mimes.et3)
-// logs application/vnd.eszigno3+xml
-
-console.log(mimes.ez2)
-// logs application/vnd.ezpix-album
-
-console.log(mimes.ez3)
-// logs application/vnd.ezpix-package
-
-console.log(mimes.fdf)
-// logs application/vnd.fdf
-
-console.log(mimes.mseed)
-// logs application/vnd.fdsn.mseed
-
-console.log(mimes.seed)
-// logs application/vnd.fdsn.seed
-
-console.log(mimes.dataless)
-// logs application/vnd.fdsn.seed
-
-console.log(mimes.gph)
-// logs application/vnd.flographit
-
-console.log(mimes.ftc)
-// logs application/vnd.fluxtime.clip
-
-console.log(mimes.fm)
-// logs application/vnd.framemaker
-
-console.log(mimes.frame)
-// logs application/vnd.framemaker
-
-console.log(mimes.maker)
-// logs application/vnd.framemaker
-
-console.log(mimes.book)
-// logs application/vnd.framemaker
-
-console.log(mimes.fnc)
-// logs application/vnd.frogans.fnc
-
-console.log(mimes.ltf)
-// logs application/vnd.frogans.ltf
-
-console.log(mimes.fsc)
-// logs application/vnd.fsc.weblaunch
-
-console.log(mimes.oas)
-// logs application/vnd.fujitsu.oasys
-
-console.log(mimes.oa2)
-// logs application/vnd.fujitsu.oasys2
-
-console.log(mimes.oa3)
-// logs application/vnd.fujitsu.oasys3
-
-console.log(mimes.fg5)
-// logs application/vnd.fujitsu.oasysgp
-
-console.log(mimes.bh2)
-// logs application/vnd.fujitsu.oasysprs
-
-console.log(mimes.ddd)
-// logs application/vnd.fujixerox.ddd
-
-console.log(mimes.xdw)
-// logs application/vnd.fujixerox.docuworks
-
-console.log(mimes.xbd)
-// logs application/vnd.fujixerox.docuworks.binder
-
-console.log(mimes.fzs)
-// logs application/vnd.fuzzysheet
-
-console.log(mimes.txd)
-// logs application/vnd.genomatix.tuxedo
-
-console.log(mimes.ggb)
-// logs application/vnd.geogebra.file
-
-console.log(mimes.ggt)
-// logs application/vnd.geogebra.tool
-
-console.log(mimes.gex)
-// logs application/vnd.geometry-explorer
-
-console.log(mimes.gre)
-// logs application/vnd.geometry-explorer
-
-console.log(mimes.gxt)
-// logs application/vnd.geonext
-
-console.log(mimes.g2w)
-// logs application/vnd.geoplan
-
-console.log(mimes.g3w)
-// logs application/vnd.geospace
-
-console.log(mimes.gmx)
-// logs application/vnd.gmx
-
-console.log(mimes.gdoc)
-// logs application/vnd.google-apps.document
-
-console.log(mimes.gslides)
-// logs application/vnd.google-apps.presentation
-
-console.log(mimes.gsheet)
-// logs application/vnd.google-apps.spreadsheet
-
-console.log(mimes.kml)
-// logs application/vnd.google-earth.kml+xml
-
-console.log(mimes.kmz)
-// logs application/vnd.google-earth.kmz
-
-console.log(mimes.gqf)
-// logs application/vnd.grafeq
-
-console.log(mimes.gqs)
-// logs application/vnd.grafeq
-
-console.log(mimes.gac)
-// logs application/vnd.groove-account
-
-console.log(mimes.ghf)
-// logs application/vnd.groove-help
-
-console.log(mimes.gim)
-// logs application/vnd.groove-identity-message
-
-console.log(mimes.grv)
-// logs application/vnd.groove-injector
-
-console.log(mimes.gtm)
-// logs application/vnd.groove-tool-message
-
-console.log(mimes.tpl)
-// logs application/vnd.groove-tool-template
-
-console.log(mimes.vcg)
-// logs application/vnd.groove-vcard
-
-console.log(mimes.hal)
-// logs application/vnd.hal+xml
-
-console.log(mimes.zmm)
-// logs application/vnd.handheld-entertainment+xml
-
-console.log(mimes.hbci)
-// logs application/vnd.hbci
-
-console.log(mimes.les)
-// logs application/vnd.hhe.lesson-player
-
-console.log(mimes.hpgl)
-// logs application/vnd.hp-hpgl
-
-console.log(mimes.hpid)
-// logs application/vnd.hp-hpid
-
-console.log(mimes.hps)
-// logs application/vnd.hp-hps
-
-console.log(mimes.jlt)
-// logs application/vnd.hp-jlyt
-
-console.log(mimes.pcl)
-// logs application/vnd.hp-pcl
-
-console.log(mimes.pclxl)
-// logs application/vnd.hp-pclxl
-
-console.log(mimes.sfd-hdstx)
-// logs application/vnd.hydrostatix.sof-data
-
-console.log(mimes.mpy)
-// logs application/vnd.ibm.minipay
-
-console.log(mimes.afp)
-// logs application/vnd.ibm.modcap
-
-console.log(mimes.listafp)
-// logs application/vnd.ibm.modcap
-
-console.log(mimes.list3820)
-// logs application/vnd.ibm.modcap
-
-console.log(mimes.irm)
-// logs application/vnd.ibm.rights-management
-
-console.log(mimes.sc)
-// logs application/vnd.ibm.secure-container
-
-console.log(mimes.icc)
-// logs application/vnd.iccprofile
-
-console.log(mimes.icm)
-// logs application/vnd.iccprofile
-
-console.log(mimes.igl)
-// logs application/vnd.igloader
-
-console.log(mimes.ivp)
-// logs application/vnd.immervision-ivp
-
-console.log(mimes.ivu)
-// logs application/vnd.immervision-ivu
-
-console.log(mimes.igm)
-// logs application/vnd.insors.igm
-
-console.log(mimes.xpw)
-// logs application/vnd.intercon.formnet
-
-console.log(mimes.xpx)
-// logs application/vnd.intercon.formnet
-
-console.log(mimes.i2g)
-// logs application/vnd.intergeo
-
-console.log(mimes.qbo)
-// logs application/vnd.intu.qbo
-
-console.log(mimes.qfx)
-// logs application/vnd.intu.qfx
-
-console.log(mimes.rcprofile)
-// logs application/vnd.ipunplugged.rcprofile
-
-console.log(mimes.irp)
-// logs application/vnd.irepository.package+xml
-
-console.log(mimes.xpr)
-// logs application/vnd.is-xpr
-
-console.log(mimes.fcs)
-// logs application/vnd.isac.fcs
-
-console.log(mimes.jam)
-// logs application/vnd.jam
-
-console.log(mimes.rms)
-// logs application/vnd.jcp.javame.midlet-rms
-
-console.log(mimes.jisp)
-// logs application/vnd.jisp
-
-console.log(mimes.joda)
-// logs application/vnd.joost.joda-archive
-
-console.log(mimes.ktz)
-// logs application/vnd.kahootz
-
-console.log(mimes.ktr)
-// logs application/vnd.kahootz
-
-console.log(mimes.karbon)
-// logs application/vnd.kde.karbon
-
-console.log(mimes.chrt)
-// logs application/vnd.kde.kchart
-
-console.log(mimes.kfo)
-// logs application/vnd.kde.kformula
-
-console.log(mimes.flw)
-// logs application/vnd.kde.kivio
-
-console.log(mimes.kon)
-// logs application/vnd.kde.kontour
-
-console.log(mimes.kpr)
-// logs application/vnd.kde.kpresenter
-
-console.log(mimes.kpt)
-// logs application/vnd.kde.kpresenter
-
-console.log(mimes.ksp)
-// logs application/vnd.kde.kspread
-
-console.log(mimes.kwd)
-// logs application/vnd.kde.kword
-
-console.log(mimes.kwt)
-// logs application/vnd.kde.kword
-
-console.log(mimes.htke)
-// logs application/vnd.kenameaapp
-
-console.log(mimes.kia)
-// logs application/vnd.kidspiration
-
-console.log(mimes.kne)
-// logs application/vnd.kinar
-
-console.log(mimes.knp)
-// logs application/vnd.kinar
-
-console.log(mimes.skp)
-// logs application/vnd.koan
-
-console.log(mimes.skd)
-// logs application/vnd.koan
-
-console.log(mimes.skt)
-// logs application/vnd.koan
-
-console.log(mimes.skm)
-// logs application/vnd.koan
-
-console.log(mimes.sse)
-// logs application/vnd.kodak-descriptor
-
-console.log(mimes.lasxml)
-// logs application/vnd.las.las+xml
-
-console.log(mimes.lbd)
-// logs application/vnd.llamagraphics.life-balance.desktop
-
-console.log(mimes.lbe)
-// logs application/vnd.llamagraphics.life-balance.exchange+xml
-
-console.log(mimes.123)
-// logs application/vnd.lotus-1-2-3
-
-console.log(mimes.apr)
-// logs application/vnd.lotus-approach
-
-console.log(mimes.pre)
-// logs application/vnd.lotus-freelance
-
-console.log(mimes.nsf)
-// logs application/vnd.lotus-notes
-
-console.log(mimes.org)
-// logs text/x-org
-
-console.log(mimes.scm)
-// logs application/vnd.lotus-screencam
-
-console.log(mimes.lwp)
-// logs application/vnd.lotus-wordpro
-
-console.log(mimes.portpkg)
-// logs application/vnd.macports.portpkg
-
-console.log(mimes.mcd)
-// logs application/vnd.mcd
-
-console.log(mimes.mc1)
-// logs application/vnd.medcalcdata
-
-console.log(mimes.cdkey)
-// logs application/vnd.mediastation.cdkey
-
-console.log(mimes.mwf)
-// logs application/vnd.mfer
-
-console.log(mimes.mfm)
-// logs application/vnd.mfmp
-
-console.log(mimes.flo)
-// logs application/vnd.micrografx.flo
-
-console.log(mimes.igx)
-// logs application/vnd.micrografx.igx
-
-console.log(mimes.mif)
-// logs application/vnd.mif
-
-console.log(mimes.daf)
-// logs application/vnd.mobius.daf
-
-console.log(mimes.dis)
-// logs application/vnd.mobius.dis
-
-console.log(mimes.mbk)
-// logs application/vnd.mobius.mbk
-
-console.log(mimes.mqy)
-// logs application/vnd.mobius.mqy
-
-console.log(mimes.msl)
-// logs application/vnd.mobius.msl
-
-console.log(mimes.plc)
-// logs application/vnd.mobius.plc
-
-console.log(mimes.txf)
-// logs application/vnd.mobius.txf
-
-console.log(mimes.mpn)
-// logs application/vnd.mophun.application
-
-console.log(mimes.mpc)
-// logs application/vnd.mophun.certificate
-
-console.log(mimes.xul)
-// logs application/vnd.mozilla.xul+xml
-
-console.log(mimes.cil)
-// logs application/vnd.ms-artgalry
-
-console.log(mimes.cab)
-// logs application/vnd.ms-cab-compressed
-
-console.log(mimes.xls)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xlm)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xla)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xlc)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xlt)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xlw)
-// logs application/vnd.ms-excel
-
-console.log(mimes.xlam)
-// logs application/vnd.ms-excel.addin.macroenabled.12
-
-console.log(mimes.xlsb)
-// logs application/vnd.ms-excel.sheet.binary.macroenabled.12
-
-console.log(mimes.xlsm)
-// logs application/vnd.ms-excel.sheet.macroenabled.12
-
-console.log(mimes.xltm)
-// logs application/vnd.ms-excel.template.macroenabled.12
-
-console.log(mimes.eot)
-// logs application/vnd.ms-fontobject
-
-console.log(mimes.chm)
-// logs application/vnd.ms-htmlhelp
-
-console.log(mimes.ims)
-// logs application/vnd.ms-ims
-
-console.log(mimes.lrm)
-// logs application/vnd.ms-lrm
-
-console.log(mimes.thmx)
-// logs application/vnd.ms-officetheme
-
-console.log(mimes.msg)
-// logs application/vnd.ms-outlook
-
-console.log(mimes.cat)
-// logs application/vnd.ms-pki.seccat
-
-console.log(mimes.stl)
-// logs model/stl
-
-console.log(mimes.ppt)
-// logs application/vnd.ms-powerpoint
-
-console.log(mimes.pps)
-// logs application/vnd.ms-powerpoint
-
-console.log(mimes.pot)
-// logs application/vnd.ms-powerpoint
-
-console.log(mimes.ppam)
-// logs application/vnd.ms-powerpoint.addin.macroenabled.12
-
-console.log(mimes.pptm)
-// logs application/vnd.ms-powerpoint.presentation.macroenabled.12
-
-console.log(mimes.sldm)
-// logs application/vnd.ms-powerpoint.slide.macroenabled.12
-
-console.log(mimes.ppsm)
-// logs application/vnd.ms-powerpoint.slideshow.macroenabled.12
-
-console.log(mimes.potm)
-// logs application/vnd.ms-powerpoint.template.macroenabled.12
-
-console.log(mimes.mpp)
-// logs application/vnd.ms-project
-
-console.log(mimes.mpt)
-// logs application/vnd.ms-project
-
-console.log(mimes.docm)
-// logs application/vnd.ms-word.document.macroenabled.12
-
-console.log(mimes.dotm)
-// logs application/vnd.ms-word.template.macroenabled.12
-
-console.log(mimes.wps)
-// logs application/vnd.ms-works
-
-console.log(mimes.wks)
-// logs application/vnd.ms-works
-
-console.log(mimes.wcm)
-// logs application/vnd.ms-works
-
-console.log(mimes.wdb)
-// logs application/vnd.ms-works
-
-console.log(mimes.wpl)
-// logs application/vnd.ms-wpl
-
-console.log(mimes.xps)
-// logs application/vnd.ms-xpsdocument
-
-console.log(mimes.mseq)
-// logs application/vnd.mseq
-
-console.log(mimes.mus)
-// logs application/vnd.musician
-
-console.log(mimes.msty)
-// logs application/vnd.muvee.style
-
-console.log(mimes.taglet)
-// logs application/vnd.mynfc
-
-console.log(mimes.nlu)
-// logs application/vnd.neurolanguage.nlu
-
-console.log(mimes.ntf)
-// logs application/vnd.nitf
-
-console.log(mimes.nitf)
-// logs application/vnd.nitf
-
-console.log(mimes.nnd)
-// logs application/vnd.noblenet-directory
-
-console.log(mimes.nns)
-// logs application/vnd.noblenet-sealer
-
-console.log(mimes.nnw)
-// logs application/vnd.noblenet-web
-
-console.log(mimes.ac)
-// logs application/vnd.nokia.n-gage.ac+xml
-
-console.log(mimes.ngdat)
-// logs application/vnd.nokia.n-gage.data
-
-console.log(mimes.n-gage)
-// logs application/vnd.nokia.n-gage.symbian.install
-
-console.log(mimes.rpst)
-// logs application/vnd.nokia.radio-preset
-
-console.log(mimes.rpss)
-// logs application/vnd.nokia.radio-presets
-
-console.log(mimes.edm)
-// logs application/vnd.novadigm.edm
-
-console.log(mimes.edx)
-// logs application/vnd.novadigm.edx
-
-console.log(mimes.ext)
-// logs application/vnd.novadigm.ext
-
-console.log(mimes.odc)
-// logs application/vnd.oasis.opendocument.chart
-
-console.log(mimes.otc)
-// logs application/vnd.oasis.opendocument.chart-template
-
-console.log(mimes.odb)
-// logs application/vnd.oasis.opendocument.database
-
-console.log(mimes.odf)
-// logs application/vnd.oasis.opendocument.formula
-
-console.log(mimes.odft)
-// logs application/vnd.oasis.opendocument.formula-template
-
-console.log(mimes.odg)
-// logs application/vnd.oasis.opendocument.graphics
-
-console.log(mimes.otg)
-// logs application/vnd.oasis.opendocument.graphics-template
-
-console.log(mimes.odi)
-// logs application/vnd.oasis.opendocument.image
-
-console.log(mimes.oti)
-// logs application/vnd.oasis.opendocument.image-template
-
-console.log(mimes.odp)
-// logs application/vnd.oasis.opendocument.presentation
-
-console.log(mimes.otp)
-// logs application/vnd.oasis.opendocument.presentation-template
-
-console.log(mimes.ods)
-// logs application/vnd.oasis.opendocument.spreadsheet
-
-console.log(mimes.ots)
-// logs application/vnd.oasis.opendocument.spreadsheet-template
-
-console.log(mimes.odt)
-// logs application/vnd.oasis.opendocument.text
-
-console.log(mimes.odm)
-// logs application/vnd.oasis.opendocument.text-master
-
-console.log(mimes.ott)
-// logs application/vnd.oasis.opendocument.text-template
-
-console.log(mimes.oth)
-// logs application/vnd.oasis.opendocument.text-web
-
-console.log(mimes.xo)
-// logs application/vnd.olpc-sugar
-
-console.log(mimes.dd2)
-// logs application/vnd.oma.dd2+xml
-
-console.log(mimes.obgx)
-// logs application/vnd.openblox.game+xml
-
-console.log(mimes.oxt)
-// logs application/vnd.openofficeorg.extension
-
-console.log(mimes.osm)
-// logs application/vnd.openstreetmap.data+xml
-
-console.log(mimes.pptx)
-// logs application/vnd.openxmlformats-officedocument.presentationml.presentation
-
-console.log(mimes.sldx)
-// logs application/vnd.openxmlformats-officedocument.presentationml.slide
-
-console.log(mimes.ppsx)
-// logs application/vnd.openxmlformats-officedocument.presentationml.slideshow
-
-console.log(mimes.potx)
-// logs application/vnd.openxmlformats-officedocument.presentationml.template
-
-console.log(mimes.xlsx)
-// logs application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-console.log(mimes.xltx)
-// logs application/vnd.openxmlformats-officedocument.spreadsheetml.template
-
-console.log(mimes.docx)
-// logs application/vnd.openxmlformats-officedocument.wordprocessingml.document
-
-console.log(mimes.dotx)
-// logs application/vnd.openxmlformats-officedocument.wordprocessingml.template
-
-console.log(mimes.mgp)
-// logs application/vnd.osgeo.mapguide.package
-
-console.log(mimes.dp)
-// logs application/vnd.osgi.dp
-
-console.log(mimes.esa)
-// logs application/vnd.osgi.subsystem
-
-console.log(mimes.pdb)
-// logs application/x-pilot
-
-console.log(mimes.pqa)
-// logs application/vnd.palm
-
-console.log(mimes.oprc)
-// logs application/vnd.palm
-
-console.log(mimes.paw)
-// logs application/vnd.pawaafile
-
-console.log(mimes.str)
-// logs application/vnd.pg.format
-
-console.log(mimes.ei6)
-// logs application/vnd.pg.osasli
-
-console.log(mimes.efif)
-// logs application/vnd.picsel
-
-console.log(mimes.wg)
-// logs application/vnd.pmi.widget
-
-console.log(mimes.plf)
-// logs application/vnd.pocketlearn
-
-console.log(mimes.pbd)
-// logs application/vnd.powerbuilder6
-
-console.log(mimes.box)
-// logs application/vnd.previewsystems.box
-
-console.log(mimes.mgz)
-// logs application/vnd.proteus.magazine
-
-console.log(mimes.qps)
-// logs application/vnd.publishare-delta-tree
-
-console.log(mimes.ptid)
-// logs application/vnd.pvi.ptid1
-
-console.log(mimes.qxd)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.qxt)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.qwd)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.qwt)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.qxl)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.qxb)
-// logs application/vnd.quark.quarkxpress
-
-console.log(mimes.rar)
-// logs application/vnd.rar
-
-console.log(mimes.bed)
-// logs application/vnd.realvnc.bed
-
-console.log(mimes.mxl)
-// logs application/vnd.recordare.musicxml
-
-console.log(mimes.musicxml)
-// logs application/vnd.recordare.musicxml+xml
-
-console.log(mimes.cryptonote)
-// logs application/vnd.rig.cryptonote
-
-console.log(mimes.cod)
-// logs application/vnd.rim.cod
-
-console.log(mimes.rm)
-// logs application/vnd.rn-realmedia
-
-console.log(mimes.rmvb)
-// logs application/vnd.rn-realmedia-vbr
-
-console.log(mimes.link66)
-// logs application/vnd.route66.link66+xml
-
-console.log(mimes.st)
-// logs application/vnd.sailingtracker.track
-
-console.log(mimes.see)
-// logs application/vnd.seemail
-
-console.log(mimes.sema)
-// logs application/vnd.sema
-
-console.log(mimes.semd)
-// logs application/vnd.semd
-
-console.log(mimes.semf)
-// logs application/vnd.semf
-
-console.log(mimes.ifm)
-// logs application/vnd.shana.informed.formdata
-
-console.log(mimes.itp)
-// logs application/vnd.shana.informed.formtemplate
-
-console.log(mimes.iif)
-// logs application/vnd.shana.informed.interchange
-
-console.log(mimes.ipk)
-// logs application/vnd.shana.informed.package
-
-console.log(mimes.twd)
-// logs application/vnd.simtech-mindmapper
-
-console.log(mimes.twds)
-// logs application/vnd.simtech-mindmapper
-
-console.log(mimes.mmf)
-// logs application/vnd.smaf
-
-console.log(mimes.teacher)
-// logs application/vnd.smart.teacher
-
-console.log(mimes.fo)
-// logs application/vnd.software602.filler.form+xml
-
-console.log(mimes.sdkm)
-// logs application/vnd.solent.sdkm+xml
-
-console.log(mimes.sdkd)
-// logs application/vnd.solent.sdkm+xml
-
-console.log(mimes.dxp)
-// logs application/vnd.spotfire.dxp
-
-console.log(mimes.sfs)
-// logs application/vnd.spotfire.sfs
-
-console.log(mimes.sdc)
-// logs application/vnd.stardivision.calc
-
-console.log(mimes.sda)
-// logs application/vnd.stardivision.draw
-
-console.log(mimes.sdd)
-// logs application/vnd.stardivision.impress
-
-console.log(mimes.smf)
-// logs application/vnd.stardivision.math
-
-console.log(mimes.sdw)
-// logs application/vnd.stardivision.writer
-
-console.log(mimes.vor)
-// logs application/vnd.stardivision.writer
-
-console.log(mimes.sgl)
-// logs application/vnd.stardivision.writer-global
-
-console.log(mimes.smzip)
-// logs application/vnd.stepmania.package
-
-console.log(mimes.sm)
-// logs application/vnd.stepmania.stepchart
-
-console.log(mimes.wadl)
-// logs application/vnd.sun.wadl+xml
-
-console.log(mimes.sxc)
-// logs application/vnd.sun.xml.calc
-
-console.log(mimes.stc)
-// logs application/vnd.sun.xml.calc.template
-
-console.log(mimes.sxd)
-// logs application/vnd.sun.xml.draw
-
-console.log(mimes.std)
-// logs application/vnd.sun.xml.draw.template
-
-console.log(mimes.sxi)
-// logs application/vnd.sun.xml.impress
-
-console.log(mimes.sti)
-// logs application/vnd.sun.xml.impress.template
-
-console.log(mimes.sxm)
-// logs application/vnd.sun.xml.math
-
-console.log(mimes.sxw)
-// logs application/vnd.sun.xml.writer
-
-console.log(mimes.sxg)
-// logs application/vnd.sun.xml.writer.global
-
-console.log(mimes.stw)
-// logs application/vnd.sun.xml.writer.template
-
-console.log(mimes.sus)
-// logs application/vnd.sus-calendar
-
-console.log(mimes.susp)
-// logs application/vnd.sus-calendar
-
-console.log(mimes.svd)
-// logs application/vnd.svd
-
-console.log(mimes.sis)
-// logs application/vnd.symbian.install
-
-console.log(mimes.sisx)
-// logs application/vnd.symbian.install
-
-console.log(mimes.xsm)
-// logs application/vnd.syncml+xml
-
-console.log(mimes.bdm)
-// logs application/vnd.syncml.dm+wbxml
-
-console.log(mimes.xdm)
-// logs application/vnd.syncml.dm+xml
-
-console.log(mimes.ddf)
-// logs application/vnd.syncml.dmddf+xml
-
-console.log(mimes.tao)
-// logs application/vnd.tao.intent-module-archive
-
-console.log(mimes.pcap)
-// logs application/vnd.tcpdump.pcap
-
-console.log(mimes.cap)
-// logs application/vnd.tcpdump.pcap
-
-console.log(mimes.dmp)
-// logs application/vnd.tcpdump.pcap
-
-console.log(mimes.tmo)
-// logs application/vnd.tmobile-livetv
-
-console.log(mimes.tpt)
-// logs application/vnd.trid.tpt
-
-console.log(mimes.mxs)
-// logs application/vnd.triscape.mxs
-
-console.log(mimes.tra)
-// logs application/vnd.trueapp
-
-console.log(mimes.ufd)
-// logs application/vnd.ufdl
-
-console.log(mimes.ufdl)
-// logs application/vnd.ufdl
-
-console.log(mimes.utz)
-// logs application/vnd.uiq.theme
-
-console.log(mimes.umj)
-// logs application/vnd.umajin
-
-console.log(mimes.unityweb)
-// logs application/vnd.unity
-
-console.log(mimes.uoml)
-// logs application/vnd.uoml+xml
-
-console.log(mimes.vcx)
-// logs application/vnd.vcx
-
-console.log(mimes.vsd)
-// logs application/vnd.visio
-
-console.log(mimes.vst)
-// logs application/vnd.visio
-
-console.log(mimes.vss)
-// logs application/vnd.visio
-
-console.log(mimes.vsw)
-// logs application/vnd.visio
-
-console.log(mimes.vis)
-// logs application/vnd.visionary
-
-console.log(mimes.vsf)
-// logs application/vnd.vsf
-
-console.log(mimes.wbxml)
-// logs application/vnd.wap.wbxml
-
-console.log(mimes.wmlc)
-// logs application/vnd.wap.wmlc
-
-console.log(mimes.wmlsc)
-// logs application/vnd.wap.wmlscriptc
-
-console.log(mimes.wtb)
-// logs application/vnd.webturbo
-
-console.log(mimes.nbp)
-// logs application/vnd.wolfram.player
-
-console.log(mimes.wpd)
-// logs application/vnd.wordperfect
-
-console.log(mimes.wqd)
-// logs application/vnd.wqd
-
-console.log(mimes.stf)
-// logs application/vnd.wt.stf
-
-console.log(mimes.xar)
-// logs application/vnd.xara
-
-console.log(mimes.xfdl)
-// logs application/vnd.xfdl
-
-console.log(mimes.hvd)
-// logs application/vnd.yamaha.hv-dic
-
-console.log(mimes.hvs)
-// logs application/vnd.yamaha.hv-script
-
-console.log(mimes.hvp)
-// logs application/vnd.yamaha.hv-voice
-
-console.log(mimes.osf)
-// logs application/vnd.yamaha.openscoreformat
-
-console.log(mimes.osfpvg)
-// logs application/vnd.yamaha.openscoreformat.osfpvg+xml
-
-console.log(mimes.saf)
-// logs application/vnd.yamaha.smaf-audio
-
-console.log(mimes.spf)
-// logs application/vnd.yamaha.smaf-phrase
-
-console.log(mimes.cmp)
-// logs application/vnd.yellowriver-custom-menu
-
-console.log(mimes.zir)
-// logs application/vnd.zul
-
-console.log(mimes.zirz)
-// logs application/vnd.zul
-
-console.log(mimes.zaz)
-// logs application/vnd.zzazz.deck+xml
-
-console.log(mimes.vxml)
-// logs application/voicexml+xml
-
-console.log(mimes.wasm)
-// logs application/wasm
-
-console.log(mimes.wgt)
-// logs application/widget
-
-console.log(mimes.hlp)
-// logs application/winhlp
-
-console.log(mimes.wsdl)
-// logs application/wsdl+xml
-
-console.log(mimes.wspolicy)
-// logs application/wspolicy+xml
-
-console.log(mimes.7z)
-// logs application/x-7z-compressed
-
-console.log(mimes.abw)
-// logs application/x-abiword
-
-console.log(mimes.ace)
-// logs application/x-ace-compressed
-
-console.log(mimes.dmg)
-// logs application/octet-stream
-
-console.log(mimes.arj)
-// logs application/x-arj
-
-console.log(mimes.aab)
-// logs application/x-authorware-bin
-
-console.log(mimes.x32)
-// logs application/x-authorware-bin
-
-console.log(mimes.u32)
-// logs application/x-authorware-bin
-
-console.log(mimes.vox)
-// logs application/x-authorware-bin
-
-console.log(mimes.aam)
-// logs application/x-authorware-map
-
-console.log(mimes.aas)
-// logs application/x-authorware-seg
-
-console.log(mimes.bcpio)
-// logs application/x-bcpio
-
-console.log(mimes.bdoc)
-// logs application/bdoc
-
-console.log(mimes.torrent)
-// logs application/x-bittorrent
-
-console.log(mimes.blb)
-// logs application/x-blorb
-
-console.log(mimes.blorb)
-// logs application/x-blorb
-
-console.log(mimes.bz)
-// logs application/x-bzip
-
-console.log(mimes.bz2)
-// logs application/x-bzip2
-
-console.log(mimes.boz)
-// logs application/x-bzip2
-
-console.log(mimes.cbr)
-// logs application/x-cbr
-
-console.log(mimes.cba)
-// logs application/x-cbr
-
-console.log(mimes.cbt)
-// logs application/x-cbr
-
-console.log(mimes.cbz)
-// logs application/x-cbr
-
-console.log(mimes.cb7)
-// logs application/x-cbr
-
-console.log(mimes.vcd)
-// logs application/x-cdlink
-
-console.log(mimes.cfs)
-// logs application/x-cfs-compressed
-
-console.log(mimes.chat)
-// logs application/x-chat
-
-console.log(mimes.pgn)
-// logs application/x-chess-pgn
-
-console.log(mimes.crx)
-// logs application/x-chrome-extension
-
-console.log(mimes.cco)
-// logs application/x-cocoa
-
-console.log(mimes.nsc)
-// logs application/x-conference
-
-console.log(mimes.cpio)
-// logs application/x-cpio
-
-console.log(mimes.csh)
-// logs application/x-csh
-
-console.log(mimes.deb)
-// logs application/x-debian-package
-
-console.log(mimes.udeb)
-// logs application/x-debian-package
-
-console.log(mimes.dgc)
-// logs application/x-dgc-compressed
-
-console.log(mimes.dir)
-// logs application/x-director
-
-console.log(mimes.dcr)
-// logs application/x-director
-
-console.log(mimes.dxr)
-// logs application/x-director
-
-console.log(mimes.cst)
-// logs application/x-director
-
-console.log(mimes.cct)
-// logs application/x-director
-
-console.log(mimes.cxt)
-// logs application/x-director
-
-console.log(mimes.w3d)
-// logs application/x-director
-
-console.log(mimes.fgd)
-// logs application/x-director
-
-console.log(mimes.swa)
-// logs application/x-director
-
-console.log(mimes.wad)
-// logs application/x-doom
-
-console.log(mimes.ncx)
-// logs application/x-dtbncx+xml
-
-console.log(mimes.dtb)
-// logs application/x-dtbook+xml
-
-console.log(mimes.res)
-// logs application/x-dtbresource+xml
-
-console.log(mimes.dvi)
-// logs application/x-dvi
-
-console.log(mimes.evy)
-// logs application/x-envoy
-
-console.log(mimes.eva)
-// logs application/x-eva
-
-console.log(mimes.bdf)
-// logs application/x-font-bdf
-
-console.log(mimes.gsf)
-// logs application/x-font-ghostscript
-
-console.log(mimes.psf)
-// logs application/x-font-linux-psf
-
-console.log(mimes.pcf)
-// logs application/x-font-pcf
-
-console.log(mimes.snf)
-// logs application/x-font-snf
-
-console.log(mimes.pfa)
-// logs application/x-font-type1
-
-console.log(mimes.pfb)
-// logs application/x-font-type1
-
-console.log(mimes.pfm)
-// logs application/x-font-type1
-
-console.log(mimes.afm)
-// logs application/x-font-type1
-
-console.log(mimes.arc)
-// logs application/x-freearc
-
-console.log(mimes.spl)
-// logs application/x-futuresplash
-
-console.log(mimes.gca)
-// logs application/x-gca-compressed
-
-console.log(mimes.ulx)
-// logs application/x-glulx
-
-console.log(mimes.gnumeric)
-// logs application/x-gnumeric
-
-console.log(mimes.gramps)
-// logs application/x-gramps-xml
-
-console.log(mimes.gtar)
-// logs application/x-gtar
-
-console.log(mimes.hdf)
-// logs application/x-hdf
-
-console.log(mimes.php)
-// logs application/x-httpd-php
-
-console.log(mimes.install)
-// logs application/x-install-instructions
-
-console.log(mimes.iso)
-// logs application/octet-stream
-
-console.log(mimes.jardiff)
-// logs application/x-java-archive-diff
-
-console.log(mimes.jnlp)
-// logs application/x-java-jnlp-file
-
-console.log(mimes.kdbx)
-// logs application/x-keepass2
-
-console.log(mimes.latex)
-// logs application/x-latex
-
-console.log(mimes.luac)
-// logs application/x-lua-bytecode
-
-console.log(mimes.lzh)
-// logs application/x-lzh-compressed
-
-console.log(mimes.lha)
-// logs application/x-lzh-compressed
-
-console.log(mimes.run)
-// logs application/x-makeself
-
-console.log(mimes.mie)
-// logs application/x-mie
-
-console.log(mimes.prc)
-// logs application/x-pilot
-
-console.log(mimes.mobi)
-// logs application/x-mobipocket-ebook
-
-console.log(mimes.application)
-// logs application/x-ms-application
-
-console.log(mimes.lnk)
-// logs application/x-ms-shortcut
-
-console.log(mimes.wmd)
-// logs application/x-ms-wmd
-
-console.log(mimes.wmz)
-// logs application/x-ms-wmz
-
-console.log(mimes.xbap)
-// logs application/x-ms-xbap
-
-console.log(mimes.mdb)
-// logs application/x-msaccess
-
-console.log(mimes.obd)
-// logs application/x-msbinder
-
-console.log(mimes.crd)
-// logs application/x-mscardfile
-
-console.log(mimes.clp)
-// logs application/x-msclip
-
-console.log(mimes.exe)
-// logs application/x-msdos-program
-
-console.log(mimes.exe)
-// logs application/x-msdos-program
-
-console.log(mimes.dll)
-// logs application/octet-stream
-
-console.log(mimes.com)
-// logs application/x-msdownload
-
-console.log(mimes.bat)
-// logs application/x-msdownload
-
-console.log(mimes.msi)
-// logs application/octet-stream
-
-console.log(mimes.mvb)
-// logs application/x-msmediaview
-
-console.log(mimes.m13)
-// logs application/x-msmediaview
-
-console.log(mimes.m14)
-// logs application/x-msmediaview
-
-console.log(mimes.wmf)
-// logs image/wmf
-
-console.log(mimes.wmz)
-// logs application/x-ms-wmz
-
-console.log(mimes.emf)
-// logs image/emf
-
-console.log(mimes.emz)
-// logs application/x-msmetafile
-
-console.log(mimes.mny)
-// logs application/x-msmoney
-
-console.log(mimes.pub)
-// logs application/x-mspublisher
-
-console.log(mimes.scd)
-// logs application/x-msschedule
-
-console.log(mimes.trm)
-// logs application/x-msterminal
-
-console.log(mimes.wri)
-// logs application/x-mswrite
-
-console.log(mimes.nc)
-// logs application/x-netcdf
-
-console.log(mimes.cdf)
-// logs application/x-netcdf
-
-console.log(mimes.pac)
-// logs application/x-ns-proxy-autoconfig
-
-console.log(mimes.nzb)
-// logs application/x-nzb
-
-console.log(mimes.pl)
-// logs application/x-perl
-
-console.log(mimes.pm)
-// logs application/x-perl
-
-console.log(mimes.prc)
-// logs application/x-pilot
-
-console.log(mimes.pdb)
-// logs application/x-pilot
-
-console.log(mimes.p12)
-// logs application/x-pkcs12
-
-console.log(mimes.pfx)
-// logs application/x-pkcs12
-
-console.log(mimes.p7b)
-// logs application/x-pkcs7-certificates
-
-console.log(mimes.spc)
-// logs application/x-pkcs7-certificates
-
-console.log(mimes.p7r)
-// logs application/x-pkcs7-certreqresp
-
-console.log(mimes.rar)
-// logs application/x-rar-compressed
-
-console.log(mimes.rpm)
-// logs application/x-redhat-package-manager
-
-console.log(mimes.ris)
-// logs application/x-research-info-systems
-
-console.log(mimes.sea)
-// logs application/x-sea
-
-console.log(mimes.sh)
-// logs application/x-sh
-
-console.log(mimes.shar)
-// logs application/x-shar
-
-console.log(mimes.swf)
-// logs application/x-shockwave-flash
-
-console.log(mimes.xap)
-// logs application/x-silverlight-app
-
-console.log(mimes.sql)
-// logs application/x-sql
-
-console.log(mimes.sit)
-// logs application/x-stuffit
-
-console.log(mimes.sitx)
-// logs application/x-stuffitx
-
-console.log(mimes.srt)
-// logs application/x-subrip
-
-console.log(mimes.sv4cpio)
-// logs application/x-sv4cpio
-
-console.log(mimes.sv4crc)
-// logs application/x-sv4crc
-
-console.log(mimes.t3)
-// logs application/x-t3vm-image
-
-console.log(mimes.gam)
-// logs application/x-tads
-
-console.log(mimes.tar)
-// logs application/x-tar
-
-console.log(mimes.tcl)
-// logs application/x-tcl
-
-console.log(mimes.tk)
-// logs application/x-tcl
-
-console.log(mimes.tex)
-// logs application/x-tex
-
-console.log(mimes.tfm)
-// logs application/x-tex-tfm
-
-console.log(mimes.texinfo)
-// logs application/x-texinfo
-
-console.log(mimes.texi)
-// logs application/x-texinfo
-
-console.log(mimes.obj)
-// logs application/x-tgif
-
-console.log(mimes.ustar)
-// logs application/x-ustar
-
-console.log(mimes.hdd)
-// logs application/x-virtualbox-hdd
-
-console.log(mimes.ova)
-// logs application/x-virtualbox-ova
-
-console.log(mimes.ovf)
-// logs application/x-virtualbox-ovf
-
-console.log(mimes.vbox)
-// logs application/x-virtualbox-vbox
-
-console.log(mimes.vbox-extpack)
-// logs application/x-virtualbox-vbox-extpack
-
-console.log(mimes.vdi)
-// logs application/x-virtualbox-vdi
-
-console.log(mimes.vhd)
-// logs application/x-virtualbox-vhd
-
-console.log(mimes.vmdk)
-// logs application/x-virtualbox-vmdk
-
-console.log(mimes.src)
-// logs application/x-wais-source
-
-console.log(mimes.webapp)
-// logs application/x-web-app-manifest+json
-
-console.log(mimes.der)
-// logs application/x-x509-ca-cert
-
-console.log(mimes.crt)
-// logs application/x-x509-ca-cert
-
-console.log(mimes.pem)
-// logs application/x-x509-ca-cert
-
-console.log(mimes.fig)
-// logs application/x-xfig
-
-console.log(mimes.xlf)
-// logs application/x-xliff+xml
-
-console.log(mimes.xpi)
-// logs application/x-xpinstall
-
-console.log(mimes.xz)
-// logs application/x-xz
-
-console.log(mimes.z1)
-// logs application/x-zmachine
-
-console.log(mimes.z2)
-// logs application/x-zmachine
-
-console.log(mimes.z3)
-// logs application/x-zmachine
-
-console.log(mimes.z4)
-// logs application/x-zmachine
-
-console.log(mimes.z5)
-// logs application/x-zmachine
-
-console.log(mimes.z6)
-// logs application/x-zmachine
-
-console.log(mimes.z7)
-// logs application/x-zmachine
-
-console.log(mimes.z8)
-// logs application/x-zmachine
-
-console.log(mimes.xaml)
-// logs application/xaml+xml
-
-console.log(mimes.xav)
-// logs application/xcap-att+xml
-
-console.log(mimes.xca)
-// logs application/xcap-caps+xml
-
-console.log(mimes.xdf)
-// logs application/xcap-diff+xml
-
-console.log(mimes.xel)
-// logs application/xcap-el+xml
-
-console.log(mimes.xer)
-// logs application/xcap-error+xml
-
-console.log(mimes.xns)
-// logs application/xcap-ns+xml
-
-console.log(mimes.xenc)
-// logs application/xenc+xml
-
-console.log(mimes.xhtml)
-// logs application/xhtml+xml
-
-console.log(mimes.xht)
-// logs application/xhtml+xml
-
-console.log(mimes.xlf)
-// logs application/xliff+xml
-
-console.log(mimes.xml)
-// logs text/xml
-
-console.log(mimes.xsl)
-// logs application/xml
-
-console.log(mimes.xsd)
-// logs application/xml
-
-console.log(mimes.rng)
-// logs application/xml
-
-console.log(mimes.dtd)
-// logs application/xml-dtd
-
-console.log(mimes.xop)
-// logs application/xop+xml
-
-console.log(mimes.xpl)
-// logs application/xproc+xml
-
-console.log(mimes.xsl)
-// logs application/xslt+xml
-
-console.log(mimes.xslt)
-// logs application/xslt+xml
-
-console.log(mimes.xspf)
-// logs application/xspf+xml
-
-console.log(mimes.mxml)
-// logs application/xv+xml
-
-console.log(mimes.xhvml)
-// logs application/xv+xml
-
-console.log(mimes.xvml)
-// logs application/xv+xml
-
-console.log(mimes.xvm)
-// logs application/xv+xml
-
-console.log(mimes.yang)
-// logs application/yang
-
-console.log(mimes.yin)
-// logs application/yin+xml
-
-console.log(mimes.zip)
-// logs application/zip
-
-console.log(mimes.3gpp)
-// logs video/3gpp
-
-console.log(mimes.adp)
-// logs audio/adpcm
-
-console.log(mimes.au)
-// logs audio/basic
-
-console.log(mimes.snd)
-// logs audio/basic
-
-console.log(mimes.mid)
-// logs audio/midi
-
-console.log(mimes.midi)
-// logs audio/midi
-
-console.log(mimes.kar)
-// logs audio/midi
-
-console.log(mimes.rmi)
-// logs audio/midi
-
-console.log(mimes.mxmf)
-// logs audio/mobile-xmf
-
-console.log(mimes.mp3)
-// logs audio/mp3
-
-console.log(mimes.m4a)
-// logs audio/mp4
-
-console.log(mimes.mp4a)
-// logs audio/mp4
-
-console.log(mimes.mpga)
-// logs audio/mpeg
-
-console.log(mimes.mp2)
-// logs audio/mpeg
-
-console.log(mimes.mp2a)
-// logs audio/mpeg
-
-console.log(mimes.mp3)
-// logs audio/mp3
-
-console.log(mimes.m2a)
-// logs audio/mpeg
-
-console.log(mimes.m3a)
-// logs audio/mpeg
-
-console.log(mimes.oga)
-// logs audio/ogg
-
-console.log(mimes.ogg)
-// logs audio/ogg
-
-console.log(mimes.spx)
-// logs audio/ogg
-
-console.log(mimes.s3m)
-// logs audio/s3m
-
-console.log(mimes.sil)
-// logs audio/silk
-
-console.log(mimes.uva)
-// logs audio/vnd.dece.audio
-
-console.log(mimes.uvva)
-// logs audio/vnd.dece.audio
-
-console.log(mimes.eol)
-// logs audio/vnd.digital-winds
-
-console.log(mimes.dra)
-// logs audio/vnd.dra
-
-console.log(mimes.dts)
-// logs audio/vnd.dts
-
-console.log(mimes.dtshd)
-// logs audio/vnd.dts.hd
-
-console.log(mimes.lvp)
-// logs audio/vnd.lucent.voice
-
-console.log(mimes.pya)
-// logs audio/vnd.ms-playready.media.pya
-
-console.log(mimes.ecelp4800)
-// logs audio/vnd.nuera.ecelp4800
-
-console.log(mimes.ecelp7470)
-// logs audio/vnd.nuera.ecelp7470
-
-console.log(mimes.ecelp9600)
-// logs audio/vnd.nuera.ecelp9600
-
-console.log(mimes.rip)
-// logs audio/vnd.rip
-
-console.log(mimes.wav)
-// logs audio/wave
-
-console.log(mimes.wav)
-// logs audio/wave
-
-console.log(mimes.weba)
-// logs audio/webm
-
-console.log(mimes.aac)
-// logs audio/x-aac
-
-console.log(mimes.aif)
-// logs audio/x-aiff
-
-console.log(mimes.aiff)
-// logs audio/x-aiff
-
-console.log(mimes.aifc)
-// logs audio/x-aiff
-
-console.log(mimes.caf)
-// logs audio/x-caf
-
-console.log(mimes.flac)
-// logs audio/x-flac
-
-console.log(mimes.m4a)
-// logs audio/mp4
-
-console.log(mimes.mka)
-// logs audio/x-matroska
-
-console.log(mimes.m3u)
-// logs audio/x-mpegurl
-
-console.log(mimes.wax)
-// logs audio/x-ms-wax
-
-console.log(mimes.wma)
-// logs audio/x-ms-wma
-
-console.log(mimes.ram)
-// logs audio/x-pn-realaudio
-
-console.log(mimes.ra)
-// logs audio/x-realaudio
-
-console.log(mimes.rmp)
-// logs audio/x-pn-realaudio-plugin
-
-console.log(mimes.ra)
-// logs audio/x-realaudio
-
-console.log(mimes.wav)
-// logs audio/wave
-
-console.log(mimes.xm)
-// logs audio/xm
-
-console.log(mimes.cdx)
-// logs chemical/x-cdx
-
-console.log(mimes.cif)
-// logs chemical/x-cif
-
-console.log(mimes.cmdf)
-// logs chemical/x-cmdf
-
-console.log(mimes.cml)
-// logs chemical/x-cml
-
-console.log(mimes.csml)
-// logs chemical/x-csml
-
-console.log(mimes.xyz)
-// logs chemical/x-xyz
-
-console.log(mimes.ttc)
-// logs font/collection
-
-console.log(mimes.otf)
-// logs font/otf
-
-console.log(mimes.ttf)
-// logs font/ttf
-
-console.log(mimes.woff)
-// logs font/woff
-
-console.log(mimes.woff2)
-// logs font/woff2
-
-console.log(mimes.exr)
-// logs image/aces
-
-console.log(mimes.apng)
-// logs image/apng
-
-console.log(mimes.avif)
-// logs image/avif
-
-console.log(mimes.bmp)
-// logs image/bmp
-
-console.log(mimes.cgm)
-// logs image/cgm
-
-console.log(mimes.drle)
-// logs image/dicom-rle
-
-console.log(mimes.emf)
-// logs image/emf
-
-console.log(mimes.fits)
-// logs image/fits
-
-console.log(mimes.g3)
-// logs image/g3fax
-
-console.log(mimes.gif)
-// logs image/gif
-
-console.log(mimes.heic)
-// logs image/heic
-
-console.log(mimes.heics)
-// logs image/heic-sequence
-
-console.log(mimes.heif)
-// logs image/heif
-
-console.log(mimes.heifs)
-// logs image/heif-sequence
-
-console.log(mimes.hej2)
-// logs image/hej2k
-
-console.log(mimes.hsj2)
-// logs image/hsj2
-
-console.log(mimes.ief)
-// logs image/ief
-
-console.log(mimes.jls)
-// logs image/jls
-
-console.log(mimes.jp2)
-// logs image/jp2
-
-console.log(mimes.jpg2)
-// logs image/jp2
-
-console.log(mimes.jpeg)
-// logs image/jpeg
-
-console.log(mimes.jpg)
-// logs image/jpeg
-
-console.log(mimes.jpe)
-// logs image/jpeg
-
-console.log(mimes.jph)
-// logs image/jph
-
-console.log(mimes.jhc)
-// logs image/jphc
-
-console.log(mimes.jpm)
-// logs image/jpm
-
-console.log(mimes.jpx)
-// logs image/jpx
-
-console.log(mimes.jpf)
-// logs image/jpx
-
-console.log(mimes.jxr)
-// logs image/jxr
-
-console.log(mimes.jxra)
-// logs image/jxra
-
-console.log(mimes.jxrs)
-// logs image/jxrs
-
-console.log(mimes.jxs)
-// logs image/jxs
-
-console.log(mimes.jxsc)
-// logs image/jxsc
-
-console.log(mimes.jxsi)
-// logs image/jxsi
-
-console.log(mimes.jxss)
-// logs image/jxss
-
-console.log(mimes.ktx)
-// logs image/ktx
-
-console.log(mimes.ktx2)
-// logs image/ktx2
-
-console.log(mimes.png)
-// logs image/png
-
-console.log(mimes.btif)
-// logs image/prs.btif
-
-console.log(mimes.pti)
-// logs image/prs.pti
-
-console.log(mimes.sgi)
-// logs image/sgi
-
-console.log(mimes.svg)
-// logs image/svg+xml
-
-console.log(mimes.svgz)
-// logs image/svg+xml
-
-console.log(mimes.t38)
-// logs image/t38
-
-console.log(mimes.tif)
-// logs image/tiff
-
-console.log(mimes.tiff)
-// logs image/tiff
-
-console.log(mimes.tfx)
-// logs image/tiff-fx
-
-console.log(mimes.psd)
-// logs image/vnd.adobe.photoshop
-
-console.log(mimes.azv)
-// logs image/vnd.airzip.accelerator.azv
-
-console.log(mimes.uvi)
-// logs image/vnd.dece.graphic
-
-console.log(mimes.uvvi)
-// logs image/vnd.dece.graphic
-
-console.log(mimes.uvg)
-// logs image/vnd.dece.graphic
-
-console.log(mimes.uvvg)
-// logs image/vnd.dece.graphic
-
-console.log(mimes.djvu)
-// logs image/vnd.djvu
-
-console.log(mimes.djv)
-// logs image/vnd.djvu
-
-console.log(mimes.sub)
-// logs text/vnd.dvb.subtitle
-
-console.log(mimes.dwg)
-// logs image/vnd.dwg
-
-console.log(mimes.dxf)
-// logs image/vnd.dxf
-
-console.log(mimes.fbs)
-// logs image/vnd.fastbidsheet
-
-console.log(mimes.fpx)
-// logs image/vnd.fpx
-
-console.log(mimes.fst)
-// logs image/vnd.fst
-
-console.log(mimes.mmr)
-// logs image/vnd.fujixerox.edmics-mmr
-
-console.log(mimes.rlc)
-// logs image/vnd.fujixerox.edmics-rlc
-
-console.log(mimes.ico)
-// logs image/x-icon
-
-console.log(mimes.dds)
-// logs image/vnd.ms-dds
-
-console.log(mimes.mdi)
-// logs image/vnd.ms-modi
-
-console.log(mimes.wdp)
-// logs image/vnd.ms-photo
-
-console.log(mimes.npx)
-// logs image/vnd.net-fpx
-
-console.log(mimes.b16)
-// logs image/vnd.pco.b16
-
-console.log(mimes.tap)
-// logs image/vnd.tencent.tap
-
-console.log(mimes.vtf)
-// logs image/vnd.valve.source.texture
-
-console.log(mimes.wbmp)
-// logs image/vnd.wap.wbmp
-
-console.log(mimes.xif)
-// logs image/vnd.xiff
-
-console.log(mimes.pcx)
-// logs image/x-pcx
-
-console.log(mimes.webp)
-// logs image/webp
-
-console.log(mimes.wmf)
-// logs image/wmf
-
-console.log(mimes.3ds)
-// logs image/x-3ds
-
-console.log(mimes.ras)
-// logs image/x-cmu-raster
-
-console.log(mimes.cmx)
-// logs image/x-cmx
-
-console.log(mimes.fh)
-// logs image/x-freehand
-
-console.log(mimes.fhc)
-// logs image/x-freehand
-
-console.log(mimes.fh4)
-// logs image/x-freehand
-
-console.log(mimes.fh5)
-// logs image/x-freehand
-
-console.log(mimes.fh7)
-// logs image/x-freehand
-
-console.log(mimes.ico)
-// logs image/x-icon
-
-console.log(mimes.jng)
-// logs image/x-jng
-
-console.log(mimes.sid)
-// logs image/x-mrsid-image
-
-console.log(mimes.bmp)
-// logs image/bmp
-
-console.log(mimes.pcx)
-// logs image/x-pcx
-
-console.log(mimes.pic)
-// logs image/x-pict
-
-console.log(mimes.pct)
-// logs image/x-pict
-
-console.log(mimes.pnm)
-// logs image/x-portable-anymap
-
-console.log(mimes.pbm)
-// logs image/x-portable-bitmap
-
-console.log(mimes.pgm)
-// logs image/x-portable-graymap
-
-console.log(mimes.ppm)
-// logs image/x-portable-pixmap
-
-console.log(mimes.rgb)
-// logs image/x-rgb
-
-console.log(mimes.tga)
-// logs image/x-tga
-
-console.log(mimes.xbm)
-// logs image/x-xbitmap
-
-console.log(mimes.xpm)
-// logs image/x-xpixmap
-
-console.log(mimes.xwd)
-// logs image/x-xwindowdump
-
-console.log(mimes.disposition-notification)
-// logs message/disposition-notification
-
-console.log(mimes.u8msg)
-// logs message/global
-
-console.log(mimes.u8dsn)
-// logs message/global-delivery-status
-
-console.log(mimes.u8mdn)
-// logs message/global-disposition-notification
-
-console.log(mimes.u8hdr)
-// logs message/global-headers
-
-console.log(mimes.eml)
-// logs message/rfc822
-
-console.log(mimes.mime)
-// logs message/rfc822
-
-console.log(mimes.wsc)
-// logs message/vnd.wfa.wsc
-
-console.log(mimes.3mf)
-// logs model/3mf
-
-console.log(mimes.gltf)
-// logs model/gltf+json
-
-console.log(mimes.glb)
-// logs model/gltf-binary
-
-console.log(mimes.igs)
-// logs model/iges
-
-console.log(mimes.iges)
-// logs model/iges
-
-console.log(mimes.msh)
-// logs model/mesh
-
-console.log(mimes.mesh)
-// logs model/mesh
-
-console.log(mimes.silo)
-// logs model/mesh
-
-console.log(mimes.mtl)
-// logs model/mtl
-
-console.log(mimes.obj)
-// logs model/obj
-
-console.log(mimes.stl)
-// logs model/stl
-
-console.log(mimes.dae)
-// logs model/vnd.collada+xml
-
-console.log(mimes.dwf)
-// logs model/vnd.dwf
-
-console.log(mimes.gdl)
-// logs model/vnd.gdl
-
-console.log(mimes.gtw)
-// logs model/vnd.gtw
-
-console.log(mimes.mts)
-// logs model/vnd.mts
-
-console.log(mimes.ogex)
-// logs model/vnd.opengex
-
-console.log(mimes.x_b)
-// logs model/vnd.parasolid.transmit.binary
-
-console.log(mimes.x_t)
-// logs model/vnd.parasolid.transmit.text
-
-console.log(mimes.usdz)
-// logs model/vnd.usdz+zip
-
-console.log(mimes.bsp)
-// logs model/vnd.valve.source.compiled-map
-
-console.log(mimes.vtu)
-// logs model/vnd.vtu
-
-console.log(mimes.wrl)
-// logs model/vrml
-
-console.log(mimes.vrml)
-// logs model/vrml
-
-console.log(mimes.x3db)
-// logs model/x3d+binary
-
-console.log(mimes.x3dbz)
-// logs model/x3d+binary
-
-console.log(mimes.x3db)
-// logs model/x3d+binary
-
-console.log(mimes.x3dv)
-// logs model/x3d-vrml
-
-console.log(mimes.x3dvz)
-// logs model/x3d+vrml
-
-console.log(mimes.x3d)
-// logs model/x3d+xml
-
-console.log(mimes.x3dz)
-// logs model/x3d+xml
-
-console.log(mimes.x3dv)
-// logs model/x3d-vrml
-
-console.log(mimes.appcache)
-// logs text/cache-manifest
-
-console.log(mimes.manifest)
-// logs text/cache-manifest
-
-console.log(mimes.ics)
-// logs text/calendar
-
-console.log(mimes.ifb)
-// logs text/calendar
-
-console.log(mimes.coffee)
-// logs text/coffeescript
-
-console.log(mimes.litcoffee)
-// logs text/coffeescript
-
-console.log(mimes.css)
-// logs text/css
-
-console.log(mimes.csv)
-// logs text/csv
-
-console.log(mimes.html)
-// logs text/html
-
-console.log(mimes.htm)
-// logs text/html
-
-console.log(mimes.shtml)
-// logs text/html
-
-console.log(mimes.jade)
-// logs text/jade
-
-console.log(mimes.jsx)
-// logs text/jsx
-
-console.log(mimes.less)
-// logs text/less
-
-console.log(mimes.markdown)
-// logs text/markdown
-
-console.log(mimes.md)
-// logs text/markdown
-
-console.log(mimes.mml)
-// logs text/mathml
-
-console.log(mimes.mdx)
-// logs text/mdx
-
-console.log(mimes.n3)
-// logs text/n3
-
-console.log(mimes.txt)
-// logs text/plain
-
-console.log(mimes.text)
-// logs text/plain
-
-console.log(mimes.conf)
-// logs text/plain
-
-console.log(mimes.def)
-// logs text/plain
-
-console.log(mimes.list)
-// logs text/plain
-
-console.log(mimes.log)
-// logs text/plain
-
-console.log(mimes.in)
-// logs text/plain
-
-console.log(mimes.ini)
-// logs text/plain
-
-console.log(mimes.dsc)
-// logs text/prs.lines.tag
-
-console.log(mimes.rtx)
-// logs text/richtext
-
-console.log(mimes.rtf)
-// logs text/rtf
-
-console.log(mimes.sgml)
-// logs text/sgml
-
-console.log(mimes.sgm)
-// logs text/sgml
-
-console.log(mimes.shex)
-// logs text/shex
-
-console.log(mimes.slim)
-// logs text/slim
-
-console.log(mimes.slm)
-// logs text/slim
-
-console.log(mimes.spdx)
-// logs text/spdx
-
-console.log(mimes.stylus)
-// logs text/stylus
-
-console.log(mimes.styl)
-// logs text/stylus
-
-console.log(mimes.tsv)
-// logs text/tab-separated-values
-
-console.log(mimes.t)
-// logs text/troff
-
-console.log(mimes.tr)
-// logs text/troff
-
-console.log(mimes.roff)
-// logs text/troff
-
-console.log(mimes.man)
-// logs text/troff
-
-console.log(mimes.me)
-// logs text/troff
-
-console.log(mimes.ms)
-// logs text/troff
-
-console.log(mimes.ttl)
-// logs text/turtle
-
-console.log(mimes.uri)
-// logs text/uri-list
-
-console.log(mimes.uris)
-// logs text/uri-list
-
-console.log(mimes.urls)
-// logs text/uri-list
-
-console.log(mimes.vcard)
-// logs text/vcard
-
-console.log(mimes.curl)
-// logs text/vnd.curl
-
-console.log(mimes.dcurl)
-// logs text/vnd.curl.dcurl
-
-console.log(mimes.mcurl)
-// logs text/vnd.curl.mcurl
-
-console.log(mimes.scurl)
-// logs text/vnd.curl.scurl
-
-console.log(mimes.sub)
-// logs text/vnd.dvb.subtitle
-
-console.log(mimes.fly)
-// logs text/vnd.fly
-
-console.log(mimes.flx)
-// logs text/vnd.fmi.flexstor
-
-console.log(mimes.gv)
-// logs text/vnd.graphviz
-
-console.log(mimes.3dml)
-// logs text/vnd.in3d.3dml
-
-console.log(mimes.spot)
-// logs text/vnd.in3d.spot
-
-console.log(mimes.jad)
-// logs text/vnd.sun.j2me.app-descriptor
-
-console.log(mimes.wml)
-// logs text/vnd.wap.wml
-
-console.log(mimes.wmls)
-// logs text/vnd.wap.wmlscript
-
-console.log(mimes.vtt)
-// logs text/vtt
-
-console.log(mimes.s)
-// logs text/x-asm
-
-console.log(mimes.asm)
-// logs text/x-asm
-
-console.log(mimes.c)
-// logs text/x-c
-
-console.log(mimes.cc)
-// logs text/x-c
-
-console.log(mimes.cxx)
-// logs text/x-c
-
-console.log(mimes.cpp)
-// logs text/x-c
-
-console.log(mimes.h)
-// logs text/x-c
-
-console.log(mimes.hh)
-// logs text/x-c
-
-console.log(mimes.dic)
-// logs text/x-c
-
-console.log(mimes.htc)
-// logs text/x-component
-
-console.log(mimes.f)
-// logs text/x-fortran
-
-console.log(mimes.for)
-// logs text/x-fortran
-
-console.log(mimes.f77)
-// logs text/x-fortran
-
-console.log(mimes.f90)
-// logs text/x-fortran
-
-console.log(mimes.hbs)
-// logs text/x-handlebars-template
-
-console.log(mimes.java)
-// logs text/x-java-source
-
-console.log(mimes.lua)
-// logs text/x-lua
-
-console.log(mimes.mkd)
-// logs text/x-markdown
-
-console.log(mimes.nfo)
-// logs text/x-nfo
-
-console.log(mimes.opml)
-// logs text/x-opml
-
-console.log(mimes.org)
-// logs text/x-org
-
-console.log(mimes.p)
-// logs text/x-pascal
-
-console.log(mimes.pas)
-// logs text/x-pascal
-
-console.log(mimes.pde)
-// logs text/x-processing
-
-console.log(mimes.sass)
-// logs text/x-sass
-
-console.log(mimes.scss)
-// logs text/x-scss
-
-console.log(mimes.etx)
-// logs text/x-setext
-
-console.log(mimes.sfv)
-// logs text/x-sfv
-
-console.log(mimes.ymp)
-// logs text/x-suse-ymp
-
-console.log(mimes.uu)
-// logs text/x-uuencode
-
-console.log(mimes.vcs)
-// logs text/x-vcalendar
-
-console.log(mimes.vcf)
-// logs text/x-vcard
-
-console.log(mimes.xml)
-// logs text/xml
-
-console.log(mimes.yaml)
-// logs text/yaml
-
-console.log(mimes.yml)
-// logs text/yaml
-
-console.log(mimes.3gp)
-// logs video/3gpp
-
-console.log(mimes.3gpp)
-// logs video/3gpp
-
-console.log(mimes.3g2)
-// logs video/3gpp2
-
-console.log(mimes.h261)
-// logs video/h261
-
-console.log(mimes.h263)
-// logs video/h263
-
-console.log(mimes.h264)
-// logs video/h264
-
-console.log(mimes.jpgv)
-// logs video/jpeg
-
-console.log(mimes.jpm)
-// logs image/jpm
-
-console.log(mimes.jpgm)
-// logs video/jpm
-
-console.log(mimes.mj2)
-// logs video/mj2
-
-console.log(mimes.mjp2)
-// logs video/mj2
-
-console.log(mimes.ts)
-// logs video/mp2t
-
-console.log(mimes.mp4)
-// logs video/mp4
-
-console.log(mimes.mp4v)
-// logs video/mp4
-
-console.log(mimes.mpg4)
-// logs video/mp4
-
-console.log(mimes.mpeg)
-// logs video/mpeg
-
-console.log(mimes.mpg)
-// logs video/mpeg
-
-console.log(mimes.mpe)
-// logs video/mpeg
-
-console.log(mimes.m1v)
-// logs video/mpeg
-
-console.log(mimes.m2v)
-// logs video/mpeg
-
-console.log(mimes.ogv)
-// logs video/ogg
-
-console.log(mimes.qt)
-// logs video/quicktime
-
-console.log(mimes.mov)
-// logs video/quicktime
-
-console.log(mimes.uvh)
-// logs video/vnd.dece.hd
-
-console.log(mimes.uvvh)
-// logs video/vnd.dece.hd
-
-console.log(mimes.uvm)
-// logs video/vnd.dece.mobile
-
-console.log(mimes.uvvm)
-// logs video/vnd.dece.mobile
-
-console.log(mimes.uvp)
-// logs video/vnd.dece.pd
-
-console.log(mimes.uvvp)
-// logs video/vnd.dece.pd
-
-console.log(mimes.uvs)
-// logs video/vnd.dece.sd
-
-console.log(mimes.uvvs)
-// logs video/vnd.dece.sd
-
-console.log(mimes.uvv)
-// logs video/vnd.dece.video
-
-console.log(mimes.uvvv)
-// logs video/vnd.dece.video
-
-console.log(mimes.dvb)
-// logs video/vnd.dvb.file
-
-console.log(mimes.fvt)
-// logs video/vnd.fvt
-
-console.log(mimes.mxu)
-// logs video/vnd.mpegurl
-
-console.log(mimes.m4u)
-// logs video/vnd.mpegurl
-
-console.log(mimes.pyv)
-// logs video/vnd.ms-playready.media.pyv
-
-console.log(mimes.uvu)
-// logs video/vnd.uvvu.mp4
-
-console.log(mimes.uvvu)
-// logs video/vnd.uvvu.mp4
-
-console.log(mimes.viv)
-// logs video/vnd.vivo
-
-console.log(mimes.webm)
-// logs video/webm
-
-console.log(mimes.f4v)
-// logs video/x-f4v
-
-console.log(mimes.fli)
-// logs video/x-fli
-
-console.log(mimes.flv)
-// logs video/x-flv
-
-console.log(mimes.m4v)
-// logs video/x-m4v
-
-console.log(mimes.mkv)
-// logs video/x-matroska
-
-console.log(mimes.mk3d)
-// logs video/x-matroska
-
-console.log(mimes.mks)
-// logs video/x-matroska
-
-console.log(mimes.mng)
-// logs video/x-mng
-
-console.log(mimes.asf)
-// logs video/x-ms-asf
-
-console.log(mimes.asx)
-// logs video/x-ms-asf
-
-console.log(mimes.vob)
-// logs video/x-ms-vob
-
-console.log(mimes.wm)
-// logs video/x-ms-wm
-
-console.log(mimes.wmv)
-// logs video/x-ms-wmv
-
-console.log(mimes.wmx)
-// logs video/x-ms-wmx
-
-console.log(mimes.wvx)
-// logs video/x-ms-wvx
-
-console.log(mimes.avi)
-// logs video/x-msvideo
-
-console.log(mimes.movie)
-// logs video/x-sgi-movie
-
-console.log(mimes.smv)
-// logs video/x-smv
-
-console.log(mimes.ice)
-// logs x-conference/x-cooltalk
-
-```
 
 ### changelog
 
@@ -3661,9 +60,2421 @@ first publish
 #### 0.0.3
 bump required node version to 14.2.0
 
-#### 0.0.4 - unreleased
+#### 0.0.4
+* bin now only builds, no commands needed.
+* build only loops once.
+* update documentation.
+
+#### 0.0.5 - unreleased
 ...
 
+
+### import / usage
+```javascript
+import mimes from '@magic/mime-types'
+
+mimes.ez === 'application/andrew-inset'
+
+mimes.aw === 'application/applixware'
+
+mimes.atom === 'application/atom+xml'
+
+mimes.atomcat === 'application/atomcat+xml'
+
+mimes.atomdeleted === 'application/atomdeleted+xml'
+
+mimes.atomsvc === 'application/atomsvc+xml'
+
+mimes.dwd === 'application/atsc-dwd+xml'
+
+mimes.held === 'application/atsc-held+xml'
+
+mimes.rsat === 'application/atsc-rsat+xml'
+
+mimes.bdoc === 'application/bdoc'
+
+mimes.xcs === 'application/calendar+xml'
+
+mimes.ccxml === 'application/ccxml+xml'
+
+mimes.cdfx === 'application/cdfx+xml'
+
+mimes.cdmia === 'application/cdmi-capability'
+
+mimes.cdmic === 'application/cdmi-container'
+
+mimes.cdmid === 'application/cdmi-domain'
+
+mimes.cdmio === 'application/cdmi-object'
+
+mimes.cdmiq === 'application/cdmi-queue'
+
+mimes.cu === 'application/cu-seeme'
+
+mimes.mpd === 'application/dash+xml'
+
+mimes.davmount === 'application/davmount+xml'
+
+mimes.dbk === 'application/docbook+xml'
+
+mimes.dssc === 'application/dssc+der'
+
+mimes.xdssc === 'application/dssc+xml'
+
+mimes.ecma === 'application/ecmascript'
+
+mimes.es === 'application/ecmascript'
+
+mimes.emma === 'application/emma+xml'
+
+mimes.emotionml === 'application/emotionml+xml'
+
+mimes.epub === 'application/epub+zip'
+
+mimes.exi === 'application/exi'
+
+mimes.fdt === 'application/fdt+xml'
+
+mimes.pfr === 'application/font-tdpfr'
+
+mimes.geojson === 'application/geo+json'
+
+mimes.gml === 'application/gml+xml'
+
+mimes.gpx === 'application/gpx+xml'
+
+mimes.gxf === 'application/gxf'
+
+mimes.gz === 'application/gzip'
+
+mimes.hjson === 'application/hjson'
+
+mimes.stk === 'application/hyperstudio'
+
+mimes.ink === 'application/inkml+xml'
+
+mimes.inkml === 'application/inkml+xml'
+
+mimes.ipfix === 'application/ipfix'
+
+mimes.its === 'application/its+xml'
+
+mimes.jar === 'application/java-archive'
+
+mimes.war === 'application/java-archive'
+
+mimes.ear === 'application/java-archive'
+
+mimes.ser === 'application/java-serialized-object'
+
+mimes.class === 'application/java-vm'
+
+mimes.js === 'application/javascript'
+
+mimes.mjs === 'application/javascript'
+
+mimes.json === 'application/json'
+
+mimes.map === 'application/json'
+
+mimes.json5 === 'application/json5'
+
+mimes.jsonml === 'application/jsonml+json'
+
+mimes.jsonld === 'application/ld+json'
+
+mimes.lgr === 'application/lgr+xml'
+
+mimes.lostxml === 'application/lost+xml'
+
+mimes.hqx === 'application/mac-binhex40'
+
+mimes.cpt === 'application/mac-compactpro'
+
+mimes.mads === 'application/mads+xml'
+
+mimes.webmanifest === 'application/manifest+json'
+
+mimes.mrc === 'application/marc'
+
+mimes.mrcx === 'application/marcxml+xml'
+
+mimes.ma === 'application/mathematica'
+
+mimes.nb === 'application/mathematica'
+
+mimes.mb === 'application/mathematica'
+
+mimes.mathml === 'application/mathml+xml'
+
+mimes.mbox === 'application/mbox'
+
+mimes.mscml === 'application/mediaservercontrol+xml'
+
+mimes.metalink === 'application/metalink+xml'
+
+mimes.meta4 === 'application/metalink4+xml'
+
+mimes.mets === 'application/mets+xml'
+
+mimes.maei === 'application/mmt-aei+xml'
+
+mimes.musd === 'application/mmt-usd+xml'
+
+mimes.mods === 'application/mods+xml'
+
+mimes.m21 === 'application/mp21'
+
+mimes.mp21 === 'application/mp21'
+
+mimes.mp4s === 'application/mp4'
+
+mimes.m4p === 'application/mp4'
+
+mimes.xdf === 'application/mrb-consumer+xml'
+
+mimes.xdf === 'application/mrb-publish+xml'
+
+mimes.doc === 'application/msword'
+
+mimes.dot === 'application/msword'
+
+mimes.mxf === 'application/mxf'
+
+mimes.nq === 'application/n-quads'
+
+mimes.nt === 'application/n-triples'
+
+mimes.cjs === 'application/node'
+
+mimes.bin === 'application/octet-stream'
+
+mimes.dms === 'application/octet-stream'
+
+mimes.lrf === 'application/octet-stream'
+
+mimes.mar === 'application/octet-stream'
+
+mimes.so === 'application/octet-stream'
+
+mimes.dist === 'application/octet-stream'
+
+mimes.distz === 'application/octet-stream'
+
+mimes.pkg === 'application/octet-stream'
+
+mimes.bpk === 'application/octet-stream'
+
+mimes.dump === 'application/octet-stream'
+
+mimes.elc === 'application/octet-stream'
+
+mimes.deploy === 'application/octet-stream'
+
+mimes.exe === 'application/x-msdos-program'
+
+mimes.dll === 'application/octet-stream'
+
+mimes.deb === 'application/x-debian-package'
+
+mimes.dmg === 'application/octet-stream'
+
+mimes.iso === 'application/octet-stream'
+
+mimes.img === 'application/octet-stream'
+
+mimes.msi === 'application/octet-stream'
+
+mimes.msp === 'application/octet-stream'
+
+mimes.msm === 'application/octet-stream'
+
+mimes.buffer === 'application/octet-stream'
+
+mimes.oda === 'application/oda'
+
+mimes.opf === 'application/oebps-package+xml'
+
+mimes.ogx === 'application/ogg'
+
+mimes.omdoc === 'application/omdoc+xml'
+
+mimes.onetoc === 'application/onenote'
+
+mimes.onetoc2 === 'application/onenote'
+
+mimes.onetmp === 'application/onenote'
+
+mimes.onepkg === 'application/onenote'
+
+mimes.oxps === 'application/oxps'
+
+mimes.relo === 'application/p2p-overlay+xml'
+
+mimes.xer === 'application/patch-ops-error+xml'
+
+mimes.pdf === 'application/pdf'
+
+mimes.pgp === 'application/pgp-encrypted'
+
+mimes.asc === 'application/pgp-signature'
+
+mimes.sig === 'application/pgp-signature'
+
+mimes.prf === 'application/pics-rules'
+
+mimes.p10 === 'application/pkcs10'
+
+mimes.p7m === 'application/pkcs7-mime'
+
+mimes.p7c === 'application/pkcs7-mime'
+
+mimes.p7s === 'application/pkcs7-signature'
+
+mimes.p8 === 'application/pkcs8'
+
+mimes.ac === 'application/pkix-attr-cert'
+
+mimes.cer === 'application/pkix-cert'
+
+mimes.crl === 'application/pkix-crl'
+
+mimes.pkipath === 'application/pkix-pkipath'
+
+mimes.pki === 'application/pkixcmp'
+
+mimes.pls === 'application/pls+xml'
+
+mimes.ai === 'application/postscript'
+
+mimes.eps === 'application/postscript'
+
+mimes.ps === 'application/postscript'
+
+mimes.provx === 'application/provenance+xml'
+
+mimes.cww === 'application/prs.cww'
+
+mimes.pskcxml === 'application/pskc+xml'
+
+mimes.raml === 'application/raml+yaml'
+
+mimes.rdf === 'application/rdf+xml'
+
+mimes.owl === 'application/rdf+xml'
+
+mimes.rif === 'application/reginfo+xml'
+
+mimes.rnc === 'application/relax-ng-compact-syntax'
+
+mimes.rl === 'application/resource-lists+xml'
+
+mimes.rld === 'application/resource-lists-diff+xml'
+
+mimes.rs === 'application/rls-services+xml'
+
+mimes.rapd === 'application/route-apd+xml'
+
+mimes.sls === 'application/route-s-tsid+xml'
+
+mimes.rusd === 'application/route-usd+xml'
+
+mimes.gbr === 'application/rpki-ghostbusters'
+
+mimes.mft === 'application/rpki-manifest'
+
+mimes.roa === 'application/rpki-roa'
+
+mimes.rsd === 'application/rsd+xml'
+
+mimes.rss === 'application/rss+xml'
+
+mimes.rtf === 'text/rtf'
+
+mimes.sbml === 'application/sbml+xml'
+
+mimes.scq === 'application/scvp-cv-request'
+
+mimes.scs === 'application/scvp-cv-response'
+
+mimes.spq === 'application/scvp-vp-request'
+
+mimes.spp === 'application/scvp-vp-response'
+
+mimes.sdp === 'application/sdp'
+
+mimes.senmlx === 'application/senml+xml'
+
+mimes.sensmlx === 'application/sensml+xml'
+
+mimes.setpay === 'application/set-payment-initiation'
+
+mimes.setreg === 'application/set-registration-initiation'
+
+mimes.shf === 'application/shf+xml'
+
+mimes.siv === 'application/sieve'
+
+mimes.sieve === 'application/sieve'
+
+mimes.smi === 'application/smil+xml'
+
+mimes.smil === 'application/smil+xml'
+
+mimes.rq === 'application/sparql-query'
+
+mimes.srx === 'application/sparql-results+xml'
+
+mimes.gram === 'application/srgs'
+
+mimes.grxml === 'application/srgs+xml'
+
+mimes.sru === 'application/sru+xml'
+
+mimes.ssdl === 'application/ssdl+xml'
+
+mimes.ssml === 'application/ssml+xml'
+
+mimes.swidtag === 'application/swid+xml'
+
+mimes.tei === 'application/tei+xml'
+
+mimes.teicorpus === 'application/tei+xml'
+
+mimes.tfi === 'application/thraud+xml'
+
+mimes.tsd === 'application/timestamped-data'
+
+mimes.toml === 'application/toml'
+
+mimes.ttml === 'application/ttml+xml'
+
+mimes.ubj === 'application/ubjson'
+
+mimes.rsheet === 'application/urc-ressheet+xml'
+
+mimes.td === 'application/urc-targetdesc+xml'
+
+mimes.1km === 'application/vnd.1000minds.decision-model+xml'
+
+mimes.plb === 'application/vnd.3gpp.pic-bw-large'
+
+mimes.psb === 'application/vnd.3gpp.pic-bw-small'
+
+mimes.pvb === 'application/vnd.3gpp.pic-bw-var'
+
+mimes.tcap === 'application/vnd.3gpp2.tcap'
+
+mimes.pwn === 'application/vnd.3m.post-it-notes'
+
+mimes.aso === 'application/vnd.accpac.simply.aso'
+
+mimes.imp === 'application/vnd.accpac.simply.imp'
+
+mimes.acu === 'application/vnd.acucobol'
+
+mimes.atc === 'application/vnd.acucorp'
+
+mimes.acutc === 'application/vnd.acucorp'
+
+mimes.air === 'application/vnd.adobe.air-application-installer-package+zip'
+
+mimes.fcdt === 'application/vnd.adobe.formscentral.fcdt'
+
+mimes.fxp === 'application/vnd.adobe.fxp'
+
+mimes.fxpl === 'application/vnd.adobe.fxp'
+
+mimes.xdp === 'application/vnd.adobe.xdp+xml'
+
+mimes.xfdf === 'application/vnd.adobe.xfdf'
+
+mimes.ahead === 'application/vnd.ahead.space'
+
+mimes.azf === 'application/vnd.airzip.filesecure.azf'
+
+mimes.azs === 'application/vnd.airzip.filesecure.azs'
+
+mimes.azw === 'application/vnd.amazon.ebook'
+
+mimes.acc === 'application/vnd.americandynamics.acc'
+
+mimes.ami === 'application/vnd.amiga.ami'
+
+mimes.apk === 'application/vnd.android.package-archive'
+
+mimes.cii === 'application/vnd.anser-web-certificate-issue-initiation'
+
+mimes.fti === 'application/vnd.anser-web-funds-transfer-initiation'
+
+mimes.atx === 'application/vnd.antix.game-component'
+
+mimes.mpkg === 'application/vnd.apple.installer+xml'
+
+mimes.key === 'application/vnd.apple.keynote'
+
+mimes.m3u8 === 'application/vnd.apple.mpegurl'
+
+mimes.numbers === 'application/vnd.apple.numbers'
+
+mimes.pages === 'application/vnd.apple.pages'
+
+mimes.pkpass === 'application/vnd.apple.pkpass'
+
+mimes.swi === 'application/vnd.aristanetworks.swi'
+
+mimes.iota === 'application/vnd.astraea-software.iota'
+
+mimes.aep === 'application/vnd.audiograph'
+
+mimes.bmml === 'application/vnd.balsamiq.bmml+xml'
+
+mimes.mpm === 'application/vnd.blueice.multipass'
+
+mimes.bmi === 'application/vnd.bmi'
+
+mimes.rep === 'application/vnd.businessobjects'
+
+mimes.cdxml === 'application/vnd.chemdraw+xml'
+
+mimes.mmd === 'application/vnd.chipnuts.karaoke-mmd'
+
+mimes.cdy === 'application/vnd.cinderella'
+
+mimes.csl === 'application/vnd.citationstyles.style+xml'
+
+mimes.cla === 'application/vnd.claymore'
+
+mimes.rp9 === 'application/vnd.cloanto.rp9'
+
+mimes.c4g === 'application/vnd.clonk.c4group'
+
+mimes.c4d === 'application/vnd.clonk.c4group'
+
+mimes.c4f === 'application/vnd.clonk.c4group'
+
+mimes.c4p === 'application/vnd.clonk.c4group'
+
+mimes.c4u === 'application/vnd.clonk.c4group'
+
+mimes.c11amc === 'application/vnd.cluetrust.cartomobile-config'
+
+mimes.c11amz === 'application/vnd.cluetrust.cartomobile-config-pkg'
+
+mimes.csp === 'application/vnd.commonspace'
+
+mimes.cdbcmsg === 'application/vnd.contact.cmsg'
+
+mimes.cmc === 'application/vnd.cosmocaller'
+
+mimes.clkx === 'application/vnd.crick.clicker'
+
+mimes.clkk === 'application/vnd.crick.clicker.keyboard'
+
+mimes.clkp === 'application/vnd.crick.clicker.palette'
+
+mimes.clkt === 'application/vnd.crick.clicker.template'
+
+mimes.clkw === 'application/vnd.crick.clicker.wordbank'
+
+mimes.wbs === 'application/vnd.criticaltools.wbs+xml'
+
+mimes.pml === 'application/vnd.ctc-posml'
+
+mimes.ppd === 'application/vnd.cups-ppd'
+
+mimes.car === 'application/vnd.curl.car'
+
+mimes.pcurl === 'application/vnd.curl.pcurl'
+
+mimes.dart === 'application/vnd.dart'
+
+mimes.rdz === 'application/vnd.data-vision.rdz'
+
+mimes.dbf === 'application/vnd.dbf'
+
+mimes.uvf === 'application/vnd.dece.data'
+
+mimes.uvvf === 'application/vnd.dece.data'
+
+mimes.uvd === 'application/vnd.dece.data'
+
+mimes.uvvd === 'application/vnd.dece.data'
+
+mimes.uvt === 'application/vnd.dece.ttml+xml'
+
+mimes.uvvt === 'application/vnd.dece.ttml+xml'
+
+mimes.uvx === 'application/vnd.dece.unspecified'
+
+mimes.uvvx === 'application/vnd.dece.unspecified'
+
+mimes.uvz === 'application/vnd.dece.zip'
+
+mimes.uvvz === 'application/vnd.dece.zip'
+
+mimes.fe_launch === 'application/vnd.denovo.fcselayout-link'
+
+mimes.dna === 'application/vnd.dna'
+
+mimes.mlp === 'application/vnd.dolby.mlp'
+
+mimes.dpg === 'application/vnd.dpgraph'
+
+mimes.dfac === 'application/vnd.dreamfactory'
+
+mimes.kpxx === 'application/vnd.ds-keypoint'
+
+mimes.ait === 'application/vnd.dvb.ait'
+
+mimes.svc === 'application/vnd.dvb.service'
+
+mimes.geo === 'application/vnd.dynageo'
+
+mimes.mag === 'application/vnd.ecowin.chart'
+
+mimes.nml === 'application/vnd.enliven'
+
+mimes.esf === 'application/vnd.epson.esf'
+
+mimes.msf === 'application/vnd.epson.msf'
+
+mimes.qam === 'application/vnd.epson.quickanime'
+
+mimes.slt === 'application/vnd.epson.salt'
+
+mimes.ssf === 'application/vnd.epson.ssf'
+
+mimes.es3 === 'application/vnd.eszigno3+xml'
+
+mimes.et3 === 'application/vnd.eszigno3+xml'
+
+mimes.ez2 === 'application/vnd.ezpix-album'
+
+mimes.ez3 === 'application/vnd.ezpix-package'
+
+mimes.fdf === 'application/vnd.fdf'
+
+mimes.mseed === 'application/vnd.fdsn.mseed'
+
+mimes.seed === 'application/vnd.fdsn.seed'
+
+mimes.dataless === 'application/vnd.fdsn.seed'
+
+mimes.gph === 'application/vnd.flographit'
+
+mimes.ftc === 'application/vnd.fluxtime.clip'
+
+mimes.fm === 'application/vnd.framemaker'
+
+mimes.frame === 'application/vnd.framemaker'
+
+mimes.maker === 'application/vnd.framemaker'
+
+mimes.book === 'application/vnd.framemaker'
+
+mimes.fnc === 'application/vnd.frogans.fnc'
+
+mimes.ltf === 'application/vnd.frogans.ltf'
+
+mimes.fsc === 'application/vnd.fsc.weblaunch'
+
+mimes.oas === 'application/vnd.fujitsu.oasys'
+
+mimes.oa2 === 'application/vnd.fujitsu.oasys2'
+
+mimes.oa3 === 'application/vnd.fujitsu.oasys3'
+
+mimes.fg5 === 'application/vnd.fujitsu.oasysgp'
+
+mimes.bh2 === 'application/vnd.fujitsu.oasysprs'
+
+mimes.ddd === 'application/vnd.fujixerox.ddd'
+
+mimes.xdw === 'application/vnd.fujixerox.docuworks'
+
+mimes.xbd === 'application/vnd.fujixerox.docuworks.binder'
+
+mimes.fzs === 'application/vnd.fuzzysheet'
+
+mimes.txd === 'application/vnd.genomatix.tuxedo'
+
+mimes.ggb === 'application/vnd.geogebra.file'
+
+mimes.ggt === 'application/vnd.geogebra.tool'
+
+mimes.gex === 'application/vnd.geometry-explorer'
+
+mimes.gre === 'application/vnd.geometry-explorer'
+
+mimes.gxt === 'application/vnd.geonext'
+
+mimes.g2w === 'application/vnd.geoplan'
+
+mimes.g3w === 'application/vnd.geospace'
+
+mimes.gmx === 'application/vnd.gmx'
+
+mimes.gdoc === 'application/vnd.google-apps.document'
+
+mimes.gslides === 'application/vnd.google-apps.presentation'
+
+mimes.gsheet === 'application/vnd.google-apps.spreadsheet'
+
+mimes.kml === 'application/vnd.google-earth.kml+xml'
+
+mimes.kmz === 'application/vnd.google-earth.kmz'
+
+mimes.gqf === 'application/vnd.grafeq'
+
+mimes.gqs === 'application/vnd.grafeq'
+
+mimes.gac === 'application/vnd.groove-account'
+
+mimes.ghf === 'application/vnd.groove-help'
+
+mimes.gim === 'application/vnd.groove-identity-message'
+
+mimes.grv === 'application/vnd.groove-injector'
+
+mimes.gtm === 'application/vnd.groove-tool-message'
+
+mimes.tpl === 'application/vnd.groove-tool-template'
+
+mimes.vcg === 'application/vnd.groove-vcard'
+
+mimes.hal === 'application/vnd.hal+xml'
+
+mimes.zmm === 'application/vnd.handheld-entertainment+xml'
+
+mimes.hbci === 'application/vnd.hbci'
+
+mimes.les === 'application/vnd.hhe.lesson-player'
+
+mimes.hpgl === 'application/vnd.hp-hpgl'
+
+mimes.hpid === 'application/vnd.hp-hpid'
+
+mimes.hps === 'application/vnd.hp-hps'
+
+mimes.jlt === 'application/vnd.hp-jlyt'
+
+mimes.pcl === 'application/vnd.hp-pcl'
+
+mimes.pclxl === 'application/vnd.hp-pclxl'
+
+mimes.sfd-hdstx === 'application/vnd.hydrostatix.sof-data'
+
+mimes.mpy === 'application/vnd.ibm.minipay'
+
+mimes.afp === 'application/vnd.ibm.modcap'
+
+mimes.listafp === 'application/vnd.ibm.modcap'
+
+mimes.list3820 === 'application/vnd.ibm.modcap'
+
+mimes.irm === 'application/vnd.ibm.rights-management'
+
+mimes.sc === 'application/vnd.ibm.secure-container'
+
+mimes.icc === 'application/vnd.iccprofile'
+
+mimes.icm === 'application/vnd.iccprofile'
+
+mimes.igl === 'application/vnd.igloader'
+
+mimes.ivp === 'application/vnd.immervision-ivp'
+
+mimes.ivu === 'application/vnd.immervision-ivu'
+
+mimes.igm === 'application/vnd.insors.igm'
+
+mimes.xpw === 'application/vnd.intercon.formnet'
+
+mimes.xpx === 'application/vnd.intercon.formnet'
+
+mimes.i2g === 'application/vnd.intergeo'
+
+mimes.qbo === 'application/vnd.intu.qbo'
+
+mimes.qfx === 'application/vnd.intu.qfx'
+
+mimes.rcprofile === 'application/vnd.ipunplugged.rcprofile'
+
+mimes.irp === 'application/vnd.irepository.package+xml'
+
+mimes.xpr === 'application/vnd.is-xpr'
+
+mimes.fcs === 'application/vnd.isac.fcs'
+
+mimes.jam === 'application/vnd.jam'
+
+mimes.rms === 'application/vnd.jcp.javame.midlet-rms'
+
+mimes.jisp === 'application/vnd.jisp'
+
+mimes.joda === 'application/vnd.joost.joda-archive'
+
+mimes.ktz === 'application/vnd.kahootz'
+
+mimes.ktr === 'application/vnd.kahootz'
+
+mimes.karbon === 'application/vnd.kde.karbon'
+
+mimes.chrt === 'application/vnd.kde.kchart'
+
+mimes.kfo === 'application/vnd.kde.kformula'
+
+mimes.flw === 'application/vnd.kde.kivio'
+
+mimes.kon === 'application/vnd.kde.kontour'
+
+mimes.kpr === 'application/vnd.kde.kpresenter'
+
+mimes.kpt === 'application/vnd.kde.kpresenter'
+
+mimes.ksp === 'application/vnd.kde.kspread'
+
+mimes.kwd === 'application/vnd.kde.kword'
+
+mimes.kwt === 'application/vnd.kde.kword'
+
+mimes.htke === 'application/vnd.kenameaapp'
+
+mimes.kia === 'application/vnd.kidspiration'
+
+mimes.kne === 'application/vnd.kinar'
+
+mimes.knp === 'application/vnd.kinar'
+
+mimes.skp === 'application/vnd.koan'
+
+mimes.skd === 'application/vnd.koan'
+
+mimes.skt === 'application/vnd.koan'
+
+mimes.skm === 'application/vnd.koan'
+
+mimes.sse === 'application/vnd.kodak-descriptor'
+
+mimes.lasxml === 'application/vnd.las.las+xml'
+
+mimes.lbd === 'application/vnd.llamagraphics.life-balance.desktop'
+
+mimes.lbe === 'application/vnd.llamagraphics.life-balance.exchange+xml'
+
+mimes.123 === 'application/vnd.lotus-1-2-3'
+
+mimes.apr === 'application/vnd.lotus-approach'
+
+mimes.pre === 'application/vnd.lotus-freelance'
+
+mimes.nsf === 'application/vnd.lotus-notes'
+
+mimes.org === 'text/x-org'
+
+mimes.scm === 'application/vnd.lotus-screencam'
+
+mimes.lwp === 'application/vnd.lotus-wordpro'
+
+mimes.portpkg === 'application/vnd.macports.portpkg'
+
+mimes.mcd === 'application/vnd.mcd'
+
+mimes.mc1 === 'application/vnd.medcalcdata'
+
+mimes.cdkey === 'application/vnd.mediastation.cdkey'
+
+mimes.mwf === 'application/vnd.mfer'
+
+mimes.mfm === 'application/vnd.mfmp'
+
+mimes.flo === 'application/vnd.micrografx.flo'
+
+mimes.igx === 'application/vnd.micrografx.igx'
+
+mimes.mif === 'application/vnd.mif'
+
+mimes.daf === 'application/vnd.mobius.daf'
+
+mimes.dis === 'application/vnd.mobius.dis'
+
+mimes.mbk === 'application/vnd.mobius.mbk'
+
+mimes.mqy === 'application/vnd.mobius.mqy'
+
+mimes.msl === 'application/vnd.mobius.msl'
+
+mimes.plc === 'application/vnd.mobius.plc'
+
+mimes.txf === 'application/vnd.mobius.txf'
+
+mimes.mpn === 'application/vnd.mophun.application'
+
+mimes.mpc === 'application/vnd.mophun.certificate'
+
+mimes.xul === 'application/vnd.mozilla.xul+xml'
+
+mimes.cil === 'application/vnd.ms-artgalry'
+
+mimes.cab === 'application/vnd.ms-cab-compressed'
+
+mimes.xls === 'application/vnd.ms-excel'
+
+mimes.xlm === 'application/vnd.ms-excel'
+
+mimes.xla === 'application/vnd.ms-excel'
+
+mimes.xlc === 'application/vnd.ms-excel'
+
+mimes.xlt === 'application/vnd.ms-excel'
+
+mimes.xlw === 'application/vnd.ms-excel'
+
+mimes.xlam === 'application/vnd.ms-excel.addin.macroenabled.12'
+
+mimes.xlsb === 'application/vnd.ms-excel.sheet.binary.macroenabled.12'
+
+mimes.xlsm === 'application/vnd.ms-excel.sheet.macroenabled.12'
+
+mimes.xltm === 'application/vnd.ms-excel.template.macroenabled.12'
+
+mimes.eot === 'application/vnd.ms-fontobject'
+
+mimes.chm === 'application/vnd.ms-htmlhelp'
+
+mimes.ims === 'application/vnd.ms-ims'
+
+mimes.lrm === 'application/vnd.ms-lrm'
+
+mimes.thmx === 'application/vnd.ms-officetheme'
+
+mimes.msg === 'application/vnd.ms-outlook'
+
+mimes.cat === 'application/vnd.ms-pki.seccat'
+
+mimes.stl === 'model/stl'
+
+mimes.ppt === 'application/vnd.ms-powerpoint'
+
+mimes.pps === 'application/vnd.ms-powerpoint'
+
+mimes.pot === 'application/vnd.ms-powerpoint'
+
+mimes.ppam === 'application/vnd.ms-powerpoint.addin.macroenabled.12'
+
+mimes.pptm === 'application/vnd.ms-powerpoint.presentation.macroenabled.12'
+
+mimes.sldm === 'application/vnd.ms-powerpoint.slide.macroenabled.12'
+
+mimes.ppsm === 'application/vnd.ms-powerpoint.slideshow.macroenabled.12'
+
+mimes.potm === 'application/vnd.ms-powerpoint.template.macroenabled.12'
+
+mimes.mpp === 'application/vnd.ms-project'
+
+mimes.mpt === 'application/vnd.ms-project'
+
+mimes.docm === 'application/vnd.ms-word.document.macroenabled.12'
+
+mimes.dotm === 'application/vnd.ms-word.template.macroenabled.12'
+
+mimes.wps === 'application/vnd.ms-works'
+
+mimes.wks === 'application/vnd.ms-works'
+
+mimes.wcm === 'application/vnd.ms-works'
+
+mimes.wdb === 'application/vnd.ms-works'
+
+mimes.wpl === 'application/vnd.ms-wpl'
+
+mimes.xps === 'application/vnd.ms-xpsdocument'
+
+mimes.mseq === 'application/vnd.mseq'
+
+mimes.mus === 'application/vnd.musician'
+
+mimes.msty === 'application/vnd.muvee.style'
+
+mimes.taglet === 'application/vnd.mynfc'
+
+mimes.nlu === 'application/vnd.neurolanguage.nlu'
+
+mimes.ntf === 'application/vnd.nitf'
+
+mimes.nitf === 'application/vnd.nitf'
+
+mimes.nnd === 'application/vnd.noblenet-directory'
+
+mimes.nns === 'application/vnd.noblenet-sealer'
+
+mimes.nnw === 'application/vnd.noblenet-web'
+
+mimes.ac === 'application/vnd.nokia.n-gage.ac+xml'
+
+mimes.ngdat === 'application/vnd.nokia.n-gage.data'
+
+mimes.n-gage === 'application/vnd.nokia.n-gage.symbian.install'
+
+mimes.rpst === 'application/vnd.nokia.radio-preset'
+
+mimes.rpss === 'application/vnd.nokia.radio-presets'
+
+mimes.edm === 'application/vnd.novadigm.edm'
+
+mimes.edx === 'application/vnd.novadigm.edx'
+
+mimes.ext === 'application/vnd.novadigm.ext'
+
+mimes.odc === 'application/vnd.oasis.opendocument.chart'
+
+mimes.otc === 'application/vnd.oasis.opendocument.chart-template'
+
+mimes.odb === 'application/vnd.oasis.opendocument.database'
+
+mimes.odf === 'application/vnd.oasis.opendocument.formula'
+
+mimes.odft === 'application/vnd.oasis.opendocument.formula-template'
+
+mimes.odg === 'application/vnd.oasis.opendocument.graphics'
+
+mimes.otg === 'application/vnd.oasis.opendocument.graphics-template'
+
+mimes.odi === 'application/vnd.oasis.opendocument.image'
+
+mimes.oti === 'application/vnd.oasis.opendocument.image-template'
+
+mimes.odp === 'application/vnd.oasis.opendocument.presentation'
+
+mimes.otp === 'application/vnd.oasis.opendocument.presentation-template'
+
+mimes.ods === 'application/vnd.oasis.opendocument.spreadsheet'
+
+mimes.ots === 'application/vnd.oasis.opendocument.spreadsheet-template'
+
+mimes.odt === 'application/vnd.oasis.opendocument.text'
+
+mimes.odm === 'application/vnd.oasis.opendocument.text-master'
+
+mimes.ott === 'application/vnd.oasis.opendocument.text-template'
+
+mimes.oth === 'application/vnd.oasis.opendocument.text-web'
+
+mimes.xo === 'application/vnd.olpc-sugar'
+
+mimes.dd2 === 'application/vnd.oma.dd2+xml'
+
+mimes.obgx === 'application/vnd.openblox.game+xml'
+
+mimes.oxt === 'application/vnd.openofficeorg.extension'
+
+mimes.osm === 'application/vnd.openstreetmap.data+xml'
+
+mimes.pptx === 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+
+mimes.sldx === 'application/vnd.openxmlformats-officedocument.presentationml.slide'
+
+mimes.ppsx === 'application/vnd.openxmlformats-officedocument.presentationml.slideshow'
+
+mimes.potx === 'application/vnd.openxmlformats-officedocument.presentationml.template'
+
+mimes.xlsx === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+
+mimes.xltx === 'application/vnd.openxmlformats-officedocument.spreadsheetml.template'
+
+mimes.docx === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+
+mimes.dotx === 'application/vnd.openxmlformats-officedocument.wordprocessingml.template'
+
+mimes.mgp === 'application/vnd.osgeo.mapguide.package'
+
+mimes.dp === 'application/vnd.osgi.dp'
+
+mimes.esa === 'application/vnd.osgi.subsystem'
+
+mimes.pdb === 'application/x-pilot'
+
+mimes.pqa === 'application/vnd.palm'
+
+mimes.oprc === 'application/vnd.palm'
+
+mimes.paw === 'application/vnd.pawaafile'
+
+mimes.str === 'application/vnd.pg.format'
+
+mimes.ei6 === 'application/vnd.pg.osasli'
+
+mimes.efif === 'application/vnd.picsel'
+
+mimes.wg === 'application/vnd.pmi.widget'
+
+mimes.plf === 'application/vnd.pocketlearn'
+
+mimes.pbd === 'application/vnd.powerbuilder6'
+
+mimes.box === 'application/vnd.previewsystems.box'
+
+mimes.mgz === 'application/vnd.proteus.magazine'
+
+mimes.qps === 'application/vnd.publishare-delta-tree'
+
+mimes.ptid === 'application/vnd.pvi.ptid1'
+
+mimes.qxd === 'application/vnd.quark.quarkxpress'
+
+mimes.qxt === 'application/vnd.quark.quarkxpress'
+
+mimes.qwd === 'application/vnd.quark.quarkxpress'
+
+mimes.qwt === 'application/vnd.quark.quarkxpress'
+
+mimes.qxl === 'application/vnd.quark.quarkxpress'
+
+mimes.qxb === 'application/vnd.quark.quarkxpress'
+
+mimes.rar === 'application/vnd.rar'
+
+mimes.bed === 'application/vnd.realvnc.bed'
+
+mimes.mxl === 'application/vnd.recordare.musicxml'
+
+mimes.musicxml === 'application/vnd.recordare.musicxml+xml'
+
+mimes.cryptonote === 'application/vnd.rig.cryptonote'
+
+mimes.cod === 'application/vnd.rim.cod'
+
+mimes.rm === 'application/vnd.rn-realmedia'
+
+mimes.rmvb === 'application/vnd.rn-realmedia-vbr'
+
+mimes.link66 === 'application/vnd.route66.link66+xml'
+
+mimes.st === 'application/vnd.sailingtracker.track'
+
+mimes.see === 'application/vnd.seemail'
+
+mimes.sema === 'application/vnd.sema'
+
+mimes.semd === 'application/vnd.semd'
+
+mimes.semf === 'application/vnd.semf'
+
+mimes.ifm === 'application/vnd.shana.informed.formdata'
+
+mimes.itp === 'application/vnd.shana.informed.formtemplate'
+
+mimes.iif === 'application/vnd.shana.informed.interchange'
+
+mimes.ipk === 'application/vnd.shana.informed.package'
+
+mimes.twd === 'application/vnd.simtech-mindmapper'
+
+mimes.twds === 'application/vnd.simtech-mindmapper'
+
+mimes.mmf === 'application/vnd.smaf'
+
+mimes.teacher === 'application/vnd.smart.teacher'
+
+mimes.fo === 'application/vnd.software602.filler.form+xml'
+
+mimes.sdkm === 'application/vnd.solent.sdkm+xml'
+
+mimes.sdkd === 'application/vnd.solent.sdkm+xml'
+
+mimes.dxp === 'application/vnd.spotfire.dxp'
+
+mimes.sfs === 'application/vnd.spotfire.sfs'
+
+mimes.sdc === 'application/vnd.stardivision.calc'
+
+mimes.sda === 'application/vnd.stardivision.draw'
+
+mimes.sdd === 'application/vnd.stardivision.impress'
+
+mimes.smf === 'application/vnd.stardivision.math'
+
+mimes.sdw === 'application/vnd.stardivision.writer'
+
+mimes.vor === 'application/vnd.stardivision.writer'
+
+mimes.sgl === 'application/vnd.stardivision.writer-global'
+
+mimes.smzip === 'application/vnd.stepmania.package'
+
+mimes.sm === 'application/vnd.stepmania.stepchart'
+
+mimes.wadl === 'application/vnd.sun.wadl+xml'
+
+mimes.sxc === 'application/vnd.sun.xml.calc'
+
+mimes.stc === 'application/vnd.sun.xml.calc.template'
+
+mimes.sxd === 'application/vnd.sun.xml.draw'
+
+mimes.std === 'application/vnd.sun.xml.draw.template'
+
+mimes.sxi === 'application/vnd.sun.xml.impress'
+
+mimes.sti === 'application/vnd.sun.xml.impress.template'
+
+mimes.sxm === 'application/vnd.sun.xml.math'
+
+mimes.sxw === 'application/vnd.sun.xml.writer'
+
+mimes.sxg === 'application/vnd.sun.xml.writer.global'
+
+mimes.stw === 'application/vnd.sun.xml.writer.template'
+
+mimes.sus === 'application/vnd.sus-calendar'
+
+mimes.susp === 'application/vnd.sus-calendar'
+
+mimes.svd === 'application/vnd.svd'
+
+mimes.sis === 'application/vnd.symbian.install'
+
+mimes.sisx === 'application/vnd.symbian.install'
+
+mimes.xsm === 'application/vnd.syncml+xml'
+
+mimes.bdm === 'application/vnd.syncml.dm+wbxml'
+
+mimes.xdm === 'application/vnd.syncml.dm+xml'
+
+mimes.ddf === 'application/vnd.syncml.dmddf+xml'
+
+mimes.tao === 'application/vnd.tao.intent-module-archive'
+
+mimes.pcap === 'application/vnd.tcpdump.pcap'
+
+mimes.cap === 'application/vnd.tcpdump.pcap'
+
+mimes.dmp === 'application/vnd.tcpdump.pcap'
+
+mimes.tmo === 'application/vnd.tmobile-livetv'
+
+mimes.tpt === 'application/vnd.trid.tpt'
+
+mimes.mxs === 'application/vnd.triscape.mxs'
+
+mimes.tra === 'application/vnd.trueapp'
+
+mimes.ufd === 'application/vnd.ufdl'
+
+mimes.ufdl === 'application/vnd.ufdl'
+
+mimes.utz === 'application/vnd.uiq.theme'
+
+mimes.umj === 'application/vnd.umajin'
+
+mimes.unityweb === 'application/vnd.unity'
+
+mimes.uoml === 'application/vnd.uoml+xml'
+
+mimes.vcx === 'application/vnd.vcx'
+
+mimes.vsd === 'application/vnd.visio'
+
+mimes.vst === 'application/vnd.visio'
+
+mimes.vss === 'application/vnd.visio'
+
+mimes.vsw === 'application/vnd.visio'
+
+mimes.vis === 'application/vnd.visionary'
+
+mimes.vsf === 'application/vnd.vsf'
+
+mimes.wbxml === 'application/vnd.wap.wbxml'
+
+mimes.wmlc === 'application/vnd.wap.wmlc'
+
+mimes.wmlsc === 'application/vnd.wap.wmlscriptc'
+
+mimes.wtb === 'application/vnd.webturbo'
+
+mimes.nbp === 'application/vnd.wolfram.player'
+
+mimes.wpd === 'application/vnd.wordperfect'
+
+mimes.wqd === 'application/vnd.wqd'
+
+mimes.stf === 'application/vnd.wt.stf'
+
+mimes.xar === 'application/vnd.xara'
+
+mimes.xfdl === 'application/vnd.xfdl'
+
+mimes.hvd === 'application/vnd.yamaha.hv-dic'
+
+mimes.hvs === 'application/vnd.yamaha.hv-script'
+
+mimes.hvp === 'application/vnd.yamaha.hv-voice'
+
+mimes.osf === 'application/vnd.yamaha.openscoreformat'
+
+mimes.osfpvg === 'application/vnd.yamaha.openscoreformat.osfpvg+xml'
+
+mimes.saf === 'application/vnd.yamaha.smaf-audio'
+
+mimes.spf === 'application/vnd.yamaha.smaf-phrase'
+
+mimes.cmp === 'application/vnd.yellowriver-custom-menu'
+
+mimes.zir === 'application/vnd.zul'
+
+mimes.zirz === 'application/vnd.zul'
+
+mimes.zaz === 'application/vnd.zzazz.deck+xml'
+
+mimes.vxml === 'application/voicexml+xml'
+
+mimes.wasm === 'application/wasm'
+
+mimes.wgt === 'application/widget'
+
+mimes.hlp === 'application/winhlp'
+
+mimes.wsdl === 'application/wsdl+xml'
+
+mimes.wspolicy === 'application/wspolicy+xml'
+
+mimes.7z === 'application/x-7z-compressed'
+
+mimes.abw === 'application/x-abiword'
+
+mimes.ace === 'application/x-ace-compressed'
+
+mimes.dmg === 'application/octet-stream'
+
+mimes.arj === 'application/x-arj'
+
+mimes.aab === 'application/x-authorware-bin'
+
+mimes.x32 === 'application/x-authorware-bin'
+
+mimes.u32 === 'application/x-authorware-bin'
+
+mimes.vox === 'application/x-authorware-bin'
+
+mimes.aam === 'application/x-authorware-map'
+
+mimes.aas === 'application/x-authorware-seg'
+
+mimes.bcpio === 'application/x-bcpio'
+
+mimes.bdoc === 'application/bdoc'
+
+mimes.torrent === 'application/x-bittorrent'
+
+mimes.blb === 'application/x-blorb'
+
+mimes.blorb === 'application/x-blorb'
+
+mimes.bz === 'application/x-bzip'
+
+mimes.bz2 === 'application/x-bzip2'
+
+mimes.boz === 'application/x-bzip2'
+
+mimes.cbr === 'application/x-cbr'
+
+mimes.cba === 'application/x-cbr'
+
+mimes.cbt === 'application/x-cbr'
+
+mimes.cbz === 'application/x-cbr'
+
+mimes.cb7 === 'application/x-cbr'
+
+mimes.vcd === 'application/x-cdlink'
+
+mimes.cfs === 'application/x-cfs-compressed'
+
+mimes.chat === 'application/x-chat'
+
+mimes.pgn === 'application/x-chess-pgn'
+
+mimes.crx === 'application/x-chrome-extension'
+
+mimes.cco === 'application/x-cocoa'
+
+mimes.nsc === 'application/x-conference'
+
+mimes.cpio === 'application/x-cpio'
+
+mimes.csh === 'application/x-csh'
+
+mimes.deb === 'application/x-debian-package'
+
+mimes.udeb === 'application/x-debian-package'
+
+mimes.dgc === 'application/x-dgc-compressed'
+
+mimes.dir === 'application/x-director'
+
+mimes.dcr === 'application/x-director'
+
+mimes.dxr === 'application/x-director'
+
+mimes.cst === 'application/x-director'
+
+mimes.cct === 'application/x-director'
+
+mimes.cxt === 'application/x-director'
+
+mimes.w3d === 'application/x-director'
+
+mimes.fgd === 'application/x-director'
+
+mimes.swa === 'application/x-director'
+
+mimes.wad === 'application/x-doom'
+
+mimes.ncx === 'application/x-dtbncx+xml'
+
+mimes.dtb === 'application/x-dtbook+xml'
+
+mimes.res === 'application/x-dtbresource+xml'
+
+mimes.dvi === 'application/x-dvi'
+
+mimes.evy === 'application/x-envoy'
+
+mimes.eva === 'application/x-eva'
+
+mimes.bdf === 'application/x-font-bdf'
+
+mimes.gsf === 'application/x-font-ghostscript'
+
+mimes.psf === 'application/x-font-linux-psf'
+
+mimes.pcf === 'application/x-font-pcf'
+
+mimes.snf === 'application/x-font-snf'
+
+mimes.pfa === 'application/x-font-type1'
+
+mimes.pfb === 'application/x-font-type1'
+
+mimes.pfm === 'application/x-font-type1'
+
+mimes.afm === 'application/x-font-type1'
+
+mimes.arc === 'application/x-freearc'
+
+mimes.spl === 'application/x-futuresplash'
+
+mimes.gca === 'application/x-gca-compressed'
+
+mimes.ulx === 'application/x-glulx'
+
+mimes.gnumeric === 'application/x-gnumeric'
+
+mimes.gramps === 'application/x-gramps-xml'
+
+mimes.gtar === 'application/x-gtar'
+
+mimes.hdf === 'application/x-hdf'
+
+mimes.php === 'application/x-httpd-php'
+
+mimes.install === 'application/x-install-instructions'
+
+mimes.iso === 'application/octet-stream'
+
+mimes.jardiff === 'application/x-java-archive-diff'
+
+mimes.jnlp === 'application/x-java-jnlp-file'
+
+mimes.kdbx === 'application/x-keepass2'
+
+mimes.latex === 'application/x-latex'
+
+mimes.luac === 'application/x-lua-bytecode'
+
+mimes.lzh === 'application/x-lzh-compressed'
+
+mimes.lha === 'application/x-lzh-compressed'
+
+mimes.run === 'application/x-makeself'
+
+mimes.mie === 'application/x-mie'
+
+mimes.prc === 'application/x-pilot'
+
+mimes.mobi === 'application/x-mobipocket-ebook'
+
+mimes.application === 'application/x-ms-application'
+
+mimes.lnk === 'application/x-ms-shortcut'
+
+mimes.wmd === 'application/x-ms-wmd'
+
+mimes.wmz === 'application/x-ms-wmz'
+
+mimes.xbap === 'application/x-ms-xbap'
+
+mimes.mdb === 'application/x-msaccess'
+
+mimes.obd === 'application/x-msbinder'
+
+mimes.crd === 'application/x-mscardfile'
+
+mimes.clp === 'application/x-msclip'
+
+mimes.exe === 'application/x-msdos-program'
+
+mimes.exe === 'application/x-msdos-program'
+
+mimes.dll === 'application/octet-stream'
+
+mimes.com === 'application/x-msdownload'
+
+mimes.bat === 'application/x-msdownload'
+
+mimes.msi === 'application/octet-stream'
+
+mimes.mvb === 'application/x-msmediaview'
+
+mimes.m13 === 'application/x-msmediaview'
+
+mimes.m14 === 'application/x-msmediaview'
+
+mimes.wmf === 'image/wmf'
+
+mimes.wmz === 'application/x-ms-wmz'
+
+mimes.emf === 'image/emf'
+
+mimes.emz === 'application/x-msmetafile'
+
+mimes.mny === 'application/x-msmoney'
+
+mimes.pub === 'application/x-mspublisher'
+
+mimes.scd === 'application/x-msschedule'
+
+mimes.trm === 'application/x-msterminal'
+
+mimes.wri === 'application/x-mswrite'
+
+mimes.nc === 'application/x-netcdf'
+
+mimes.cdf === 'application/x-netcdf'
+
+mimes.pac === 'application/x-ns-proxy-autoconfig'
+
+mimes.nzb === 'application/x-nzb'
+
+mimes.pl === 'application/x-perl'
+
+mimes.pm === 'application/x-perl'
+
+mimes.prc === 'application/x-pilot'
+
+mimes.pdb === 'application/x-pilot'
+
+mimes.p12 === 'application/x-pkcs12'
+
+mimes.pfx === 'application/x-pkcs12'
+
+mimes.p7b === 'application/x-pkcs7-certificates'
+
+mimes.spc === 'application/x-pkcs7-certificates'
+
+mimes.p7r === 'application/x-pkcs7-certreqresp'
+
+mimes.rar === 'application/x-rar-compressed'
+
+mimes.rpm === 'application/x-redhat-package-manager'
+
+mimes.ris === 'application/x-research-info-systems'
+
+mimes.sea === 'application/x-sea'
+
+mimes.sh === 'application/x-sh'
+
+mimes.shar === 'application/x-shar'
+
+mimes.swf === 'application/x-shockwave-flash'
+
+mimes.xap === 'application/x-silverlight-app'
+
+mimes.sql === 'application/x-sql'
+
+mimes.sit === 'application/x-stuffit'
+
+mimes.sitx === 'application/x-stuffitx'
+
+mimes.srt === 'application/x-subrip'
+
+mimes.sv4cpio === 'application/x-sv4cpio'
+
+mimes.sv4crc === 'application/x-sv4crc'
+
+mimes.t3 === 'application/x-t3vm-image'
+
+mimes.gam === 'application/x-tads'
+
+mimes.tar === 'application/x-tar'
+
+mimes.tcl === 'application/x-tcl'
+
+mimes.tk === 'application/x-tcl'
+
+mimes.tex === 'application/x-tex'
+
+mimes.tfm === 'application/x-tex-tfm'
+
+mimes.texinfo === 'application/x-texinfo'
+
+mimes.texi === 'application/x-texinfo'
+
+mimes.obj === 'application/x-tgif'
+
+mimes.ustar === 'application/x-ustar'
+
+mimes.hdd === 'application/x-virtualbox-hdd'
+
+mimes.ova === 'application/x-virtualbox-ova'
+
+mimes.ovf === 'application/x-virtualbox-ovf'
+
+mimes.vbox === 'application/x-virtualbox-vbox'
+
+mimes.vbox-extpack === 'application/x-virtualbox-vbox-extpack'
+
+mimes.vdi === 'application/x-virtualbox-vdi'
+
+mimes.vhd === 'application/x-virtualbox-vhd'
+
+mimes.vmdk === 'application/x-virtualbox-vmdk'
+
+mimes.src === 'application/x-wais-source'
+
+mimes.webapp === 'application/x-web-app-manifest+json'
+
+mimes.der === 'application/x-x509-ca-cert'
+
+mimes.crt === 'application/x-x509-ca-cert'
+
+mimes.pem === 'application/x-x509-ca-cert'
+
+mimes.fig === 'application/x-xfig'
+
+mimes.xlf === 'application/x-xliff+xml'
+
+mimes.xpi === 'application/x-xpinstall'
+
+mimes.xz === 'application/x-xz'
+
+mimes.z1 === 'application/x-zmachine'
+
+mimes.z2 === 'application/x-zmachine'
+
+mimes.z3 === 'application/x-zmachine'
+
+mimes.z4 === 'application/x-zmachine'
+
+mimes.z5 === 'application/x-zmachine'
+
+mimes.z6 === 'application/x-zmachine'
+
+mimes.z7 === 'application/x-zmachine'
+
+mimes.z8 === 'application/x-zmachine'
+
+mimes.xaml === 'application/xaml+xml'
+
+mimes.xav === 'application/xcap-att+xml'
+
+mimes.xca === 'application/xcap-caps+xml'
+
+mimes.xdf === 'application/xcap-diff+xml'
+
+mimes.xel === 'application/xcap-el+xml'
+
+mimes.xer === 'application/xcap-error+xml'
+
+mimes.xns === 'application/xcap-ns+xml'
+
+mimes.xenc === 'application/xenc+xml'
+
+mimes.xhtml === 'application/xhtml+xml'
+
+mimes.xht === 'application/xhtml+xml'
+
+mimes.xlf === 'application/xliff+xml'
+
+mimes.xml === 'text/xml'
+
+mimes.xsl === 'application/xml'
+
+mimes.xsd === 'application/xml'
+
+mimes.rng === 'application/xml'
+
+mimes.dtd === 'application/xml-dtd'
+
+mimes.xop === 'application/xop+xml'
+
+mimes.xpl === 'application/xproc+xml'
+
+mimes.xsl === 'application/xslt+xml'
+
+mimes.xslt === 'application/xslt+xml'
+
+mimes.xspf === 'application/xspf+xml'
+
+mimes.mxml === 'application/xv+xml'
+
+mimes.xhvml === 'application/xv+xml'
+
+mimes.xvml === 'application/xv+xml'
+
+mimes.xvm === 'application/xv+xml'
+
+mimes.yang === 'application/yang'
+
+mimes.yin === 'application/yin+xml'
+
+mimes.zip === 'application/zip'
+
+mimes.3gpp === 'video/3gpp'
+
+mimes.adp === 'audio/adpcm'
+
+mimes.au === 'audio/basic'
+
+mimes.snd === 'audio/basic'
+
+mimes.mid === 'audio/midi'
+
+mimes.midi === 'audio/midi'
+
+mimes.kar === 'audio/midi'
+
+mimes.rmi === 'audio/midi'
+
+mimes.mxmf === 'audio/mobile-xmf'
+
+mimes.mp3 === 'audio/mp3'
+
+mimes.m4a === 'audio/mp4'
+
+mimes.mp4a === 'audio/mp4'
+
+mimes.mpga === 'audio/mpeg'
+
+mimes.mp2 === 'audio/mpeg'
+
+mimes.mp2a === 'audio/mpeg'
+
+mimes.mp3 === 'audio/mp3'
+
+mimes.m2a === 'audio/mpeg'
+
+mimes.m3a === 'audio/mpeg'
+
+mimes.oga === 'audio/ogg'
+
+mimes.ogg === 'audio/ogg'
+
+mimes.spx === 'audio/ogg'
+
+mimes.s3m === 'audio/s3m'
+
+mimes.sil === 'audio/silk'
+
+mimes.uva === 'audio/vnd.dece.audio'
+
+mimes.uvva === 'audio/vnd.dece.audio'
+
+mimes.eol === 'audio/vnd.digital-winds'
+
+mimes.dra === 'audio/vnd.dra'
+
+mimes.dts === 'audio/vnd.dts'
+
+mimes.dtshd === 'audio/vnd.dts.hd'
+
+mimes.lvp === 'audio/vnd.lucent.voice'
+
+mimes.pya === 'audio/vnd.ms-playready.media.pya'
+
+mimes.ecelp4800 === 'audio/vnd.nuera.ecelp4800'
+
+mimes.ecelp7470 === 'audio/vnd.nuera.ecelp7470'
+
+mimes.ecelp9600 === 'audio/vnd.nuera.ecelp9600'
+
+mimes.rip === 'audio/vnd.rip'
+
+mimes.wav === 'audio/wave'
+
+mimes.wav === 'audio/wave'
+
+mimes.weba === 'audio/webm'
+
+mimes.aac === 'audio/x-aac'
+
+mimes.aif === 'audio/x-aiff'
+
+mimes.aiff === 'audio/x-aiff'
+
+mimes.aifc === 'audio/x-aiff'
+
+mimes.caf === 'audio/x-caf'
+
+mimes.flac === 'audio/x-flac'
+
+mimes.m4a === 'audio/mp4'
+
+mimes.mka === 'audio/x-matroska'
+
+mimes.m3u === 'audio/x-mpegurl'
+
+mimes.wax === 'audio/x-ms-wax'
+
+mimes.wma === 'audio/x-ms-wma'
+
+mimes.ram === 'audio/x-pn-realaudio'
+
+mimes.ra === 'audio/x-realaudio'
+
+mimes.rmp === 'audio/x-pn-realaudio-plugin'
+
+mimes.ra === 'audio/x-realaudio'
+
+mimes.wav === 'audio/wave'
+
+mimes.xm === 'audio/xm'
+
+mimes.cdx === 'chemical/x-cdx'
+
+mimes.cif === 'chemical/x-cif'
+
+mimes.cmdf === 'chemical/x-cmdf'
+
+mimes.cml === 'chemical/x-cml'
+
+mimes.csml === 'chemical/x-csml'
+
+mimes.xyz === 'chemical/x-xyz'
+
+mimes.ttc === 'font/collection'
+
+mimes.otf === 'font/otf'
+
+mimes.ttf === 'font/ttf'
+
+mimes.woff === 'font/woff'
+
+mimes.woff2 === 'font/woff2'
+
+mimes.exr === 'image/aces'
+
+mimes.apng === 'image/apng'
+
+mimes.avif === 'image/avif'
+
+mimes.bmp === 'image/bmp'
+
+mimes.cgm === 'image/cgm'
+
+mimes.drle === 'image/dicom-rle'
+
+mimes.emf === 'image/emf'
+
+mimes.fits === 'image/fits'
+
+mimes.g3 === 'image/g3fax'
+
+mimes.gif === 'image/gif'
+
+mimes.heic === 'image/heic'
+
+mimes.heics === 'image/heic-sequence'
+
+mimes.heif === 'image/heif'
+
+mimes.heifs === 'image/heif-sequence'
+
+mimes.hej2 === 'image/hej2k'
+
+mimes.hsj2 === 'image/hsj2'
+
+mimes.ief === 'image/ief'
+
+mimes.jls === 'image/jls'
+
+mimes.jp2 === 'image/jp2'
+
+mimes.jpg2 === 'image/jp2'
+
+mimes.jpeg === 'image/jpeg'
+
+mimes.jpg === 'image/jpeg'
+
+mimes.jpe === 'image/jpeg'
+
+mimes.jph === 'image/jph'
+
+mimes.jhc === 'image/jphc'
+
+mimes.jpm === 'image/jpm'
+
+mimes.jpx === 'image/jpx'
+
+mimes.jpf === 'image/jpx'
+
+mimes.jxr === 'image/jxr'
+
+mimes.jxra === 'image/jxra'
+
+mimes.jxrs === 'image/jxrs'
+
+mimes.jxs === 'image/jxs'
+
+mimes.jxsc === 'image/jxsc'
+
+mimes.jxsi === 'image/jxsi'
+
+mimes.jxss === 'image/jxss'
+
+mimes.ktx === 'image/ktx'
+
+mimes.ktx2 === 'image/ktx2'
+
+mimes.png === 'image/png'
+
+mimes.btif === 'image/prs.btif'
+
+mimes.pti === 'image/prs.pti'
+
+mimes.sgi === 'image/sgi'
+
+mimes.svg === 'image/svg+xml'
+
+mimes.svgz === 'image/svg+xml'
+
+mimes.t38 === 'image/t38'
+
+mimes.tif === 'image/tiff'
+
+mimes.tiff === 'image/tiff'
+
+mimes.tfx === 'image/tiff-fx'
+
+mimes.psd === 'image/vnd.adobe.photoshop'
+
+mimes.azv === 'image/vnd.airzip.accelerator.azv'
+
+mimes.uvi === 'image/vnd.dece.graphic'
+
+mimes.uvvi === 'image/vnd.dece.graphic'
+
+mimes.uvg === 'image/vnd.dece.graphic'
+
+mimes.uvvg === 'image/vnd.dece.graphic'
+
+mimes.djvu === 'image/vnd.djvu'
+
+mimes.djv === 'image/vnd.djvu'
+
+mimes.sub === 'text/vnd.dvb.subtitle'
+
+mimes.dwg === 'image/vnd.dwg'
+
+mimes.dxf === 'image/vnd.dxf'
+
+mimes.fbs === 'image/vnd.fastbidsheet'
+
+mimes.fpx === 'image/vnd.fpx'
+
+mimes.fst === 'image/vnd.fst'
+
+mimes.mmr === 'image/vnd.fujixerox.edmics-mmr'
+
+mimes.rlc === 'image/vnd.fujixerox.edmics-rlc'
+
+mimes.ico === 'image/x-icon'
+
+mimes.dds === 'image/vnd.ms-dds'
+
+mimes.mdi === 'image/vnd.ms-modi'
+
+mimes.wdp === 'image/vnd.ms-photo'
+
+mimes.npx === 'image/vnd.net-fpx'
+
+mimes.b16 === 'image/vnd.pco.b16'
+
+mimes.tap === 'image/vnd.tencent.tap'
+
+mimes.vtf === 'image/vnd.valve.source.texture'
+
+mimes.wbmp === 'image/vnd.wap.wbmp'
+
+mimes.xif === 'image/vnd.xiff'
+
+mimes.pcx === 'image/x-pcx'
+
+mimes.webp === 'image/webp'
+
+mimes.wmf === 'image/wmf'
+
+mimes.3ds === 'image/x-3ds'
+
+mimes.ras === 'image/x-cmu-raster'
+
+mimes.cmx === 'image/x-cmx'
+
+mimes.fh === 'image/x-freehand'
+
+mimes.fhc === 'image/x-freehand'
+
+mimes.fh4 === 'image/x-freehand'
+
+mimes.fh5 === 'image/x-freehand'
+
+mimes.fh7 === 'image/x-freehand'
+
+mimes.ico === 'image/x-icon'
+
+mimes.jng === 'image/x-jng'
+
+mimes.sid === 'image/x-mrsid-image'
+
+mimes.bmp === 'image/bmp'
+
+mimes.pcx === 'image/x-pcx'
+
+mimes.pic === 'image/x-pict'
+
+mimes.pct === 'image/x-pict'
+
+mimes.pnm === 'image/x-portable-anymap'
+
+mimes.pbm === 'image/x-portable-bitmap'
+
+mimes.pgm === 'image/x-portable-graymap'
+
+mimes.ppm === 'image/x-portable-pixmap'
+
+mimes.rgb === 'image/x-rgb'
+
+mimes.tga === 'image/x-tga'
+
+mimes.xbm === 'image/x-xbitmap'
+
+mimes.xpm === 'image/x-xpixmap'
+
+mimes.xwd === 'image/x-xwindowdump'
+
+mimes.disposition-notification === 'message/disposition-notification'
+
+mimes.u8msg === 'message/global'
+
+mimes.u8dsn === 'message/global-delivery-status'
+
+mimes.u8mdn === 'message/global-disposition-notification'
+
+mimes.u8hdr === 'message/global-headers'
+
+mimes.eml === 'message/rfc822'
+
+mimes.mime === 'message/rfc822'
+
+mimes.wsc === 'message/vnd.wfa.wsc'
+
+mimes.3mf === 'model/3mf'
+
+mimes.gltf === 'model/gltf+json'
+
+mimes.glb === 'model/gltf-binary'
+
+mimes.igs === 'model/iges'
+
+mimes.iges === 'model/iges'
+
+mimes.msh === 'model/mesh'
+
+mimes.mesh === 'model/mesh'
+
+mimes.silo === 'model/mesh'
+
+mimes.mtl === 'model/mtl'
+
+mimes.obj === 'model/obj'
+
+mimes.stl === 'model/stl'
+
+mimes.dae === 'model/vnd.collada+xml'
+
+mimes.dwf === 'model/vnd.dwf'
+
+mimes.gdl === 'model/vnd.gdl'
+
+mimes.gtw === 'model/vnd.gtw'
+
+mimes.mts === 'model/vnd.mts'
+
+mimes.ogex === 'model/vnd.opengex'
+
+mimes.x_b === 'model/vnd.parasolid.transmit.binary'
+
+mimes.x_t === 'model/vnd.parasolid.transmit.text'
+
+mimes.usdz === 'model/vnd.usdz+zip'
+
+mimes.bsp === 'model/vnd.valve.source.compiled-map'
+
+mimes.vtu === 'model/vnd.vtu'
+
+mimes.wrl === 'model/vrml'
+
+mimes.vrml === 'model/vrml'
+
+mimes.x3db === 'model/x3d+binary'
+
+mimes.x3dbz === 'model/x3d+binary'
+
+mimes.x3db === 'model/x3d+binary'
+
+mimes.x3dv === 'model/x3d-vrml'
+
+mimes.x3dvz === 'model/x3d+vrml'
+
+mimes.x3d === 'model/x3d+xml'
+
+mimes.x3dz === 'model/x3d+xml'
+
+mimes.x3dv === 'model/x3d-vrml'
+
+mimes.appcache === 'text/cache-manifest'
+
+mimes.manifest === 'text/cache-manifest'
+
+mimes.ics === 'text/calendar'
+
+mimes.ifb === 'text/calendar'
+
+mimes.coffee === 'text/coffeescript'
+
+mimes.litcoffee === 'text/coffeescript'
+
+mimes.css === 'text/css'
+
+mimes.csv === 'text/csv'
+
+mimes.html === 'text/html'
+
+mimes.htm === 'text/html'
+
+mimes.shtml === 'text/html'
+
+mimes.jade === 'text/jade'
+
+mimes.jsx === 'text/jsx'
+
+mimes.less === 'text/less'
+
+mimes.markdown === 'text/markdown'
+
+mimes.md === 'text/markdown'
+
+mimes.mml === 'text/mathml'
+
+mimes.mdx === 'text/mdx'
+
+mimes.n3 === 'text/n3'
+
+mimes.txt === 'text/plain'
+
+mimes.text === 'text/plain'
+
+mimes.conf === 'text/plain'
+
+mimes.def === 'text/plain'
+
+mimes.list === 'text/plain'
+
+mimes.log === 'text/plain'
+
+mimes.in === 'text/plain'
+
+mimes.ini === 'text/plain'
+
+mimes.dsc === 'text/prs.lines.tag'
+
+mimes.rtx === 'text/richtext'
+
+mimes.rtf === 'text/rtf'
+
+mimes.sgml === 'text/sgml'
+
+mimes.sgm === 'text/sgml'
+
+mimes.shex === 'text/shex'
+
+mimes.slim === 'text/slim'
+
+mimes.slm === 'text/slim'
+
+mimes.spdx === 'text/spdx'
+
+mimes.stylus === 'text/stylus'
+
+mimes.styl === 'text/stylus'
+
+mimes.tsv === 'text/tab-separated-values'
+
+mimes.t === 'text/troff'
+
+mimes.tr === 'text/troff'
+
+mimes.roff === 'text/troff'
+
+mimes.man === 'text/troff'
+
+mimes.me === 'text/troff'
+
+mimes.ms === 'text/troff'
+
+mimes.ttl === 'text/turtle'
+
+mimes.uri === 'text/uri-list'
+
+mimes.uris === 'text/uri-list'
+
+mimes.urls === 'text/uri-list'
+
+mimes.vcard === 'text/vcard'
+
+mimes.curl === 'text/vnd.curl'
+
+mimes.dcurl === 'text/vnd.curl.dcurl'
+
+mimes.mcurl === 'text/vnd.curl.mcurl'
+
+mimes.scurl === 'text/vnd.curl.scurl'
+
+mimes.sub === 'text/vnd.dvb.subtitle'
+
+mimes.fly === 'text/vnd.fly'
+
+mimes.flx === 'text/vnd.fmi.flexstor'
+
+mimes.gv === 'text/vnd.graphviz'
+
+mimes.3dml === 'text/vnd.in3d.3dml'
+
+mimes.spot === 'text/vnd.in3d.spot'
+
+mimes.jad === 'text/vnd.sun.j2me.app-descriptor'
+
+mimes.wml === 'text/vnd.wap.wml'
+
+mimes.wmls === 'text/vnd.wap.wmlscript'
+
+mimes.vtt === 'text/vtt'
+
+mimes.s === 'text/x-asm'
+
+mimes.asm === 'text/x-asm'
+
+mimes.c === 'text/x-c'
+
+mimes.cc === 'text/x-c'
+
+mimes.cxx === 'text/x-c'
+
+mimes.cpp === 'text/x-c'
+
+mimes.h === 'text/x-c'
+
+mimes.hh === 'text/x-c'
+
+mimes.dic === 'text/x-c'
+
+mimes.htc === 'text/x-component'
+
+mimes.f === 'text/x-fortran'
+
+mimes.for === 'text/x-fortran'
+
+mimes.f77 === 'text/x-fortran'
+
+mimes.f90 === 'text/x-fortran'
+
+mimes.hbs === 'text/x-handlebars-template'
+
+mimes.java === 'text/x-java-source'
+
+mimes.lua === 'text/x-lua'
+
+mimes.mkd === 'text/x-markdown'
+
+mimes.nfo === 'text/x-nfo'
+
+mimes.opml === 'text/x-opml'
+
+mimes.org === 'text/x-org'
+
+mimes.p === 'text/x-pascal'
+
+mimes.pas === 'text/x-pascal'
+
+mimes.pde === 'text/x-processing'
+
+mimes.sass === 'text/x-sass'
+
+mimes.scss === 'text/x-scss'
+
+mimes.etx === 'text/x-setext'
+
+mimes.sfv === 'text/x-sfv'
+
+mimes.ymp === 'text/x-suse-ymp'
+
+mimes.uu === 'text/x-uuencode'
+
+mimes.vcs === 'text/x-vcalendar'
+
+mimes.vcf === 'text/x-vcard'
+
+mimes.xml === 'text/xml'
+
+mimes.yaml === 'text/yaml'
+
+mimes.yml === 'text/yaml'
+
+mimes.3gp === 'video/3gpp'
+
+mimes.3gpp === 'video/3gpp'
+
+mimes.3g2 === 'video/3gpp2'
+
+mimes.h261 === 'video/h261'
+
+mimes.h263 === 'video/h263'
+
+mimes.h264 === 'video/h264'
+
+mimes.jpgv === 'video/jpeg'
+
+mimes.jpm === 'image/jpm'
+
+mimes.jpgm === 'video/jpm'
+
+mimes.mj2 === 'video/mj2'
+
+mimes.mjp2 === 'video/mj2'
+
+mimes.ts === 'video/mp2t'
+
+mimes.mp4 === 'video/mp4'
+
+mimes.mp4v === 'video/mp4'
+
+mimes.mpg4 === 'video/mp4'
+
+mimes.mpeg === 'video/mpeg'
+
+mimes.mpg === 'video/mpeg'
+
+mimes.mpe === 'video/mpeg'
+
+mimes.m1v === 'video/mpeg'
+
+mimes.m2v === 'video/mpeg'
+
+mimes.ogv === 'video/ogg'
+
+mimes.qt === 'video/quicktime'
+
+mimes.mov === 'video/quicktime'
+
+mimes.uvh === 'video/vnd.dece.hd'
+
+mimes.uvvh === 'video/vnd.dece.hd'
+
+mimes.uvm === 'video/vnd.dece.mobile'
+
+mimes.uvvm === 'video/vnd.dece.mobile'
+
+mimes.uvp === 'video/vnd.dece.pd'
+
+mimes.uvvp === 'video/vnd.dece.pd'
+
+mimes.uvs === 'video/vnd.dece.sd'
+
+mimes.uvvs === 'video/vnd.dece.sd'
+
+mimes.uvv === 'video/vnd.dece.video'
+
+mimes.uvvv === 'video/vnd.dece.video'
+
+mimes.dvb === 'video/vnd.dvb.file'
+
+mimes.fvt === 'video/vnd.fvt'
+
+mimes.mxu === 'video/vnd.mpegurl'
+
+mimes.m4u === 'video/vnd.mpegurl'
+
+mimes.pyv === 'video/vnd.ms-playready.media.pyv'
+
+mimes.uvu === 'video/vnd.uvvu.mp4'
+
+mimes.uvvu === 'video/vnd.uvvu.mp4'
+
+mimes.viv === 'video/vnd.vivo'
+
+mimes.webm === 'video/webm'
+
+mimes.f4v === 'video/x-f4v'
+
+mimes.fli === 'video/x-fli'
+
+mimes.flv === 'video/x-flv'
+
+mimes.m4v === 'video/x-m4v'
+
+mimes.mkv === 'video/x-matroska'
+
+mimes.mk3d === 'video/x-matroska'
+
+mimes.mks === 'video/x-matroska'
+
+mimes.mng === 'video/x-mng'
+
+mimes.asf === 'video/x-ms-asf'
+
+mimes.asx === 'video/x-ms-asf'
+
+mimes.vob === 'video/x-ms-vob'
+
+mimes.wm === 'video/x-ms-wm'
+
+mimes.wmv === 'video/x-ms-wmv'
+
+mimes.wmx === 'video/x-ms-wmx'
+
+mimes.wvx === 'video/x-ms-wvx'
+
+mimes.avi === 'video/x-msvideo'
+
+mimes.movie === 'video/x-sgi-movie'
+
+mimes.smv === 'video/x-smv'
+
+mimes.ice === 'x-conference/x-cooltalk'
+```
 
 [![NPM version][npm-image]][npm-url]
 [![Linux Build Status][travis-image]][travis-url]
