@@ -29,6 +29,16 @@ run
 ```
 to rebuild the file.
 
+### usage:
+in yourproject.js
+
+```javascript
+import defaultMimes, { mimes, compressibles } from '@magic/mime-types'
+```
+
+very detailed usage below
+
+## Dev
 
 ### recreate src/index.mjs
 **src/index.mjs should never be changed manually.**
@@ -37,14 +47,6 @@ run
 ./bin/bin.mjs build
 ```
 to rebuild the file.
-
-
-### import / usage
-```javascript
-import mimes from '@magic/mime-types'
-
-||::mime-db-content::||
-```
 
 ### changelog
 
@@ -58,9 +60,21 @@ first publish
 #### 0.0.3
 bump required node version to 14.2.0
 
-#### 0.0.4 - unreleased
+#### 0.0.4
+* bin now only builds, no commands needed.
+* build only loops once.
+* update documentation.
+
+#### 0.0.5 - unreleased
 ...
 
+
+### import / usage
+```javascript
+import mimes from '@magic/mime-types'
+
+||::mime-db-content::||
+```
 
 [![NPM version][npm-image]][npm-url]
 [![Linux Build Status][travis-image]][travis-url]
