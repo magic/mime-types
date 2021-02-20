@@ -1750,6 +1750,8 @@ mimes.3gpp === 'video/3gpp'
 
 mimes.adp === 'audio/adpcm'
 
+mimes.amr === 'audio/amr'
+
 mimes.au === 'audio/basic'
 
 mimes.snd === 'audio/basic'
@@ -1787,6 +1789,8 @@ mimes.oga === 'audio/ogg'
 mimes.ogg === 'audio/ogg'
 
 mimes.spx === 'audio/ogg'
+
+mimes.opus === 'audio/ogg'
 
 mimes.s3m === 'audio/s3m'
 
@@ -2367,6 +2371,8 @@ mimes.h261 === 'video/h261'
 mimes.h263 === 'video/h263'
 
 mimes.h264 === 'video/h264'
+
+mimes.m4s === 'video/iso.segment'
 
 mimes.jpgv === 'video/jpeg'
 
