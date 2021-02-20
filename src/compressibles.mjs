@@ -255,6 +255,7 @@ export const compressibles = {
   oga: false,
   ogg: false,
   spx: false,
+  opus: false,
   wav: false,
   weba: false,
   aac: false,
