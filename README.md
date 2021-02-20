@@ -68,7 +68,10 @@ small change
 * build only loops once.
 * update documentation.
 
-#### 0.0.6 - unreleased
+#### 0.0.6
+update mime-db
+
+#### 0.0.7 - unreleased
 ...
 
 
