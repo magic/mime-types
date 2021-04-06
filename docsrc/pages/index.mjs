@@ -2429,7 +2429,7 @@ mimes.ice === 'x-conference/x-cooltalk'
   h2({ id: 'source' }, 'source'),
   p([
     'the source for this page is in the ',
-    Link({ to: 'https://github.com/magic/fs/tree/master/example' }, 'example directory'),
+    Link({ to: 'https://github.com/magic/mime-types/tree/master/docsrc' }, 'docsrc directory'),
     ' and gets built and published to github using ',
     Link({ to: 'https://github.com/magic/core' }, '@magic/core'),
   ]),
