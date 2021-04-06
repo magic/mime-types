@@ -68,16 +68,7 @@ small change
 * build only loops once.
 * update documentation.
 
-#### 0.0.6 
-update mime-db
-
-#### 0.0.7
-update mime-db
-
-#### 0.0.8
-update mime-db
-
-#### 0.0.9 - unreleased
+#### 0.0.6 - unreleased
 ...
 
 
@@ -133,9 +124,9 @@ mimes.dssc === 'application/dssc+der'
 
 mimes.xdssc === 'application/dssc+xml'
 
-mimes.ecma === 'application/ecmascript'
-
 mimes.es === 'application/ecmascript'
+
+mimes.ecma === 'application/ecmascript'
 
 mimes.emma === 'application/emma+xml'
 
@@ -242,10 +233,6 @@ mimes.mp21 === 'application/mp21'
 mimes.mp4s === 'application/mp4'
 
 mimes.m4p === 'application/mp4'
-
-mimes.xdf === 'application/mrb-consumer+xml'
-
-mimes.xdf === 'application/mrb-publish+xml'
 
 mimes.doc === 'application/msword'
 
@@ -1709,8 +1696,6 @@ mimes.xdf === 'application/xcap-diff+xml'
 
 mimes.xel === 'application/xcap-el+xml'
 
-mimes.xer === 'application/xcap-error+xml'
-
 mimes.xns === 'application/xcap-ns+xml'
 
 mimes.xenc === 'application/xenc+xml'
@@ -2144,6 +2129,8 @@ mimes.ogex === 'model/vnd.opengex'
 mimes.x_b === 'model/vnd.parasolid.transmit.binary'
 
 mimes.x_t === 'model/vnd.parasolid.transmit.text'
+
+mimes.vds === 'model/vnd.sap.vds'
 
 mimes.usdz === 'model/vnd.usdz+zip'
 
