@@ -42,9 +42,7 @@ const run = async () => {
   const compStringified = JSON.stringify(compressibles, null, 2)
   const compressibleString = `export const compressibles = ${compStringified}`
 
-  const docMimeTypeString = docMimeTypes
-    .map(([key, ext]) => `mimes.${key} === '${ext}'`)
-    .join('\n\n')
+  const docMimeTypeString = docMimeTypes.map(([key, ext]) => `mimes.${key} === '${ext}'`).join('\n')
 
   let [docContent, jsDocContent] = await Promise.all([
     fs.readFile(path.join(process.cwd(), 'bin', './README-template.md'), 'utf8'),
