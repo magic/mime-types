@@ -77,7 +77,11 @@ update mime-db
 #### 0.0.8
 update mime-db
 
-#### 0.0.9 - unreleased
+#### 0.0.9
+* remove greenkeeper badges from readme
+* update @magic devdependency libraries
+
+#### 0.0.10 - unreleased
 ...
 
 
