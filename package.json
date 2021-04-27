@@ -6,6 +6,7 @@
   "license": "AGPL-3.0",
   "homepage": "https://magic.github.io/mime-types",
   "main": "src/index.mjs",
+  "type": "module",
   "scripts": {
     "start": "npm test",
     "test": "t --exclude docs example config.js",
