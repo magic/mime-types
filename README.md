@@ -1293,7 +1293,6 @@ mimes.ice === 'x-conference/x-cooltalk'
 [![Linux Build Status][travis-image]][travis-url]
 [![Windows Build Status][appveyor-image]][appveyor-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 
 [npm-image]: https://img.shields.io/npm/v/@magic/mime-types.svg
@@ -1304,7 +1303,5 @@ mimes.ice === 'x-conference/x-cooltalk'
 [appveyor-url]: https://ci.appveyor.com/project/magic/mime-types/branch/master
 [coveralls-image]: https://coveralls.io/repos/github/magic/mime-types/badge.svg
 [coveralls-url]: https://coveralls.io/github/magic/mime-types
-[greenkeeper-image]: https://badges.greenkeeper.io/magic/mime-types.svg
-[greenkeeper-url]: https://badges.greenkeeper.io/magic/mime-types.svg
 [snyk-image]: https://snyk.io/test/github/magic/mime-types/badge.svg
 [snyk-url]: https://snyk.io/test/github/magic/mime-types
