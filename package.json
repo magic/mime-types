@@ -1,6 +1,6 @@
 {
   "name": "@magic/mime-types",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Wizards & Witches",
   "description": "mime-db, in a key => value store where keys are extensions and values are mime/types",
   "license": "AGPL-3.0",
