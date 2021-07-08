@@ -400,6 +400,7 @@ export const mimes = {
   scm: 'application/vnd.lotus-screencam',
   lwp: 'application/vnd.lotus-wordpro',
   portpkg: 'application/vnd.macports.portpkg',
+  mvt: 'application/vnd.mapbox-vector-tile',
   mcd: 'application/vnd.mcd',
   mc1: 'application/vnd.medcalcdata',
   cdkey: 'application/vnd.mediastation.cdkey',

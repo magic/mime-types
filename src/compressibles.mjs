@@ -332,6 +332,8 @@ export const compressibles = {
   org: true,
   pde: true,
   ymp: true,
+  yaml: true,
+  yml: true,
   mp4: false,
   mp4v: false,
   mpg4: false,
