@@ -34,14 +34,14 @@
     "@magic-modules/git-badges": "0.0.11",
     "@magic-modules/light-switch": "0.0.10",
     "@magic-modules/no-spy": "0.0.6",
-    "@magic-modules/pre": "0.0.10",
-    "@magic-themes/docs": "0.0.13",
-    "@magic/core": "0.0.124",
-    "@magic/format": "0.0.23",
-    "@magic/fs": "0.0.13",
-    "@magic/log": "0.1.9",
-    "@magic/test": "0.1.69",
-    "mime-db": "1.48.0"
+    "@magic-modules/pre": "0.0.11",
+    "@magic-themes/docs": "0.0.14",
+    "@magic/core": "0.0.130",
+    "@magic/format": "0.0.30",
+    "@magic/fs": "0.0.16",
+    "@magic/log": "0.1.10",
+    "@magic/test": "0.1.75",
+    "mime-db": "1.50.0"
   },
   "files": [
     "src"
