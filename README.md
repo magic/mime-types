@@ -84,7 +84,10 @@ update mime-db
 #### 0.0.10
 update mime-db
 
-#### 0.0.11 - unreleased
+#### 0.0.11
+update mime-db
+
+#### 0.0.12 - unreleased
 ...
 
 
