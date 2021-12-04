@@ -22,6 +22,7 @@ const run = async () => {
 
   Object.entries(additions).forEach(([key, value]) => {
     mimeTypes[key] = value
+    docMimeTypes.push([key, value])
   })
 
   Object.entries(mimes)
