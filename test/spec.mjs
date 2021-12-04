@@ -20,6 +20,9 @@ const tests = Object.entries(mimedb)
     }),
   )
 
-const additionTests = Object.entries(additions).map(([key, val]) => ({ fn: mimes[key] === val, info: `addition ${key} exists and is correctly assigned` }))
+const additionTests = Object.entries(additions).map(([key, val]) => ({
+  fn: mimes[key] === val,
+  info: `addition ${key} exists and is correctly assigned`,
+}))
 
 export default deep.flatten(tests, additionTests)
