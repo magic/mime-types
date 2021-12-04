@@ -37,11 +37,11 @@
     "@magic-modules/pre": "0.0.11",
     "@magic-themes/docs": "0.0.14",
     "@magic/core": "0.0.132",
-    "@magic/format": "0.0.31",
+    "@magic/format": "0.0.32",
     "@magic/fs": "0.0.17",
     "@magic/log": "0.1.10",
     "@magic/test": "0.1.76",
-    "mime-db": "1.50.0"
+    "mime-db": "1.51.0"
   },
   "files": [
     "src"
