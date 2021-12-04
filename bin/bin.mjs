@@ -6,6 +6,7 @@ import fs from '@magic/fs'
 import log from '@magic/log'
 
 import overwrites from './overwrites.mjs'
+import additions from './additions.mjs'
 
 import { default as mimes } from 'mime-db'
 
@@ -18,6 +19,10 @@ const run = async () => {
   const mimeTypes = {}
   const docMimeTypes = []
   const compressibles = {}
+
+  Object.entries(additions).forEach(([key, value]) => {
+    mimeTypes[key] = value
+  })
 
   Object.entries(mimes)
     .filter(([_, { extensions = [] }]) => extensions.length)
