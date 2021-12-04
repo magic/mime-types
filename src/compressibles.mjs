@@ -281,6 +281,7 @@ export const compressibles = {
   tiff: false,
   psd: true,
   ico: true,
+  dds: true,
   eml: true,
   mime: true,
   gltf: true,

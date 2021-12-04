@@ -1,5 +1,6 @@
 export const mimes = {
   123: 'application/vnd.lotus-1-2-3',
+  ply: 'application/octet-stream',
   ez: 'application/andrew-inset',
   aw: 'application/applixware',
   atom: 'application/atom+xml',
@@ -208,6 +209,7 @@ export const mimes = {
   fxpl: 'application/vnd.adobe.fxp',
   xdp: 'application/vnd.adobe.xdp+xml',
   xfdf: 'application/vnd.adobe.xfdf',
+  age: 'application/vnd.age',
   ahead: 'application/vnd.ahead.space',
   azf: 'application/vnd.airzip.filesecure.azf',
   azs: 'application/vnd.airzip.filesecure.azs',
@@ -1070,6 +1072,7 @@ export const mimes = {
   dcurl: 'text/vnd.curl.dcurl',
   mcurl: 'text/vnd.curl.mcurl',
   scurl: 'text/vnd.curl.scurl',
+  ged: 'text/vnd.familysearch.gedcom',
   fly: 'text/vnd.fly',
   flx: 'text/vnd.fmi.flexstor',
   gv: 'text/vnd.graphviz',
