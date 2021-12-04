@@ -87,7 +87,11 @@ update mime-db
 #### 0.0.11
 update mime-db
 
-#### 0.0.12 - unreleased
+#### 0.0.12
+* update mime-db
+* add mimetype: ply: application/octet-stream
+
+#### 0.0.13 - unreleased
 ...
 
 
@@ -303,6 +307,7 @@ mimes.fxp === 'application/vnd.adobe.fxp'
 mimes.fxpl === 'application/vnd.adobe.fxp'
 mimes.xdp === 'application/vnd.adobe.xdp+xml'
 mimes.xfdf === 'application/vnd.adobe.xfdf'
+mimes.age === 'application/vnd.age'
 mimes.ahead === 'application/vnd.ahead.space'
 mimes.azf === 'application/vnd.airzip.filesecure.azf'
 mimes.azs === 'application/vnd.airzip.filesecure.azs'
@@ -1200,6 +1205,7 @@ mimes.dcurl === 'text/vnd.curl.dcurl'
 mimes.mcurl === 'text/vnd.curl.mcurl'
 mimes.scurl === 'text/vnd.curl.scurl'
 mimes.sub === 'text/vnd.dvb.subtitle'
+mimes.ged === 'text/vnd.familysearch.gedcom'
 mimes.fly === 'text/vnd.fly'
 mimes.flx === 'text/vnd.fmi.flexstor'
 mimes.gv === 'text/vnd.graphviz'
