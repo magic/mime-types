@@ -89,7 +89,7 @@ update mime-db
 
 #### 0.0.12
 * update mime-db
-* add mimetype: ply: application/octet-stream
+* add mimetype: ply === application/octet-stream
 
 #### 0.0.13 - unreleased
 ...
@@ -99,6 +99,7 @@ update mime-db
 ```javascript
 import mimes from '@magic/mime-types'
 
+mimes.ply === 'application/octet-stream'
 mimes.ez === 'application/andrew-inset'
 mimes.aw === 'application/applixware'
 mimes.atom === 'application/atom+xml'
