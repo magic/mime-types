@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "start": "npm test",
-    "test": "t --exclude docs example config.js",
+    "test": "t --exclude docs",
     "format": "f -w --exclude docs",
     "format:check": "f",
     "calls": "calls",
