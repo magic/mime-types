@@ -91,7 +91,10 @@ update mime-db
 * update mime-db
 * add mimetype: ply === application/octet-stream
 
-#### 0.0.13 - unreleased
+#### 0.0.13
+update dependencies
+
+#### 0.0.14 - unreleased
 ...
 
 
