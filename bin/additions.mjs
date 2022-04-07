@@ -4,6 +4,6 @@
 
 export default {
   ply: 'application/octet-stream',
-  glsl: 'text/plain',
-  shader: 'text/plain',
+  glsl: { value: 'text/plain', compressible: true },
+  shader: { value: 'text/plain', compressible: true },
 }
