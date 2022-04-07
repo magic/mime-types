@@ -4,6 +4,7 @@ import path from 'path'
 
 import fs from '@magic/fs'
 import log from '@magic/log'
+import is from '@magic/types'
 
 import overwrites from './overwrites.mjs'
 import additions from './additions.mjs'
@@ -21,8 +22,13 @@ const run = async () => {
   const compressibles = {}
 
   Object.entries(additions).forEach(([key, value]) => {
-    mimeTypes[key] = value
-    docMimeTypes.push([key, value])
+    if (is.objectNative(value)) {
+      mimeTypes[key] = value.value
+      compressibles[key] = value.compressible
+    } else {
+      mimeTypes[key] = value
+      docMimeTypes.push([key, value])
+    }
   })
 
   Object.entries(mimes)

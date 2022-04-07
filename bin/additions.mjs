@@ -4,4 +4,6 @@
 
 export default {
   ply: 'application/octet-stream',
+  glsl: 'text/plain',
+  shader: 'text/plain',
 }
