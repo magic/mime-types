@@ -11,6 +11,8 @@ import additions from './additions.mjs'
 
 import { default as mimes } from 'mime-db'
 
+const sortByKey = ([extA], [extB]) => (extA > extB ? 1 : -1)
+
 const mimeTypeFilePath = path.join(process.cwd(), 'src', 'mimes.mjs')
 const compressFilePath = path.join(process.cwd(), 'src', 'compressibles.mjs')
 
@@ -51,10 +53,13 @@ const run = async () => {
       })
     })
 
-  const sortedDocMimeTypes = docMimeTypes.sort(([extA], [extB]) => (extA > extB ? 1 : -1))
+  const sortedDocMimeTypes = docMimeTypes.sort(sortByKey)
 
-  const mimeTypeString = `export const mimes = ${JSON.stringify(mimeTypes, null, 2)}`
-  const compStringified = JSON.stringify(compressibles, null, 2)
+  const sortedMimeTypes = Object.fromEntries(Object.entries(mimeTypes).sort(sortByKey))
+
+  const mimeTypeString = `export const mimes = ${JSON.stringify(sortedMimeTypes, null, 2)}`
+  const sortedCompressibles = Object.fromEntries(Object.entries(compressibles).sort(sortByKey))
+  const compStringified = JSON.stringify(sortedCompressibles, null, 2)
   const compressibleString = `export const compressibles = ${compStringified}`
 
   const docMimeTypeString = sortedDocMimeTypes
