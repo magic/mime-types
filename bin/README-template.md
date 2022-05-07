@@ -100,7 +100,13 @@ update dependencies
 #### 0.0.15
 update dependencies
 
-#### 0.0.16 - unreleased
+#### 0.0.16
+* ply files are compressible
+* update dependencies
+* mimetypes are sorted alphabetically by extension
+* add custom mimetype additions to docs
+
+#### 0.0.17 - unreleased
 ...
 
 
