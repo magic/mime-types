@@ -25,6 +25,7 @@ const run = async () => {
     if (is.objectNative(value)) {
       mimeTypes[key] = value.value
       compressibles[key] = value.compressible
+      docMimeTypes.push([key, value.value])
     } else {
       mimeTypes[key] = value
       docMimeTypes.push([key, value])
@@ -50,11 +51,15 @@ const run = async () => {
       })
     })
 
+  const sortedDocMimeTypes = docMimeTypes.sort(([extA], [extB]) => (extA > extB ? 1 : -1))
+
   const mimeTypeString = `export const mimes = ${JSON.stringify(mimeTypes, null, 2)}`
   const compStringified = JSON.stringify(compressibles, null, 2)
   const compressibleString = `export const compressibles = ${compStringified}`
 
-  const docMimeTypeString = docMimeTypes.map(([key, ext]) => `mimes.${key} === '${ext}'`).join('\n')
+  const docMimeTypeString = sortedDocMimeTypes
+    .map(([key, ext]) => `mimes.${key} === '${ext}'`)
+    .join('\n')
 
   let [docContent, jsDocContent] = await Promise.all([
     fs.readFile(path.join(process.cwd(), 'bin', './README-template.md'), 'utf8'),
