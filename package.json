@@ -36,11 +36,11 @@
     "@magic-modules/no-spy": "0.0.7",
     "@magic-modules/pre": "0.0.11",
     "@magic-themes/docs": "0.0.14",
-    "@magic/core": "0.0.140",
-    "@magic/format": "0.0.39",
-    "@magic/fs": "0.0.24",
+    "@magic/core": "0.0.141",
+    "@magic/format": "0.0.40",
+    "@magic/fs": "0.0.25",
     "@magic/log": "0.1.15",
-    "@magic/test": "0.2.10",
+    "@magic/test": "0.2.11",
     "mime-db": "1.52.0"
   },
   "files": [
