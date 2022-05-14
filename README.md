@@ -106,7 +106,10 @@ update dependencies
 * mimetypes are sorted alphabetically by extension
 * add custom mimetype additions to docs
 
-#### 0.0.17 - unreleased
+#### 0.0.17
+update dependencies
+
+#### 0.0.18 - unreleased
 ...
 
 
