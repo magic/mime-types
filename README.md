@@ -16,20 +16,26 @@ where key = extension and value = mime/type
 [html-docs](https://magic.github.io/mime-types)
 
 ### installation
+
 be in a nodejs project
+
 ```bash
 npm install --save-exact @magic/mime-types
 ```
 
 ### recreate README.md
+
 **README.md should never be changed manually.**
 run
+
 ```bash
 ./bin/bin.mjs docs
 ```
+
 to rebuild the file.
 
 ### usage:
+
 in yourproject.js
 
 ```javascript
@@ -41,79 +47,100 @@ very detailed usage below
 ## Dev
 
 ### recreate src/index.mjs
+
 **src/index.mjs should never be changed manually.**
 run
+
 ```bash
 ./bin/bin.mjs build
 ```
+
 to rebuild the file.
 
 ### changelog
 
 #### 0.0.1
+
 first publish
 
 #### 0.0.2
-* required node version is >= 13.5.0
-* update mime-db
+
+- required node version is >= 13.5.0
+- update mime-db
 
 #### 0.0.3
+
 bump required node version to 14.2.0
 
 #### 0.0.4
+
 small change
 
 #### 0.0.5
-* bin now only builds, no commands needed.
-* build only loops once.
-* update documentation.
+
+- bin now only builds, no commands needed.
+- build only loops once.
+- update documentation.
 
 #### 0.0.6
+
 update mime-db
 
 #### 0.0.7
+
 update mime-db
 
 #### 0.0.8
+
 update mime-db
 
 #### 0.0.9
-* remove greenkeeper badges from readme
-* update @magic devdependency libraries
+
+- remove greenkeeper badges from readme
+- update @magic devdependency libraries
 
 #### 0.0.10
+
 update mime-db
 
 #### 0.0.11
+
 update mime-db
 
 #### 0.0.12
-* update mime-db
-* add mimetype: ply === application/octet-stream
+
+- update mime-db
+- add mimetype: ply === application/octet-stream
 
 #### 0.0.13
+
 update dependencies
 
 #### 0.0.14
+
 update dependencies
 
 #### 0.0.15
+
 update dependencies
 
 #### 0.0.16
-* ply files are compressible
-* update dependencies
-* mimetypes are sorted alphabetically by extension
-* add custom mimetype additions to docs
+
+- ply files are compressible
+- update dependencies
+- mimetypes are sorted alphabetically by extension
+- add custom mimetype additions to docs
 
 #### 0.0.17
+
 update dependencies
 
 #### 0.0.18 - unreleased
+
 ...
 
-
 ### import / usage
+
 ```javascript
 import mimes from '@magic/mime-types'
 
