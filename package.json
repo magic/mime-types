@@ -6,14 +6,17 @@
   "license": "AGPL-3.0",
   "homepage": "https://magic.github.io/mime-types",
   "main": "src/index.mjs",
+  "types": "types/index.d.ts",
   "type": "module",
   "scripts": {
     "start": "npm test",
+    "build": "npm run build:docs && bin/bin.mjs && tsc && node scripts/strip-js-extension.js && npm run format",
+    "prepublishOnly": "npm run build",
     "test": "t --exclude docs",
     "format": "f -w --exclude docs",
     "format:check": "f",
     "calls": "calls",
-    "build": "bin/bin.mjs && npm run format && NODE_ENV=production magic build",
+    "build:docs": "NODE_ENV=production magic build",
     "prod": "NODE_ENV=production magic build serve",
     "clean": "magic clean",
     "serve": "magic serve",
@@ -32,19 +35,21 @@
   },
   "devDependencies": {
     "@magic-modules/git-badges": "0.0.12",
-    "@magic-modules/light-switch": "0.0.11",
-    "@magic-modules/no-spy": "0.0.8",
-    "@magic-modules/pre": "0.0.11",
-    "@magic-themes/docs": "0.0.14",
-    "@magic/core": "0.0.149",
-    "@magic/format": "0.0.50",
-    "@magic/fs": "0.0.27",
-    "@magic/log": "0.1.17",
-    "@magic/test": "0.2.15",
-    "mime-db": "1.52.0"
+    "@magic-modules/light-switch": "0.0.12",
+    "@magic-modules/no-spy": "0.0.9",
+    "@magic-modules/pre": "0.0.12",
+    "@magic-themes/docs": "0.0.15",
+    "@magic/core": "0.0.156",
+    "@magic/format": "0.0.68",
+    "@magic/fs": "0.0.31",
+    "@magic/log": "0.1.18",
+    "@magic/test": "0.2.20",
+    "mime-db": "1.54.0",
+    "typescript": "5.9.2"
   },
   "files": [
-    "src"
+    "src",
+    "types"
   ],
   "contributors": [
     {

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "types",
+    "strict": true,
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
+    "module": "nodenext"
+  },
+  "include": ["src/**/*"]
+}
