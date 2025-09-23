@@ -18,6 +18,14 @@ const compressFilePath = path.join(process.cwd(), 'src', 'compressibles.mjs')
 
 const overwriteKeys = Object.keys(overwrites)
 
+/** @type {(str: string) => boolean} */
+export const startsWithNumber = str => /^[0-9]/.test(str) && `${parseInt(str)}` !== str
+
+/** @type {(str: string) => boolean} */
+export const isStringObjectKey = str => startsWithNumber(str) || str.includes('-')
+
+export const isNumericKey = str => /^[0-9]/.test(str) || str.includes('-')
+
 const run = async () => {
   const mimeTypes = {}
   const docMimeTypes = []
@@ -55,15 +63,23 @@ const run = async () => {
 
   const sortedDocMimeTypes = docMimeTypes.sort(sortByKey)
 
-  const sortedMimeTypes = Object.fromEntries(Object.entries(mimeTypes).sort(sortByKey))
+  const sortedMimeTypes = Object.entries(mimeTypes).sort(sortByKey)
 
-  const mimeTypeString = `export const mimes = ${JSON.stringify(sortedMimeTypes, null, 2)}`
-  const sortedCompressibles = Object.fromEntries(Object.entries(compressibles).sort(sortByKey))
-  const compStringified = JSON.stringify(sortedCompressibles, null, 2)
-  const compressibleString = `export const compressibles = ${compStringified}`
+  const mimeTypeString = `
+export const mimes = /** @type {const} */ ({
+  ${sortedMimeTypes.map(([k, v]) => `  ${isStringObjectKey(k) ? `'${k}'` : k}: '${v}'`).join(',\n')}
+})
+`
+  const sortedCompressibles = Object.entries(compressibles).sort(sortByKey)
+
+  const compressibleString = `
+export const compressibles = /** @type {const} */ ({
+  ${sortedCompressibles.map(([k, v]) => `  ${isStringObjectKey(k) ? `'${k}'` : k}: ${v}`).join(',\n')}
+})
+`
 
   const docMimeTypeString = sortedDocMimeTypes
-    .map(([key, ext]) => `mimes.${key} === '${ext}'`)
+    .map(([key, ext]) => `mimes${isNumericKey(key) ? `['${key}']` : `.${key}`} === '${ext}'`)
     .join('\n')
 
   let [docContent, jsDocContent] = await Promise.all([

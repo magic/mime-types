@@ -2,8 +2,7 @@
  * Some extensions have multiple mime-type representations in the mime-db.
  * make sure some mimes http and browsers would expect are included.
  */
-
-export default {
+export default /** @type {const} */ ({
   bdoc: 'application/bdoc',
   exe: 'application/octet-stream',
   dll: 'application/octet-stream',
@@ -34,4 +33,8 @@ export default {
   pcx: 'image/x-pcx',
   x3db: 'model/x3d+binary',
   x3dv: 'model/x3d-vrml',
-}
+  woff: 'font/woff',
+  woff2: 'font/woff2',
+  ttf: 'font/ttf',
+  otf: 'font/otf',
+})
