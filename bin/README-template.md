@@ -146,7 +146,12 @@ update dependencies
 - add typescript types to exports
 - update dependencies
 
-#### 0.0.20 - unreleased
+#### 0.0.20
+
+- rename .mjs files to .js
+- now correctly export types
+
+#### 0.0.21 - unreleased
 
 ...
 
