@@ -2,10 +2,9 @@ import { deep } from '@magic/test'
 
 import mimedb from 'mime-db'
 
-import mimes from '../src/index.mjs'
-
-import overwrites from '../bin/overwrites.mjs'
-import additions from '../bin/additions.mjs'
+import mimes from '../src/index.js'
+import overwrites from '../bin/overwrites.js'
+import additions from '../bin/additions.js'
 
 const tests = Object.entries(mimedb)
   .filter(([_, val]) => val.extensions && val.extensions.length)

@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 
-import path from 'path'
+import path from 'node:path'
 
 import fs from '@magic/fs'
 import log from '@magic/log'
 import is from '@magic/types'
 
-import overwrites from './overwrites.mjs'
-import additions from './additions.mjs'
+import overwrites from './overwrites.js'
+import additions from './additions.js'
 
 import { default as mimes } from 'mime-db'
 
 const sortByKey = ([extA], [extB]) => (extA > extB ? 1 : -1)
 
-const mimeTypeFilePath = path.join(process.cwd(), 'src', 'mimes.mjs')
-const compressFilePath = path.join(process.cwd(), 'src', 'compressibles.mjs')
+const mimeTypeFilePath = path.join(process.cwd(), 'src', 'mimes.js')
+const compressFilePath = path.join(process.cwd(), 'src', 'compressibles.js')
 
 const overwriteKeys = Object.keys(overwrites)
 
@@ -84,7 +84,7 @@ export const compressibles = /** @type {const} */ ({
 
   let [docContent, jsDocContent] = await Promise.all([
     fs.readFile(path.join(process.cwd(), 'bin', './README-template.md'), 'utf8'),
-    fs.readFile(path.join(process.cwd(), 'bin', './MAGIC-doc-template.mjs'), 'utf8'),
+    fs.readFile(path.join(process.cwd(), 'bin', './MAGIC-doc-template.js'), 'utf8'),
   ])
 
   docContent = docContent.replace('||::mime-db-content::||', docMimeTypeString)
@@ -95,7 +95,7 @@ export const compressibles = /** @type {const} */ ({
     fs.writeFile(mimeTypeFilePath, mimeTypeString),
     fs.writeFile(compressFilePath, compressibleString),
     fs.writeFile(path.join(process.cwd(), 'README.md'), docContent),
-    fs.writeFile(path.join(process.cwd(), 'docsrc', 'pages', 'index.mjs'), jsDocContent),
+    fs.writeFile(path.join(process.cwd(), 'docsrc', 'pages', 'index.js'), jsDocContent),
   ])
 
   log.success('build done')

@@ -29,7 +29,7 @@ npm install --save-exact @magic/mime-types
 run
 
 ```bash
-./bin/bin.mjs docs
+./bin/bin.js docs
 ```
 
 to rebuild the file.
@@ -46,13 +46,13 @@ very detailed usage below
 
 ## Dev
 
-### recreate src/index.mjs
+### recreate src/index.js
 
-**src/index.mjs should never be changed manually.**
+**src/index.js should never be changed manually.**
 run
 
 ```bash
-./bin/bin.mjs build
+./bin/bin.js build
 ```
 
 to rebuild the file.

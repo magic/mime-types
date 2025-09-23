@@ -1,4 +1,4 @@
-export { compressibles } from './compressibles.mjs'
+export { compressibles } from './compressibles'
 export const mimes: {
   readonly 123: 'application/vnd.lotus-1-2-3'
   readonly '1km': 'application/vnd.1000minds.decision-model+xml'

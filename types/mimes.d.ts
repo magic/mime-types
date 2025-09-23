@@ -1,4 +1,3 @@
-export { compressibles } from './compressibles.mjs'
 export const mimes: {
   readonly 123: 'application/vnd.lotus-1-2-3'
   readonly '1km': 'application/vnd.1000minds.decision-model+xml'
@@ -1243,5 +1242,3 @@ export const mimes: {
   readonly zirz: 'application/vnd.zul'
   readonly zmm: 'application/vnd.handheld-entertainment+xml'
 }
-export default M
-import { mimes as M } from './mimes'
