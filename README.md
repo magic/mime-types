@@ -140,7 +140,13 @@ update dependencies
 - update dependencies
 - rebuild docs
 
-#### 0.0.19 - unreleased
+#### 0.0.19
+
+- update mimes from db
+- add typescript types to exports
+- update dependencies
+
+#### 0.0.20 - unreleased
 
 ...
 
