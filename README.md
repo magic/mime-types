@@ -151,7 +151,11 @@ update dependencies
 - rename .mjs files to .js
 - now correctly export types
 
-#### 0.0.21 - unreleased
+#### 0.0.21
+
+- update types
+
+#### 0.0.22 - unreleased
 
 ...
 
