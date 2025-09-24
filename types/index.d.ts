@@ -1,4 +1,4 @@
-export { compressibles } from './compressibles'
+export { compressibles } from './compressibles.js'
 export const mimes: {
   readonly 123: 'application/vnd.lotus-1-2-3'
   readonly '1km': 'application/vnd.1000minds.decision-model+xml'
@@ -1244,4 +1244,4 @@ export const mimes: {
   readonly zmm: 'application/vnd.handheld-entertainment+xml'
 }
 export default M
-import { mimes as M } from './mimes'
+import { mimes as M } from './mimes.js'
