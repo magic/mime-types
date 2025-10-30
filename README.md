@@ -155,7 +155,11 @@ update dependencies
 
 - update types
 
-#### 0.0.22 - unreleased
+#### 0.0.22
+
+- update dependencies
+
+#### 0.0.23 - unreleased
 
 ...
 
