@@ -5,10 +5,12 @@
     "allowJs": true,
     "checkJs": true,
     "outDir": "types",
+    "rootDir": "src",
     "strict": true,
     "moduleResolution": "nodenext",
     "target": "ES2022",
-    "module": "nodenext"
+    "module": "nodenext",
+    "types": ["@types/node"]
   },
   "include": ["src/**/*"]
 }
