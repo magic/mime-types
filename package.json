@@ -28,7 +28,7 @@
   "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/magic/mime-types.git"
+    "url": "git+https://github.com/magic/mime-types.git"
   },
   "bugs": {
     "url": "https://github.com/magic/mime-types/issues"
