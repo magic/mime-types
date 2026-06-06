@@ -39,13 +39,13 @@
     "@magic-modules/no-spy": "0.0.9",
     "@magic-modules/pre": "0.0.12",
     "@magic-themes/docs": "0.0.15",
-    "@magic/core": "0.0.156",
-    "@magic/format": "0.0.68",
-    "@magic/fs": "0.0.36",
-    "@magic/log": "0.1.21",
-    "@magic/test": "0.2.25",
+    "@magic/core": "0.0.158",
+    "@magic/format": "0.0.73",
+    "@magic/fs": "0.0.37",
+    "@magic/log": "0.1.22",
+    "@magic/test": "0.3.12",
     "mime-db": "1.54.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "files": [
     "src",
