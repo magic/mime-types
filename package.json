@@ -1,13 +1,30 @@
 {
   "name": "@magic/mime-types",
   "version": "0.0.24",
-  "author": "Wizards & Witches",
   "description": "mime-db, in a key => value store where keys are extensions and values are mime/types",
-  "license": "AGPL-3.0",
   "homepage": "https://magic.github.io/mime-types",
+  "bugs": {
+    "url": "https://github.com/magic/mime-types/issues"
+  },
+  "license": "AGPL-3.0",
+  "author": "Wizards & Witches",
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "github": "jaeh"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magic/mime-types.git"
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "type": "module",
   "main": "src/index.js",
   "types": "types/index.d.ts",
-  "type": "module",
   "scripts": {
     "start": "npm test",
     "build": "npm run build:docs && bin/bin.js && tsc && npm run format",
@@ -21,17 +38,6 @@
     "clean": "magic clean",
     "serve": "magic serve",
     "dev": "magic dev"
-  },
-  "engines": {
-    "node": ">=14.15.4"
-  },
-  "engineStrict": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magic/mime-types.git"
-  },
-  "bugs": {
-    "url": "https://github.com/magic/mime-types/issues"
   },
   "devDependencies": {
     "@magic-modules/git-badges": "0.0.12",
@@ -48,16 +54,10 @@
     "mime-db": "1.54.0",
     "typescript": "npm:@typescript/typescript6"
   },
-  "files": [
-    "src",
-    "types"
-  ],
-  "contributors": [
-    {
-      "name": "jascha ehrenreich",
-      "github": "jaeh"
-    }
-  ],
+  "engines": {
+    "node": ">=14.15.4"
+  },
+  "engineStrict": true,
   "allowScripts": {
     "@swc/core@1.15.47": true
   }
