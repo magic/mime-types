@@ -169,9 +169,12 @@ update dependencies
 - add npm run tsc, tsc:test, lint and check tasks
 - update dependencies
 
-#### 0.0.25 - unreleased
+#### 0.0.25
 
-...
+- add tsc and @magic/lint checks
+- update dependencies
+
+#### 0.0.26 - unreleased
 
 ### import / usage
 
