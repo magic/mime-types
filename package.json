@@ -55,6 +55,7 @@
     "@magic/lint": "0.0.5",
     "@magic/log": "0.1.24",
     "@magic/test": "0.3.55",
+    "@types/mime-db": "1.43.6",
     "mime-db": "1.54.0",
     "typescript": "npm:@typescript/typescript6"
   },
