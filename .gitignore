@@ -3,4 +3,3 @@ npm-debug.log
 yarn-error.log
 .nyc_output
 coverage
-.__browserify_empty.js
