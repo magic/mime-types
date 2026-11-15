@@ -4,7 +4,7 @@
  */
 export default /** @type {const} */ ({
   bdoc: 'application/bdoc',
-  exe: 'application/octet-stream',
+  // exe: 'application/octet-stream',
   dll: 'application/octet-stream',
   deb: 'application/x-debian-package',
   dmg: 'application/octet-stream',
@@ -23,7 +23,7 @@ export default /** @type {const} */ ({
   '3gpp': 'video/3gpp',
   mp3: 'audio/mp3',
   m4a: 'audio/mp4',
-  wav: 'audio/wav',
+  // wav: 'audio/wav',
   wav: 'audio/wave',
   ra: 'audio/x-realaudio',
   bmp: 'image/bmp',
