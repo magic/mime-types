@@ -1,6 +1,6 @@
 {
   "name": "@magic/mime-types",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "mime-db, in a key => value store where keys are extensions and values are mime/types",
   "homepage": "https://magic.github.io/mime-types",
   "bugs": {
