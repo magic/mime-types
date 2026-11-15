@@ -163,7 +163,13 @@ update dependencies
 
 - update dependencies
 
-#### 0.0.24 - unreleased
+#### 0.0.24
+
+- remove duplicate keys from bin/overwrites
+- add npm run tsc, tsc:test, lint and check tasks
+- update dependencies
+
+#### 0.0.25 - unreleased
 
 ...
 
