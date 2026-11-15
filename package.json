@@ -37,7 +37,11 @@
     "prod": "NODE_ENV=production magic build serve",
     "clean": "magic clean",
     "serve": "magic serve",
-    "dev": "magic dev"
+    "dev": "magic dev",
+    "tsc": "tsc --noEmit",
+    "tsc:test": "tsc --noEmit -p tsconfig.test.json",
+    "lint": "lint",
+    "check": "npm run tsc && npm run tsc:test && npm run lint"
   },
   "devDependencies": {
     "@magic-modules/git-badges": "0.0.12",
