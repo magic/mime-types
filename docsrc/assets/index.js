@@ -1,4 +1,9 @@
-module.exports = {
-  GitBadges: require('@magic-modules/git-badges'),
-  Pre: require('@magic-modules/pre'),
+import GitBadges from '@magic-modules/git-badges'
+import Pre from '@magic-modules/pre'
+
+export { GitBadges, Pre }
+
+export default {
+  GitBadges,
+  Pre,
 }
